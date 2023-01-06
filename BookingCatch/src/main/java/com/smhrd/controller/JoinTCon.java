@@ -23,12 +23,11 @@ public class JoinTCon extends HttpServlet {
 		String birth = request.getParameter("birth");
 		String mbti = request.getParameter("mbti");
 		String gender = request.getParameter("gender");
-		String career = request.getParameter("career");
 		String center = request.getParameter("center");
 		String ttype = request.getParameter("ttype");
 		String phone = request.getParameter("phone");
 
-		TrainerVO vo = new TrainerVO(id, pw, name, birth, mbti, gender, career, center, ttype, phone);
+		TrainerVO vo = new TrainerVO(id, pw, name, birth, mbti, gender, center, ttype, phone);
 		int cnt = new TrainerDAO().joinTrainer(vo);
 		if (cnt > 0) {
 			System.out.println("회원가입 성공");

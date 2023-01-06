@@ -20,13 +20,12 @@ public class TrainerVO {
 	private String birth;
 	private String mbti;
 	private String gender;
-	private String career;
 	private String center;
 	private Timestamp b_date;
 	private String ttype;
 	private String phone;
 
-	public TrainerVO(String id, String pw, String name, String birth, String mbti, String gender, String career,
+	public TrainerVO(String id, String pw, String name, String birth, String mbti, String gender,
 			String center,String ttype, String phone) {
 
 		this.id = id;
@@ -35,7 +34,6 @@ public class TrainerVO {
 		this.birth = birth;
 		this.mbti = mbti;
 		this.gender = gender;
-		this.career = career;
 		this.center = center;
 		this.ttype = ttype;
 		this.phone = phone;
