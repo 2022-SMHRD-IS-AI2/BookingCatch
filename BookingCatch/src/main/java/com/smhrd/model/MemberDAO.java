@@ -9,21 +9,8 @@ public class MemberDAO {
 	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	SqlSession sqlSession = sqlSessionFactory.openSession();	
 
-//	public MemberVO selectMember(MemberVO vo) {
-//		MemberVO loginMember = null;
-//		
-//		try {
-//			loginMember = SqlSession.selectOne("com.smhrd.model.MemberDAO.selectOne", vo);
-//			// commit/rollback 생략 (왜? 셀렉트문이니까)
-//
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		} finally {
-//			SqlSession.close();
-//		}
-//		return loginMember;
-//	}
-
+	
+	// 사용자 회원가입 
 	public int joinMember(MemberVO vo) {
 		int cnt=0;
 		try {
@@ -40,6 +27,23 @@ public class MemberDAO {
 		}
 		
 		return cnt;
+	}
+	
+	
+	// 사용자 로그인
+	public MemberVO selectMember(MemberVO vo) {
+		MemberVO loginMember = null;
+		
+		try {
+			loginMember = sqlSession.selectOne("com.smhrd.model.MemberDAO.selectOne", vo);
+			// commit/rollback 생략 (왜? 셀렉트문이니까)
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return loginMember;
 	}
 	
 	
