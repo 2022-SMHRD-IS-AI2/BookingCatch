@@ -11,7 +11,7 @@ insert into TB_USER values (#{id},#{pw},#{name},#{birth},#{mbti},#{address},#{ca
 </insert>
 
 <select id="selectOne" resultType="com.smhrd.model.MemberVO" parameterType = "com.smhrd.model.MemberVO">
-		select * from TB_USER where id=#{id} and pw=#{pw}
+		select * from TB_USER where u_id=#{id} and u_pw=#{pw}
 	</select>
 
 
