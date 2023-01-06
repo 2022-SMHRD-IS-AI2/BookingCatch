@@ -28,8 +28,14 @@ public class JoinCon extends HttpServlet {
 		String gender = request.getParameter("gender");
 		
 		MemberVO vo = new MemberVO(id,pw,name,birth,mbti,address,phone,gender);
-		//int cnt = new MemberDAO(vo);
-		
+		int cnt = new MemberDAO().joinMember(vo);
+		if(cnt>0) {
+			System.out.println("회원가입 성공");
+//			회원가입 후 갈 경로 선택-> 아마 메인?
+		}else {
+			//회원가입 실패시 갈 경로 선택
+			System.out.println("회원가입 실패");
+		}
 		
 		
 		

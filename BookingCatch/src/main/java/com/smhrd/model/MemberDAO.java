@@ -24,10 +24,22 @@ public class MemberDAO {
 //		return loginMember;
 //	}
 
-	public void joinMember(MemberVO vo) {
-		sqlSession.insert("com.smhrd.model.MemberDAO.joinMember",vo);
+	public int joinMember(MemberVO vo) {
+		int cnt=0;
+		try {
+			cnt = sqlSession.insert("com.smhrd.model.MemberDAO.joinMember",vo);
+			if(cnt>0) {
+				sqlSession.commit();
+			}else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}
 		
-		
+		return cnt;
 	}
 	
 	
