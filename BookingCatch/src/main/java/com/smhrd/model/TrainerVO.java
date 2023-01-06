@@ -21,8 +21,8 @@ public class TrainerVO {
 	private String mbti;
 	private String gender;
 	private String center;
-	private Timestamp b_date;
 	private String ttype;
+	private Timestamp b_date;
 	private String phone;
 
 	public TrainerVO(String id, String pw, String name, String birth, String mbti, String gender,
