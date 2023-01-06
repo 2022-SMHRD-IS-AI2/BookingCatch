@@ -13,6 +13,8 @@ insert into TB_USER values (#{id},#{pw},#{name},#{birth},#{mbti},#{address},#{ca
 <select id="selectOne" resultType="com.smhrd.model.MemberVO" parameterType = "com.smhrd.model.MemberVO">
 		select * from TB_USER where u_id=#{id} and u_pw=#{pw}
 	</select>
-
+<delete id="deleteMember" parameterType="String">
+delete from TB_USER where u_id=#{id}
+</delete>
 
 </mapper>

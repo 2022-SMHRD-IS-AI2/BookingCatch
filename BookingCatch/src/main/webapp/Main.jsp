@@ -16,5 +16,12 @@
 
 <a href="Login.jsp"><button>로그인</button></a>  <br>
 <a href="LoginT.jsp"><button>트레이너 로그인</button></a>
+
+ <br>
+  <br>
+   <br>
+    <br>
+<a href="Delete.jsp"><button>회원 탈퇴</button></a>
+<a href="Delete.jsp"><button>트레이너 탈퇴</button></a>
 </body>
 </html>

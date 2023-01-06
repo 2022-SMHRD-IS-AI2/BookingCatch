@@ -44,5 +44,22 @@ public class TrainerDAO {
 			}
 			return loginTrainer;
 		}
+		public int deleteTrainer(String id) {
+			int cnt=0;
+			try {
+				cnt = sqlSession.delete("com.smhrd.model.TrainerDAO.deleteTrainer",id);
+				if(cnt>0) {
+					sqlSession.commit();
+				}else {
+					sqlSession.rollback();
+				}
+			} catch (Exception e) {
+				
+				e.printStackTrace();
+			}finally {
+				sqlSession.close();
+			}
+			return cnt;
+		}
 
 }

@@ -13,6 +13,8 @@ insert into TB_TRAINER values (#{id},#{pw},#{name},#{birth},#{mbti},#{gender},#{
 <select id="selectOne" resultType="com.smhrd.model.TrainerVO" parameterType = "com.smhrd.model.TrainerVO">
 		select * from TB_TRAINER where t_id=#{id} and t_pw=#{pw}
 	</select>
-
+<delete id="deleteTrainer" parameterType="String">
+delete from TB_TRAINER where t_id=#{id}
+</delete>
 
 </mapper>
