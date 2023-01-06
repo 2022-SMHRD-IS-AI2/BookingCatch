@@ -6,6 +6,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.ibatis.javassist.expr.NewExpr;
+
+import com.smhrd.model.MemberDAO;
+import com.smhrd.model.MemberVO;
+
 
 public class JoinCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -22,6 +27,8 @@ public class JoinCon extends HttpServlet {
 		String phone = request.getParameter("phone");
 		String gender = request.getParameter("gender");
 		
+		MemberVO vo = new MemberVO(id,pw,name,birth,mbti,address,phone,gender);
+		//int cnt = new MemberDAO(vo);
 		
 		
 		

@@ -6,6 +6,8 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import com.smhrd.database.SqlSessionManager;
 
 public class MemberDAO {
+	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
+	SqlSession sqlSession = sqlSessionFactory.openSession();	
 
 //	public MemberVO selectMember(MemberVO vo) {
 //		MemberVO loginMember = null;
@@ -21,5 +23,12 @@ public class MemberDAO {
 //		}
 //		return loginMember;
 //	}
+
+	public void joinMember(MemberVO vo) {
+		sqlSession.insert("com.smhrd.model.MemberDAO.joinMember",vo);
+		
+		
+	}
+	
 	
 }
