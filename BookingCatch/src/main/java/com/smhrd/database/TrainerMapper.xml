@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smhrd.model.TrainerDAO">
+
+<insert id="joinTrainer" parameterType="com.smhrd.model.TrainerVO">
+insert into TB_TRAINER values (#{id},#{pw},#{name},#{birth},#{mbti}, #{gender},#{career},#{center},#{ttype},sysdate,#{phone})
+</insert>
+
+<select id="selectOne" resultType="com.smhrd.model.TrainerVO" parameterType = "com.smhrd.model.TrainerVO">
+		select * from TB_TRAINER where t_id=#{id} and t_pw=#{pw}
+	</select>
+
+
+</mapper>

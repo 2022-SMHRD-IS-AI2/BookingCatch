@@ -10,7 +10,8 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class MemberVO {
+public class TrainerVO {
+
 	@NonNull
 	private String id;
 	@NonNull
@@ -18,23 +19,25 @@ public class MemberVO {
 	private String name;
 	private String birth;
 	private String mbti;
-	private String address;
-	private Timestamp b_date;
-	private String phone;
 	private String gender;
+	private String career;
+	private String center;
+	private Timestamp b_date;
+	private String ttype;
+	private String phone;
 
-	
-	public MemberVO(String id, String pw, String name, String birth, String mbti, String address, String phone, String gender){
+	public TrainerVO(String id, String pw, String name, String birth, String mbti, String gender, String career,
+			String center,String ttype, String phone) {
+
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
 		this.birth = birth;
-		this.mbti= mbti;
-		this.address= address;
+		this.mbti = mbti;
+		this.gender = gender;
+		this.career = career;
+		this.center = center;
+		this.ttype = ttype;
 		this.phone = phone;
-		this.gender= gender;
-		
 	}
-	
 }
-

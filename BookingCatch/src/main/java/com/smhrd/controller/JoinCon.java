@@ -31,10 +31,12 @@ public class JoinCon extends HttpServlet {
 		int cnt = new MemberDAO().joinMember(vo);
 		if(cnt>0) {
 			System.out.println("회원가입 성공");
+			response.sendRedirect("Main.jsp");
 //			회원가입 후 갈 경로 선택-> 아마 메인?
 		}else {
 			//회원가입 실패시 갈 경로 선택
 			System.out.println("회원가입 실패");
+			response.sendRedirect("Main.jsp");
 		}
 		
 		
