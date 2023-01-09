@@ -19,4 +19,11 @@ insert into TB_USER values (#{id},#{pw},#{name},#{birth},#{mbti},#{address},sysd
 delete from TB_USER where u_id=#{id}
 </delete>
 
+<select id="emailCheck" parameterType="String" resultType="boolean">
+		select case when count(*)>0 then 1
+					else 0
+				end result
+		from TB_USER where U_ID=#{id}		
+	</select>
+
 </mapper>

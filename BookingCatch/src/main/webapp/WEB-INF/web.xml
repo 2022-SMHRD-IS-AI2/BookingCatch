@@ -40,6 +40,18 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller.DeleteTCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>LogOutCon</servlet-name>
+  	<display-name>LogOutCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.LogOutCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EmailCheckCon</servlet-name>
+  	<display-name>EmailCheckCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.EmailCheckCon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -63,5 +75,13 @@
   <servlet-mapping>
   	<servlet-name>DeleteTCon</servlet-name>
   	<url-pattern>/DeleteTCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogOutCon</servlet-name>
+  	<url-pattern>/LogOutCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EmailCheckCon</servlet-name>
+  	<url-pattern>/EmailCheckCon</url-pattern>
   </servlet-mapping>
 </web-app>

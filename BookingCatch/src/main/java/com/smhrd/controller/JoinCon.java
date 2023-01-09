@@ -26,10 +26,11 @@ public class JoinCon extends HttpServlet {
 		String birth = request.getParameter("birth");
 		String mbti = request.getParameter("mbti");
 		String address = request.getParameter("address");
-		String gender = request.getParameter("phone");
-		String phone = request.getParameter("gender");
+		String gender = request.getParameter("gender");
+		String phone = request.getParameter("phone");
 		
 		System.out.println(id);
+		System.out.println(pw+name+birth+mbti+address+gender+phone);
 		
 		MemberVO vo = new MemberVO(id,pw,name,birth,mbti,address,phone,gender);
 		int cnt = new MemberDAO().joinMember(vo);

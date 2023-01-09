@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,6 +17,11 @@
     
 </head>
 <body>
+	<%
+	MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
+	//System.out.print(loginMember.getId());
+	%>
+	
     <div class="wrap">
         <header>
             <div class="header1">

@@ -63,5 +63,19 @@ public class MemberDAO {
 		}
 		return cnt;
 	}
+public boolean emailCheck(String inputE) {
+		
+		boolean checkE = false;
+		try {
+			checkE = sqlSession.selectOne("com.smhrd.model.MemberDAO.emailCheck", inputE);
+			// commit/rollback 생략 (왜? 셀렉트문이니까)
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return checkE;
+	}
 	
 }
