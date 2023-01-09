@@ -32,8 +32,8 @@
         </ul>
         <div class="for-space"></div>
         <ul class="header1-ul">
-            <li class="menu-letter"><a href="Login.html">로그인</a></li>
-            <li class="menu-letter"><a href="#">회원가입</a></li>
+            <li class="menu-letter"><a href="Login.jsp">로그인</a></li>
+            <li class="menu-letter"><a href="Join.jsp">회원가입</a></li>
             <li class="menu-letter"><a href="#">고객센터</a></li>
             <li class="menu-letter" id="addEvent"><i class="fa-regular fa-heart"></i>
                 <div id="hidden-list">
@@ -109,7 +109,7 @@
     
     
     
-    <img src="http://127.0.0.1:5500/girl-gfcbf84a7a_1920.jpg" alt="Sorry" class="Main-img">
+    <img src="./img/Main.jpg" alt="Sorry" class="Main-img">
     
     
     </div>

@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="Join.css">
 </head>
 <body>
 <form action="JoinTCon">
@@ -21,5 +22,6 @@ TRAINER TYPE : <input type="text" name="ttype"> <br>
 PHONE : <input type="text" name="phone"> <br>
 
 <input type="submit" value="회원가입">
+<script src="Join.js"></script>
 </body>
 </html>

@@ -7,8 +7,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.smhrd.model.MemberDAO">
 
 <insert id="joinMember" parameterType="com.smhrd.model.MemberVO">
-insert into TB_USER values (#{id},#{pw},#{name},#{birth},#{mbti},#{address},#{career},sysdate,#{phone},#{gender})
+insert into TB_USER values (#{id},#{pw},#{name},#{birth},#{mbti},#{address},sysdate,#{phone},#{gender})
 </insert>
+<!-- 인서트문 커리어 삭제했어요 -->
+
 
 <select id="selectOne" resultType="com.smhrd.model.MemberVO" parameterType = "com.smhrd.model.MemberVO">
 		select * from TB_USER where u_id=#{id} and u_pw=#{pw}
