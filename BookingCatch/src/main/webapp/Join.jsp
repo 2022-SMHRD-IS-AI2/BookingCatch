@@ -16,7 +16,8 @@
 				<div class="id-box">
 					<p>아이디</p>
 					<input type="text" name="id" id="inputE" placeholder="ID">
-					<input value="id중복체크" onclick="checkE()" type="button">
+					<!-- <input value="id중복체크" onclick="checkE()" type="button"> -->
+					<button onclick="checkE()" type="button">중복확인</button>
 					<div>
 						<span id="resultCheck"></span>
 					</div>
