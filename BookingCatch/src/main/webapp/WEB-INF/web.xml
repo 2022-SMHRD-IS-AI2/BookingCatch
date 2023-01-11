@@ -52,6 +52,18 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller.EmailCheckCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>write</servlet-name>
+  	<display-name>write</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.write</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>writeTipBoardCon</servlet-name>
+  	<display-name>writeTipBoardCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.writeTipBoardCon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -83,5 +95,13 @@
   <servlet-mapping>
   	<servlet-name>EmailCheckCon</servlet-name>
   	<url-pattern>/EmailCheckCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>write</servlet-name>
+  	<url-pattern>/write</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>writeTipBoardCon</servlet-name>
+  	<url-pattern>/writeTipBoardCon</url-pattern>
   </servlet-mapping>
 </web-app>
