@@ -12,6 +12,7 @@
 
     <div class="wrap">
         <div class="login">
+        <div> <a href="Main.jsp"><img src="./img/Logo.jpg"></a></div>
             <p class="login-letter">로그인</p>
             <div class="login-who">
                 <button id="user">회원</button>
@@ -46,7 +47,7 @@
 
 
 
-<script src="asset/js/Login.js"></script>
+<script src="Login.js"></script>
 
 </body>
 </html>

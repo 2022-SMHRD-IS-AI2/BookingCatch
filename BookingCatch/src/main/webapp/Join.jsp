@@ -10,7 +10,7 @@
 <body>
 
 	<div class="wrap">
-
+		<div align="center"> <a href="Main.jsp"><img src="./img/Logo.jpg"></a></div>
 		<form action="JoinCon" method="post">
 			<div class="id">
 				<div class="id-box">
