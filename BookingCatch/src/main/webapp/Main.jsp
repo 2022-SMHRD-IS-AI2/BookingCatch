@@ -100,7 +100,7 @@
                 <a href="#">커뮤니티</a>
                 <ul class="hidden">
                     
-                    <li>Tip게시판</li>
+                    <a href="tipBoardMain.jsp"><li>Tip게시판</li></a>
                     <li>공감게시판</li>
                 </ul>
             </li>

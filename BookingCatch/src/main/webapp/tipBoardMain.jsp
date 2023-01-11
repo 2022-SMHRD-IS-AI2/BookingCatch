@@ -15,9 +15,7 @@
 </head>
 <body>
 
-	<%
-	List<tipBoardVO> vo = new tipBoardDAO().showTipBoard();
-	%>
+	<%List<tipBoardVO> vo = new tipBoardDAO().showTipBoard();%>
 	<div id="#">
 		<table id="#">
 			<tr>
@@ -26,23 +24,19 @@
 				<td>작성자</td>
 				<td>시간</td>
 			</tr>
-
-			<%
-			for (int i = 0; i < vo.size(); i++) {
-			%>
-			<tr>
-				<!-- 게시글 내용이 들어갈 부분 -->
-				<td><%=i + 1%></td>
-				<td><a href="tipBoardDetail.jsp?num=<%=vo.get(i).getNum()%>"><%=vo.get(i).getTitle()%></a></td>
-				<td><%=vo.get(i).getWriter()%></td>
-				<td><%=vo.get(i).getDate().toString()%></td>
-			</tr>
-			<%
-			}
-			%>
-
+		
+			 <%for (int i = 0; i < vo.size(); i++) { %>
+            	<tr>
+            	<!-- 게시글 내용이 들어갈 부분 -->
+                  <td><%=i+1 %></td>
+                  <td><a href="tipBoardDetail.jsp?num=<%=vo.get(i).getNum()%>"><%=vo.get(i).getTitle() %></a></td>
+                  <td><%=vo.get(i).getWriter() %></td>
+                  <td><%=vo.get(i).getDate().toString()%></td>
+               </tr>
+            	<%} %>
+			
 		</table>
-		<a href="main.jsp"><button id="writer">홈으로가기</button></a> <a
+		<a href="Main.jsp"><button id="writer">홈으로가기</button></a> <a
 			href="tipBoardWrite.jsp"><button id="writer">작성하러가기</button> </a>
 
 	</div>
