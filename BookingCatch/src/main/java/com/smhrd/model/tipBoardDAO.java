@@ -36,7 +36,7 @@ public class tipBoardDAO {
 
 	// 세부 게시글 조회하는 기능
 	public tipBoardVO detailTipBoard(int num) {
-		tipBoardVO vo = sqlSession.selectOne("com.smhrd.model.tipBoardDAO.detailTipBoard");
+		tipBoardVO vo = sqlSession.selectOne("com.smhrd.model.tipBoardDAO.detailTipBoard",num);
 		sqlSession.close();
 
 		return vo;

@@ -16,8 +16,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	select * from tb_tip_board
 	</select>
 	
-<!-- 	<select id="detailBoard" parameterMap="int" resultType="com.smhrd.model.tipBoardVO">
-	select * from tb_tip_board where num=#{num}</select>  -->
+	<select id="detailTipBoard" parameterType="int" resultType="com.smhrd.model.tipBoardVO">
+	select * from tb_tip_board where t_num=#{num}</select>
 
 
 </mapper>
