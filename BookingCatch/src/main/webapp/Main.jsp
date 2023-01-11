@@ -35,13 +35,44 @@
                 </button>
             </div>
             
-        </ul>
-        <div class="for-space"></div>
+            <%
+            if (loginMember == null){ 
+            %> <div class="for-space" id="menu">
+		<ul class="header1-ul">
+			<li class="menu-letter"><a href="Login.jsp">로그인</a></li>
+			<li class="menu-letter"><a href="Join.jsp">회원가입</a></li>
+		<li class="menu-letter"><a href="#">고객센터</a></li>
+		</ul>
+		</div>  
+            
+            <%
+            }else{
+            %><%
+            if(loginMember.getId().equals("admin")){
+            %> <a href="#">전체회원정보</a> <%
+            }
+            %> <a href="#">개인정보수정</a> <a href="LogoutCon">로그아웃</a> <%
+            		}%>
+            
+        
+       <!--  <div class="for-space"></div>
         <ul class="header1-ul">
             <li class="menu-letter"><a href="Login.jsp">로그인</a></li>
             <li class="menu-letter"><a href="Join.jsp">회원가입</a></li>
             <li class="menu-letter"><a href="#">고객센터</a></li>
-            <li class="menu-letter" id="addEvent"><i class="fa-regular fa-heart"></i>
+            <li class="menu-letter" id="addEvent"><i class="fa-regular fa-heart"></i> -->
+        
+               
+           <!-- <div class="for-space" id="menu">
+		<ul class="header1-ul">
+			<li class="menu-letter"><a href="Login.jsp">로그인</a></li>
+			<li class="menu-letter"><a href="Join.jsp">회원가입</a></li>
+		<li class="menu-letter"><a href="#">고객센터</a></li>
+		</ul>
+		</div>     -->
+               
+               
+               <!-- 찜목록보이는 -->
                 <div id="hidden-list">
                     <p>My Trainer</p>
                     <i class="fa-solid fa-xmark" id="close"></i>
