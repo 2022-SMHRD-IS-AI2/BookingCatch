@@ -7,17 +7,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class LogoutCon extends HttpServlet {
+
+public class LogOutCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		HttpSession session = request.getSession();
 		
-//		session.invalidate();
+		//session.invalidate();
 		session.removeAttribute("loginMember");
 		
-		response.sendRedirect("main.jsp");
+		response.sendRedirect("Main.jsp");
 	
 	
 	}
