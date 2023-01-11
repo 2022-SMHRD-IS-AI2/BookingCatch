@@ -1,6 +1,7 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.URLEncoder;
 
 import javax.servlet.ServletException;
@@ -52,7 +53,7 @@ public class writeTipBoardCon extends HttpServlet {
 		System.out.println("writer:"+writer);
 		System.out.println("filename:"+filename);
 		System.out.println("content:"+content);
-		int likes = 0;
+		BigDecimal likes = BigDecimal.ZERO;
 		
 		tipBoardVO vo = new tipBoardVO(title, content, filename, writer ,likes);
 		

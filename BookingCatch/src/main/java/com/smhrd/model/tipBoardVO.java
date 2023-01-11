@@ -26,7 +26,7 @@ public class tipBoardVO {
 	@NonNull
 	private String writer;
 	@NonNull
-	private int likes;
+	private BigDecimal likes;
 	
 
 	
