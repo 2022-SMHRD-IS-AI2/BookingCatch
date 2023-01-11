@@ -46,7 +46,7 @@
 
 
 
-<script src="Login.js"></script>
+<script src="asset/js/Login.js"></script>
 
 </body>
 </html>

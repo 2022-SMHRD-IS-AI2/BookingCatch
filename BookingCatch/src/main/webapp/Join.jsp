@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="./asset/css/Join.css">
+<link rel="stylesheet" href="asset/css/Join.css">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
 					<p>아이디</p>
 					<input type="text" name="id" id="inputE" placeholder="ID">
 					<!-- <input value="id중복체크" onclick="checkE()" type="button"> -->
-					<button onclick="checkE()" type="button">중복확인</button>
+					<button onkeypress="checkE()" type="button">중복확인</button>
 					<div>
 						<span id="resultCheck"></span>
 					</div>

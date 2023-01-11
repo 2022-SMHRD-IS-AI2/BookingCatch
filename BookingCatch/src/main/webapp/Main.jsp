@@ -119,6 +119,6 @@
     
     
     </div>
-    <script src="Main.js"></script>
+    <script src="asset/js/Main.js"></script>
 </body>
 </html>
