@@ -1,7 +1,7 @@
 let btn1 = document.getElementById('user')
 let btn2 = document.getElementById('trainer')
 let cnt1 =0;
-let cnt12 =0;
+let cnt2 =0;
 
 btn1.addEventListener('click',()=>{
     if(cnt1==0){

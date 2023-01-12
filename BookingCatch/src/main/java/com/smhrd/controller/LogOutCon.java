@@ -18,8 +18,8 @@ public class LogOutCon extends HttpServlet {
 
 		HttpSession session = request.getSession();
 		
-		//session.invalidate();
-		session.removeAttribute("loginMember");
+		session.invalidate();
+//		session.removeAttribute("loginMember");
 		
 //		response.sendRedirect("Main.jsp");
 	
