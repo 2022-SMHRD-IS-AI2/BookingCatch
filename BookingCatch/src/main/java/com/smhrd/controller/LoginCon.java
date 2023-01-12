@@ -1,6 +1,8 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +25,14 @@ public class LoginCon extends HttpServlet {
 		String who = request.getParameter("who");
 		
 		System.out.println(who);
+		
+		if(who == null) {
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter writer = response.getWriter();
+			writer.println("<script>alert('로그인 유형을 선택해 주세요!'); location.href='Login.jsp';</script>"); 
+			writer.close();
+			
+		}
 		
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");

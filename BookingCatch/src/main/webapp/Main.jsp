@@ -23,16 +23,13 @@
 	
 	MemberVO loginMember=null;
 	TrainerVO loginTrainer=null;
-	System.out.print("여기서 문제?");
 	if(session.getAttribute("who")==null){
-		System.out.print("당연히 null이겠지");
 		
 	}else{
 		String who = (String)session.getAttribute("who");
 	if(session.getAttribute("who").equals("U")){
 		loginMember = (MemberVO) session.getAttribute("loginMember");}
 	else if(who.equals("T")){
-		System.out.print("제발되어라");
 	//System.out.print(loginMember.getId());
 	loginTrainer =(TrainerVO) session.getAttribute("loginMember");}}
 	%>
@@ -52,7 +49,6 @@
             
             <%
             if (loginMember == null && loginTrainer ==null){ 
-            	System.out.print("제발되어라2");
             %> <div class="for-space" id="menu">
 		<ul class="header1-ul">
 			<li class="menu-letter"><a href="Login.jsp">로그인</a></li>
@@ -77,9 +73,7 @@
             	
             }
             else if(loginMember!=null){
-            	System.out.print("제발되어라4");
             	System.out.print(loginMember.getId());
-            	System.out.print("제발되어라5");
             %><div class="for-space" id="menu">
           	<ul class="header1-ul">
           	<li class="menu-letter"><%=loginMember.getId() %>님 </li>
@@ -90,10 +84,8 @@
             
              <%
             } else if(loginMember.getId().equals("admin")){ 
-            	System.out.print("제발되어라4");
             	System.out.print(loginTrainer.getId());
-            	System.out.print("제발되어라5");
-            %>	System.out.print("제발되어라3");
+            %>	
             %>
             <div class="for-space" id="menu">
             <ul class="header1-ul">
