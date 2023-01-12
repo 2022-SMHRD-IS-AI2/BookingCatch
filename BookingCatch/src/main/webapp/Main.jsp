@@ -66,21 +66,6 @@
             </div>
             <%}} %>
         
-       <!--  <div class="for-space"></div>
-        <ul class="header1-ul">
-            <li class="menu-letter"><a href="Login.jsp">로그인</a></li>
-            <li class="menu-letter"><a href="Join.jsp">회원가입</a></li>
-            <li class="menu-letter"><a href="#">고객센터</a></li>
-            <li class="menu-letter" id="addEvent"><i class="fa-regular fa-heart"></i> -->
-        
-               
-           <!-- <div class="for-space" id="menu">
-		<ul class="header1-ul">
-			<li class="menu-letter"><a href="Login.jsp">로그인</a></li>
-			<li class="menu-letter"><a href="Join.jsp">회원가입</a></li>
-		<li class="menu-letter"><a href="#">고객센터</a></li>
-		</ul>
-		</div>     -->
                
                
                <!-- 찜목록보이는 -->
