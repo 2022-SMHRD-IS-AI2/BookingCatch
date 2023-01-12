@@ -1,123 +1,181 @@
 @charset "EUC-KR";
+@font-face {
+    font-family: 'Rubik80sFade-Regular';
+    src: url("Rubik80sFade-Regular.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&family=Gowun+Batang&family=Kanit&family=Lilita+One&family=Lobster&family=Michroma&family=Montserrat+Alternates&family=Moon+Dance&family=Play&family=Rubik+80s+Fade&family=Shadows+Into+Light&display=swap');
+
 .wrap{
-    width: 100%;height: 100vh;
-    position: absolute;top: 0px;left: 0px;}
-input{border: none;}
-input:focus{outline: none;}
+    width: 100%;
+    position: absolute;
+    top: 0px;left: 0px;
+}
+
+body,div,ul,li,a{font-family: Arial, Helvetica, sans-serif;}
+
+*{padding:0; margin:0;}
+li{list-style:none;}
 a{color:inherit; text-decoration:none;}
+button{border:none; border-radius:0%;}
+input{border:none; border-radius:none;}
+input:focus{outline:none;}
+textarea{resize: none; padding:20px 30px; font-size:18px; font-family: Arial, Helvetica, sans-serif; border:none;}
+textarea:focus{outline:none;}
 
+.fc{display:flex; justify-content:center;}
+.fb{display:flex; justify-content:space-between;}
 
+header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 3%;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+}
+header h1{
+    font-family:'Gloria Hallelujah';
+}
+header input{
+    width: 12%;
+    border-bottom: 1px solid black;
+    align-self: center;
+    padding-bottom: 5px;
+}
+header>ul{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+.ul-forSize ul{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.ul-forSize{
+    width: 20%;
+    display: flex;
+    justify-content: end;
+}
 
+.wrap header ul li span.en{display: block;}
+.wrap header ul li span.ko{display: none;}
+.wrap header ul li:hover span.ko{display: block;}
+.wrap header ul li:hover span.en{display: none;}
+.want-to-be-fixed li{
+    line-height: 16px;
+    vertical-align: middle;
+    text-align: center;
+}
+.want-to-be-fixed li:first-child{
+    width: 50.09px;
+}
+.want-to-be-fixed li:nth-child(2){
+    width: 64px;
+}
+.want-to-be-fixed li:nth-child(3){
+    width: 80.91px;
+}
+.want-to-be-fixed li:nth-child(4){
+    width: 61.38px;
+}
 
-
-
+/* 여기까지 header부분 css */
 
 .login{
-    width: 500px;
-    height: 100vh;
-    margin: 1px solid black;
+    margin-top: 3%;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 0;left: 0;right: 0;left: 0;
-    margin: auto;
 }
-.login-letter{
-    font-size: 40px;
-    font-weight: 100;
-    margin: 30px;
+.login h1{
+    font-weight: 300;
+    padding: 20px;
+    font-family:'Montserrat Alternates','Gloria Hallelujah';
 }
-.login-who{
-    display: flex;
-    justify-content: center;
+.login-form{
+    height: 30%;
     width: 100%;
-    margin-bottom: 15px;
-}
-.login-who button{
-    border-radius: 0px;
-    width: 50%;
-    height: 50px;
-    background-color: transparent;
-    color: black;
-    border: 1px solid black;
-}
-.login-who button:hover,.login-button input:hover{
-    background-color: black;
-    color: white;
-    cursor: pointer;
-}
-.login-input{
-    width: 100%;
-    height: 40px;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 20px 0px 0px;
+    margin-top: 25px;
 }
-.login-input p{ 
+.login-form>input{
+    height: 100%;
     width: 30%;
-    text-align: center;
-    font-size: 20px;
-}
-.login-input input{
-    width: 70%;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    border-bottom: 1px solid black;
+    border-radius: 15px;
+    border: 1px solid rgb(223, 223, 223);
+    padding-left: 20px;
+    box-sizing: border-box;
     font-size: 17px;
-}
-.login-checkbox{
-    width: 40%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 10px 0px;
 
 }
-.login-checkbox input{
-    border-radius: 0px;
-    
+.login-form>input::placeholder{
+    /* padding-left: 2px; */
+    font-size: 17px;
+
 }
-.login-checkbox span{
-    font-size:12px;
-    color: black;
+.remain-login{
+    width: 30%;
+    height: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1% 0px;
+    padding-left: 2%;
 }
-.login-button{
-    margin-top:10px;
-    width: 100%;
-    height: 50px;
+input[type="checkbox"]{
+    zoom: 1.3;
+    accent-color: black;
+    margin-right: 5px;
+    border-color: rgb(206, 206, 206);
 }
-.login-button input{
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background-color: transparent;
+
+button{
+    height: 10%;
+    width: 30%;
+    background-color: white;
     color: black;
     border: 1px solid black;
-    font-size: 20px;
-    font-weight: 100;
+    font-size: 17px;
+    cursor: pointer;
 }
-.login-find{
-    width: 50%;
-    height: 20px;
+button:hover{
+    
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    transition-property: background-color, color, border-radius;
+    transition-duration: 1s;
+}
+button .block{display: block;}
+button:hover .block{display: none;}
+button .none{display: none;}
+button:hover .none{display: block;}
+.little-letter{
+    width:10%;
+    height: 8%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 20px;
 }
-.login-find span{
-    position: relative;
-    left: 10px;
-}
-.login-find span:nth-child(2){
-    color: rgb(162, 162, 162);
-}
-input::placeholder{
-    color: rgb(162, 162, 162);
-}
-span{
-    color: black;
+.little-letter span{
     font-size: 12px;
+    color: rgb(191, 191, 191);
+}
+.little-letter span:nth-child(2){
+    color: black;
+    font-size: 16px;
+}
+.little-letter span:hover{
+    color: black;
+    transition: color 1s;
 }
