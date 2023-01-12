@@ -139,9 +139,7 @@
 
         
     
-    
-    
-    
+
     <img src="./img/Main.jpg" alt="Sorry" class="Main-img">
     
     

@@ -24,13 +24,13 @@
                 <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
             </ul>
 
-            <a href="#"><h1>HelinCare</h1></a> 
+            <a href="Main.jsp"><h1>HelinCare</h1></a> 
             
             <div class="ul-forSize">
 
                 <ul>
                     <li><a href="#">로그인</a></li>
-                    <li><a href="#">회원가입</a></li>
+                    <li><a href="Join.jsp">회원가입</a></li>
                     <li><a href="#">고객센터</a></li>
                     <li><i class="fa-regular fa-heart"></i></li>
                 </ul>
@@ -44,19 +44,19 @@
     
         <div class="login">
             <h1>Login</h1>
-            <form action="#" class="login-form">
+            <form action="LoginCon" class="login-form">
                 <input type="text" name="id" placeholder="아이디">
                 <input type="password" name="pw" placeholder="비밀번호">
                 <div class="remain-login">
                     <input type="checkbox">
                     <span>로그인 유지</span>
                 </div>
+            <button type="submit"><span class="block">LOGIN</span><span class="none">로그인</span></button>
             </form>
-            <button><span class="block">LOGIN</span><span class="none">로그인</span></button>
             <div class="little-letter">
-                <a href=""><span>아이디 찾기</span></a>
+                <a href="#"><span>아이디 찾기</span></a>
                 <span>|</span>
-                <a href=""><span>비번 찾기</span></a>
+                <a href="#"><span>비번 찾기</span></a>
             </div>
         </div>
 
@@ -70,55 +70,3 @@
 
 </body>
 </html>
-    
-<!-- <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="./asset/css/Login.css">
-</head>
- <body>
-    
-
-    <div class="wrap">
-        <div class="login">
-        <div> <a href="Main.jsp"><img src="./img/Logo.jpg"></a></div>
-            <p class="login-letter">로그인</p>
-            <div class="login-who">
-                <button id="user">회원</button>
-                <button id="trainer">트레이너</button>
-            </div>
-            <form action="LoginCon" method="post">
-            <div class="login-input">
-                <p>ID</p>
-                <input type="text" name="id" placeholder="아이디">
-            </div>
-            <div class="login-input">
-                <p>PW</p>
-                <input type="password" name="pw" placeholder="비밀번호">
-            </div>
-            <div class="login-checkbox">
-                <input type="checkbox"><span>아이디 저장</span>
-            </div>
-            <div class="login-button">
-                <input type="submit" value="로그인">
-            </div>
-            </form>
-            <div class="login-find">
-                <span><a href="#">아이디 찾기</a></span>
-                <span>|</span>
-                <span><a href="#">비밀번호 재설정</a></span>
-            </div>
-            
-            
-            
-        </div>
-    </div>
-
-
-
-<script src="Login.js"></script>
-
-</body>
-</html>  -->
