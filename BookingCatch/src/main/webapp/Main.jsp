@@ -1,3 +1,5 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="com.smhrd.model.TrainerVO"%>
 <%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -18,8 +20,21 @@
 </head>
 <body>
 	<%
-	MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
+	
+	MemberVO loginMember=null;
+	TrainerVO loginTrainer=null;
+	System.out.print("여기서 문제?");
+	if(session.getAttribute("who")==null){
+		System.out.print("당연히 null이겠지");
+		
+	}else{
+		String who = (String)session.getAttribute("who");
+	if(session.getAttribute("who").equals("U")){
+		loginMember = (MemberVO) session.getAttribute("loginMember");}
+	else if(who.equals("T")){
+		System.out.print("제발되어라");
 	//System.out.print(loginMember.getId());
+	loginTrainer =(TrainerVO) session.getAttribute("loginMember");}}
 	%>
 	
     <div class="wrap">
@@ -36,7 +51,8 @@
             </div>
             
             <%
-            if (loginMember == null){ 
+            if (loginMember == null && loginTrainer ==null){ 
+            	System.out.print("제발되어라2");
             %> <div class="for-space" id="menu">
 		<ul class="header1-ul">
 			<li class="menu-letter"><a href="Login.jsp">로그인</a></li>
@@ -48,15 +64,22 @@
             <%
             }else{
             %><%
-            if(loginMember.getId().equals("admin")){
-            %><div class="for-space" id="menu">
-            <ul class="header1-ul">
-            <li class="menu-letter"><a href="#">전체회원정보</a></li>
-            <li class="menu-letter"><a href="#">개인정보수정</a> </li>
+            if(loginTrainer!=null){%>
+            <div class="for-space" id="menu">
+          	<ul class="header1-ul">
+          	<li class="menu-letter"><%=loginTrainer.getId() %>님 </li>
+            <li class="menu-letter"><a href="#">개인정보수정</a></li>
+            <li class="menu-letter"><a href="#">예약확인</a> </li>
             <li class="menu-letter"><a href="LogOutCon">로그아웃</a></li></ul>
             </div>
+            
              <%
-            } else if(loginMember != null) { 
+            	
+            }
+            else if(loginMember!=null){
+            	System.out.print("제발되어라4");
+            	System.out.print(loginMember.getId());
+            	System.out.print("제발되어라5");
             %><div class="for-space" id="menu">
           	<ul class="header1-ul">
           	<li class="menu-letter"><%=loginMember.getId() %>님 </li>
@@ -64,7 +87,21 @@
             <li class="menu-letter"><a href="#">예약확인</a> </li>
             <li class="menu-letter"><a href="LogOutCon">로그아웃</a></li></ul>
             </div>
-            <%}} %>
+            
+             <%
+            } else if(loginMember.getId().equals("admin")){ 
+            	System.out.print("제발되어라4");
+            	System.out.print(loginTrainer.getId());
+            	System.out.print("제발되어라5");
+            %>	System.out.print("제발되어라3");
+            %>
+            <div class="for-space" id="menu">
+            <ul class="header1-ul">
+            <li class="menu-letter"><a href="#">전체회원정보</a></li>
+            <li class="menu-letter"><a href="#">개인정보수정</a> </li>
+            <li class="menu-letter"><a href="LogOutCon">로그아웃</a></li></ul>
+            </div>
+            <%}}%>
         
                
                
@@ -103,10 +140,6 @@
                         
                         
                     </div>
-
-                  
-                    
-                    
 
                 </div>
             </li>

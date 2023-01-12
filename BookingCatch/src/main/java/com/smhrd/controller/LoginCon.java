@@ -9,6 +9,8 @@ import javax.servlet.http.HttpSession;
 
 import com.smhrd.model.MemberDAO;
 import com.smhrd.model.MemberVO;
+import com.smhrd.model.TrainerDAO;
+import com.smhrd.model.TrainerVO;
 
 public class LoginCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -18,23 +20,58 @@ public class LoginCon extends HttpServlet {
 		
 		request.setCharacterEncoding("UTF-8");
 		
+		String who = request.getParameter("who");
+		
+		System.out.println(who);
+		
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
-		MemberVO vo = new MemberVO(id,pw);
-		MemberDAO dao = new MemberDAO();
-		MemberVO loginMember = dao.selectMember(vo);
 		
-		if(loginMember != null) { 
-			System.out.println("로그인 성공");
+		
+		if(who.equals("U")) {
 			
-			HttpSession session = request.getSession();
-			session.setAttribute("loginMember", loginMember);
-			response.sendRedirect("Main.jsp");
-		}else {
-			System.out.println("로그인 실패");
-			response.sendRedirect("Main.jsp");
+			
+			MemberVO vo = new MemberVO(id,pw);
+			MemberDAO dao = new MemberDAO();
+			MemberVO loginMember = dao.selectMember(vo);
+
+			if(loginMember != null) { 
+				System.out.println("로그인 성공");
+				
+				HttpSession session = request.getSession();
+				session.setAttribute("loginMember", loginMember);
+				session.setAttribute("who", who);
+				response.sendRedirect("Main.jsp");
+			}else {
+				System.out.println("로그인 실패");
+				response.sendRedirect("Main.jsp");
+			}
+			
+		}else if (who.equals("T")) {
+			
+			TrainerVO vo =new TrainerVO(id,pw);
+			TrainerDAO dao = new TrainerDAO();
+			TrainerVO loginMember = dao.selectTrainer(vo);
+
+			if(loginMember != null) { 
+				System.out.println("로그인 성공");
+				
+				HttpSession session = request.getSession();
+				session.setAttribute("loginMember", loginMember);
+				session.setAttribute("who", who);
+				response.sendRedirect("Main.jsp");
+			}else {
+				System.out.println("로그인 실패");
+				response.sendRedirect("Main.jsp");
+			}
+			
+			
+			
 		}
+		
+		
+		
 		
 		
 		
