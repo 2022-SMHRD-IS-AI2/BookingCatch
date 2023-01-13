@@ -72,7 +72,7 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td class="subject" a>공지사항 안내(세부내용 포함)</td>
+                    <td class="subject"><a href="board.jsp">공지사항 안내(세부내용 포함)</a></td>
                     <td>dusikiki</td>
                     <td>2022-10-26</td>
                     <td>0</td>
