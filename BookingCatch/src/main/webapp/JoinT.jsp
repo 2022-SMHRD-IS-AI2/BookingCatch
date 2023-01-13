@@ -5,23 +5,94 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="Join.css">
+<link rel="stylesheet" href="asset/css/Join.css">
+
 </head>
 <body>
-<form action="JoinTCon">
-ID : <input type="text" name="id"> <br>
-PW : <input type="text" name="pw"> <br>
-NAME : <input type="text" name="name"> <br>
-BIRTH : <input type="text" name="birth"> <br>
-MBTI : <input type="text" name="mbti"> <br>
-<!-- 실제로 mbti, 성별은 select(option)사용할 예정, birth는 date 사용할 예정 -->
-GENDER : <input type="text" name="gender"> <br>
-CAREER : <input type="text" name="career"> <br>
-CENTER : <input type="text" name="center"> <br>
-TRAINER TYPE : <input type="text" name="ttype"> <br>
-PHONE : <input type="text" name="phone"> <br>
+    <div class="wrap">
+        <!-- header시작 -->
+        <header>
+            
+            <ul class="want-to-be-fixed">
+                <li><a href="#"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
+                <li><a href="#"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
+                <li><a href="#"><span class="en">Community</span><span class="ko">게시판</span></a></li>
+                <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
+            </ul>
 
-<input type="submit" value="회원가입">
-<script src="Join.js"></script>
+            <a href="#"><h1>HelinCare</h1></a> 
+            
+            <div class="ul-forSize">
+
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+
+        </header>
+        <!-- 여기까지 header -->
+
+        <div class="join">
+            <h1>Join</h1>
+            <form action="#" class="join-form">
+                
+                <!-- input들어옴 -->
+                <div class="input-join">
+                    <input type="text" placeholder="아이디">
+                    <div class="inside-letter">
+                        <span>사용할 수 있는 아이디</span>
+                    </div>
+                
+                    <input type="password" placeholder="비밀번호">
+                    <input type="password" placeholder="비밀번호 확인">
+                    
+                    <div class="inside-letter">
+                        <span>비밀번호가 일치합니다</span>
+                    </div>
+                
+                    <input type="text" placeholder="이름">
+                    <input type="datetime" placeholder="생일 8자리">
+                    <!-- <input type="text" placeholder="MBTI"> -->
+                    <input list="mbtis" name="mbti" placeholder="MBTI" class="input-list">
+
+                        <datalist id="mbtis">
+                            <option value="ESTP">
+                            <option value="ESFP">
+                            <option value="ENFP">
+                            <option value="ENTP">
+                            <option value="ESTJ">
+                            <option value="ESFJ">
+                            <option value="ENFJ">
+                            <option value="ENTJ">
+                            <option value="ISTJ">
+                            <option value="ISFJ">
+                            <option value="INFJ">
+                            <option value="INTJ">
+                            <option value="ISTP">
+                            <option value="ISFP">
+                            <option value="INFP">
+                            <option value="INTP">
+                        </datalist>
+                    <input type="text" placeholder="주소">
+                
+                    <div class="input-radio">
+                        <input type="radio" name="gender" value="M" id="Man">
+                        <label for="Man">남</label>
+                        <input type="radio" name="gender" value="W" id="Woman">
+                        <label for="Woman">여</label>
+                        <!-- <span>히</span> -->
+                    </div>
+                    <button class="submit"><span class="en">Join</span><span class="ko">회원가입</span></button>
+
+                </div>
+            </form>
+            
+        </div>
+
+        
+    </div>
 </body>
 </html>
