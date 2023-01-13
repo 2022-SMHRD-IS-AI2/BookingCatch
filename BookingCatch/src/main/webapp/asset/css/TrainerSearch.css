@@ -1,0 +1,354 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+.wrap{
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 100%;
+}
+button{border:none; border-radius:0%;}
+input{border:none; border-radius:none;background-color: transparent;}
+input:focus{outline:none;}
+a{color:inherit; text-decoration:none;}
+li{list-style: none;}
+
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* padding: 0 16px; */
+    box-sizing: border-box;
+}
+.header1{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0px 40px;
+}
+.Main-img{
+    width: 100%;
+    height: 83vh;
+}
+.logo{
+    flex-basis:35%;
+}
+.header1-ul{
+    flex-basis: 17%;
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+}
+.for-space{
+    flex-basis: 18%;
+}
+.header-center{
+    flex-basis:30%;
+    display: flex;
+    align-items:center;
+}
+.header-search{
+    width: 100%;
+    appearance: none;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+    padding-left:10px;
+}
+.header-search::placeholder{
+    color: rgb(150, 150, 150);
+    padding-left: 10px;
+    font-size: 12px;
+}
+.search-btn{
+    position:relative;
+    left: -30px;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 100;
+    cursor: pointer;
+}
+.menu-letter{
+    font-size: 12px;
+}
+.menu-letter i{
+    font-size: 15px;
+    cursor: pointer;
+}
+.header2{
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+.header2-ul{
+    width: 25%;
+    min-height: 50px;
+    padding-left: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.header2-ul>li{
+    width: 100%;
+    color:rgb(145, 145, 145);
+    text-align: center;
+}
+a:hover{
+    font-weight: 600;
+    color: rgb(65, 65, 65);
+}
+
+.hidden{
+    display:none;
+    width: 120px;
+    list-style: none;
+    position:absolute;
+    top: 161px;
+    font-size: 13px;
+    border: 1px solid #dedede;
+    padding: 15px 5px;
+    box-sizing: border-box;
+    text-align: left;  
+
+    /* hover시 밑줄 */
+    border-top: 2px solid #fcbf49;
+    margin-top: -1px;
+}
+
+/* 서연 */
+.hidden > li > a{
+    display: block;
+    padding-top: 15px;
+    margin-left: 10px;
+}
+.hidden > li:first-child > a{padding-top: 0;}
+
+.header2-ul>li:hover >.hidden,.hidden:hover{display: block;}
+
+/* .header2-ul>li:hover >.hidden,.hidden:hover{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    color: black;
+    padding-bottom: 40px;
+} */
+
+
+#hidden-list{
+    background-color: white;
+    border-left: 1px solid rgb(145, 145, 145);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 450px;
+    height: 100vh;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    align-items: center;
+}
+#hidden-list>p{
+    margin-top: 40px;
+    font-size: 20px;
+}
+hr{
+    width: 90%;
+    margin: 2px;
+}
+#hidden-list img{
+    width: 50px;
+    height: 70px;
+}
+.my-trainer-all{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: 30px 0px 0px 40px;
+}
+.my-trainer{
+    width: 80%;
+    float: inline-start;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.trainer-letter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.my-trainer>i{
+    position: relative;
+    left: 50px;
+    cursor: pointer;
+}
+#hidden-list>i{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-size: 20px;
+    color: rgb(145, 145, 145);
+}
+/* Gray Scale */
+/* Trainer 모음 */
+/* Trainer001 */
+.Trainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.Trainer h3 {
+    text-align: center;
+}
+
+.Trainer figure img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  
+  }
+  .Trainer figure:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+  /* Trainer002 */
+  .Trainer002 figure img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+   
+  }
+  .Trainer002 figure:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+
+  /* 서연 */
+  .Trainer{padding: 0 1rem;
+           margin-top: -150px;
+         
+              
+}
+  .Trainer ul{font-size: 0;
+display: flex;
+flex-wrap: wrap;
+padding: 0px 30px;
+width: 98%;
+
+}
+  .Trainer ul li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  color: #000;
+  width: 25%;
+  text-align: center;
+  box-sizing: border-box;
+  padding-right: 20px;
+  padding-bottom: 50px;
+  font-weight: 1000;
+  font-size: 30px;
+  font-style: italic;
+ 
+}
+
+.Trainer ul li p{
+    font-size: large;
+}
+
+.Trainer ul li:nth-child(4n){padding-right: 0;}
+
+.TrainerKategorie{
+padding: 10px;
+margin-top: 50px;
+text-align: center;
+font-size: 1cm
+}
+/* .TrainerKategorie:nth-child(2){
+    position: absolute;
+    top: 100px;
+} */
+.Container{
+display: flex;
+flex-direction: column;
+}
+
+.Trainer{
+   height: 500px;
+    margin: 0px;
+}
+
+/* .Trainer:nth-child(2){
+    position: absolute;
+    top: 1500px;
+} */
+
+.Trainer_Name{
+    padding: 20px;
+}
+
+
+
