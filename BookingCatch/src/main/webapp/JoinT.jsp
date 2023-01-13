@@ -41,16 +41,16 @@
                 
                 <!-- input들어옴 -->
                 <div class="input-join">
-                    <input type="text" placeholder="아이디">
+                    <input type="text" placeholder="아이디" id="inputE" onkeypress="checkE()">
                     <div class="inside-letter">
-                        <span>사용할 수 있는 아이디</span>
+                        <span id="resultCheck"></span>
                     </div>
                 
-                    <input type="password" placeholder="비밀번호">
-                    <input type="password" placeholder="비밀번호 확인">
+                    <input type="password" placeholder="비밀번호" id="pw">
+                    <input type="password" placeholder="비밀번호 확인" id="checkPw" onkeyup="checkPassword()">
                     
                     <div class="inside-letter">
-                        <span>비밀번호가 일치합니다</span>
+                        <span id="resultPw"></span>
                     </div>
                 
                     <input type="text" placeholder="이름">
@@ -94,5 +94,44 @@
 
         
     </div>
+    	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script>
+		function checkE() {
+			var inputE = $('#inputE').val()
+			// console.log(inputE)
+
+			$.ajax({
+				// 어디로 요청할 것인지??
+				url : 'EmailCheckCon',
+				// 요청데이터(json형태, {key, value})
+				data : {
+					'inputE' : inputE
+				},
+				// 요청방식
+				type : 'get',
+				// 요청-응답
+				success : function(data) {
+					if (data == 'true') {
+						$('#resultCheck').text('사용할 수 없는 아이디')
+					} else {
+						$('#resultCheck').text('사용할 수 있는 아이디')
+					}
+				},
+				error : function() {
+					alert("통신실패")
+				}
+			})
+		}
+		
+		function checkPassword(){
+			var pw = $('#pw').val()
+			var checkPw = $('#checkPw').val()
+			if(checkPw==pw){
+				$('#resultPw').text('비밀번호가 일치합니다')
+			}else{
+				$('#resultPw').text('비밀번호가 다릅니다')
+			}
+		}
+	</script>
 </body>
 </html>
