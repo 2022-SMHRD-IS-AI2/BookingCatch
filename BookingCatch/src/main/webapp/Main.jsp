@@ -138,7 +138,7 @@
     </div>
     <div class="header2">
         <ul class="header2-ul">
-            <li><a href="#">트레이너</a>
+            <li><a href="TrainerInfo.jsp">트레이너</a>
                 <ul class="hidden">
                     <li>지역별</li>
                     <li>운동별</li>
