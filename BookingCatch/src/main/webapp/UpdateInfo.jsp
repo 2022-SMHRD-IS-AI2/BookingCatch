@@ -20,17 +20,18 @@
 				<li><input name="pw" type="password" placeholder="PW를 입력하세요"></li>
 				<li>이름 : <%=loginMember.getName() %></li>
 				<li>생년월일 : <%=loginMember.getBirth() %></li>
-				<li><input name="mbti" type="text" placeholder="MBTI를 입력하세요"></li>
+				<li><input name="mbti" type="text" placeholder="MBTI를 입력하세요" 
+					value="<%=loginMember.getMbti()%>"></li>
 				<li><input name="address" type="text" placeholder="집주소를 입력하세요"
-					value="<%=loginMember.getAddress()%>"></li>
+					value="<%=loginMember.getAddress()%>"></li>	
 				<li>가입일자 : <%=loginMember.getB_date() %></li>
 				<li><input name="phone" type="text"
-					value="<%=loginMember.getPhone()%>" placeholder="전화번호를 입력하세요"></li>
+					value="<%=loginMember.getPhone()%>" placeholder="핸드폰번호를 입력하세요"></li>
 				<li><input type="submit" value="회원정보수정"></li>
 				<li>성별 : <%=loginMember.getGender()%></li>
 			</form>
 		</ul>
-
+		<a href="Main.jsp">홈으로 가기</a>
 	</div>
 
 </body>

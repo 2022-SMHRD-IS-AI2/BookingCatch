@@ -24,6 +24,11 @@ delete from TB_USER where u_id=#{id}
 					else 0
 				end result
 		from TB_USER where U_ID=#{id}		
-	</select>
+</select>
+
+<update id="updateMember" parameterType= "com.smhrd.model.MemberVO">
+		update tb_user set u_pw=#{pw}, u_mbti=#{mbti},u_address=#{address},u_phone=#{phone} where u_id=#{id}
+	</update>
+
 
 </mapper>

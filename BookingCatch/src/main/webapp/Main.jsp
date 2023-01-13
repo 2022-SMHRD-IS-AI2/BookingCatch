@@ -19,21 +19,20 @@
     
 </head>
 <body>
-	<%
-	
-	MemberVO loginMember=null;
-	TrainerVO loginTrainer=null;
-	if(session.getAttribute("who")==null){
-		
-	}else{
-		String who = (String)session.getAttribute("who");
-	if(session.getAttribute("who").equals("U")){
-		loginMember = (MemberVO) session.getAttribute("loginMember");}
-	else if(who.equals("T")){
-	//System.out.print(loginMember.getId());
-	loginTrainer =(TrainerVO) session.getAttribute("loginMember");}}
-	%>
-	
+   <%
+   
+   MemberVO loginMember=null;
+   TrainerVO loginTrainer=null;
+   
+   if(session.getAttribute("loginMember")==null&&session.getAttribute("loginTrainer")==null){
+      System.out.print("첫 메인");
+   }else if(session.getAttribute("loginMember")!=null){
+      loginMember = (MemberVO) session.getAttribute("loginMember");
+   }else{
+      loginTrainer = (TrainerVO)session.getAttribute("loginTrainer");
+   }
+   %>
+   
     <div class="wrap">
         <header>
             <div class="header1">
@@ -50,49 +49,49 @@
             <%
             if (loginMember == null && loginTrainer ==null){ 
             %> <div class="for-space" id="menu">
-		<ul class="header1-ul">
-			<li class="menu-letter"><a href="Login.jsp">로그인</a></li>
-			<li class="menu-letter"><a href="Join.jsp">회원가입</a></li>
-		<li class="menu-letter"><a href="#">고객센터</a></li>
-		</ul>
-		</div>  
+      <ul class="header1-ul">
+         <li class="menu-letter"><a href="Login.jsp">로그인</a></li>
+         <li class="menu-letter"><a href="Join.jsp">회원가입</a></li>
+      <li class="menu-letter"><a href="#">고객센터</a></li>
+      </ul>
+      </div>  
             
             <%
             }else{
             %><%
             if(loginTrainer!=null){%>
             <div class="for-space" id="menu">
-          	<ul class="header1-ul">
-          	<li class="menu-letter"><%=loginTrainer.getId() %>님 </li>
-            <li class="menu-letter"><a href="#">개인정보수정</a></li>
-            <li class="menu-letter"><a href="#">예약확인</a> </li>
-            <li class="menu-letter"><a href="LogOutCon">로그아웃</a></li></ul>
-            </div>
-            
-             <%
-            	
-            }
-            else if(loginMember!=null){
-            	System.out.print(loginMember.getId());
-            %><div class="for-space" id="menu">
-          	<ul class="header1-ul">
-          	<li class="menu-letter"><%=loginMember.getId() %>님 </li>
-            <li class="menu-letter"><a href="#">개인정보수정</a></li>
+             <ul class="header1-ul">
+             <li class="menu-letter"><%=loginTrainer.getId() %>님 </li>
+            <li class="menu-letter"><a href="UpdateInfo.jsp">개인정보수정</a></li>
             <li class="menu-letter"><a href="#">예약확인</a> </li>
             <li class="menu-letter"><a href="LogOutCon">로그아웃</a></li></ul>
             </div>
             
              <%
             } else if(loginMember.getId().equals("admin")){ 
-            	System.out.print(loginTrainer.getId());
-            %>	
-            %>
+               
+            %>   
+            
             <div class="for-space" id="menu">
             <ul class="header1-ul">
             <li class="menu-letter"><a href="#">전체회원정보</a></li>
-            <li class="menu-letter"><a href="#">개인정보수정</a> </li>
+            <li class="menu-letter"><a href="UpdateInfo.jsp">개인정보수정</a> </li>
+            <li class="menu-letter"><a href="LogOutCon">로그아웃</a></li></ul>
+            </div> 
+               
+             <%
+            }
+            else if(loginMember!=null){
+               System.out.print(loginMember.getId());
+            %><div class="for-space" id="menu">
+             <ul class="header1-ul">
+             <li class="menu-letter"><%=loginMember.getId() %>님 </li>
+            <li class="menu-letter"><a href="UpdateInfo.jsp">개인정보수정</a></li>
+            <li class="menu-letter"><a href="#">예약확인</a> </li>
             <li class="menu-letter"><a href="LogOutCon">로그아웃</a></li></ul>
             </div>
+            
             <%}}%>
         
                

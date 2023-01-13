@@ -56,8 +56,8 @@
 			<div class="gender-box">
 				<p>성별</p>
 				<div class="gender">
-					남<input type="radio" name="gender" value="m"> 여<input
-						type="radio" name="gender" value="w">
+					남<input type="radio" name="gender" value="Male"> 여<input
+						type="radio" name="gender" value="Female">
 				</div>
 			</div>
 			<input type="checkbox"> <input type="checkbox"> <input

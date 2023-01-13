@@ -15,78 +15,84 @@ import com.smhrd.model.TrainerDAO;
 import com.smhrd.model.TrainerVO;
 
 public class LoginCon extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+   private static final long serialVersionUID = 1L;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		
-		request.setCharacterEncoding("UTF-8");
-		
-		String who = request.getParameter("who");
-		
-		System.out.println(who);
-		
-		if(who == null) {
-			response.setContentType("text/html; charset=UTF-8");
-			PrintWriter writer = response.getWriter();
-			writer.println("<script>alert('로그인 유형을 선택해 주세요!'); location.href='Login.jsp';</script>"); 
-			writer.close();
-			
-		}
-		
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		
-		
-		
-		if(who.equals("U")) {
-			
-			
-			MemberVO vo = new MemberVO(id,pw);
-			MemberDAO dao = new MemberDAO();
-			MemberVO loginMember = dao.selectMember(vo);
+   protected void service(HttpServletRequest request, HttpServletResponse response)
+         throws ServletException, IOException {
+      
+      request.setCharacterEncoding("UTF-8");
+      
+      String who = request.getParameter("who");
+      
+      System.out.println(who);
+      
+      if(who == null) {
+         response.setContentType("text/html; charset=UTF-8");
+         PrintWriter writer = response.getWriter();
+         writer.println("<script>alert('로그인 유형을 선택해 주세요!'); location.href='Login.jsp';</script>"); 
+         writer.close();
+         
+      }
+      
+      String id = request.getParameter("id");
+      String pw = request.getParameter("pw");
+      
+      
+      
+      if(who.equals("U")) {
+         
+         
+         MemberVO vo = new MemberVO(id,pw);
+         MemberDAO dao = new MemberDAO();
+         MemberVO loginMember = dao.selectMember(vo);
 
-			if(loginMember != null) { 
-				System.out.println("로그인 성공");
-				
-				HttpSession session = request.getSession();
-				session.setAttribute("loginMember", loginMember);
-				session.setAttribute("who", who);
-				response.sendRedirect("Main.jsp");
-			}else {
-				System.out.println("로그인 실패");
-				response.sendRedirect("Main.jsp");
-			}
-			
-		}else if (who.equals("T")) {
-			
-			TrainerVO vo =new TrainerVO(id,pw);
-			TrainerDAO dao = new TrainerDAO();
-			TrainerVO loginMember = dao.selectTrainer(vo);
+         if(loginMember != null) { 
+            System.out.println("로그인 성공");
+            
+            HttpSession session = request.getSession();
+            session.setAttribute("loginMember", loginMember);
+            response.sendRedirect("Main.jsp");
+         }else {
+            System.out.println("로그인 실패");
+            //response.sendRedirect("Main.jsp");
+            response.setContentType("text/html; charset=UTF-8");
+    		PrintWriter writer = response.getWriter();
+    		writer.println("<script>alert('아이디와 비밀번호를 확인해주세요!'); location.href='Login.jsp';</script>"); 
+    		writer.close();
+         }
+         
+      }else if (who.equals("T")) {
+         
+         TrainerVO vo =new TrainerVO(id,pw);
+         TrainerDAO dao = new TrainerDAO();
+         TrainerVO loginTrainer = dao.selectTrainer(vo);
 
-			if(loginMember != null) { 
-				System.out.println("로그인 성공");
-				
-				HttpSession session = request.getSession();
-				session.setAttribute("loginMember", loginMember);
-				session.setAttribute("who", who);
-				response.sendRedirect("Main.jsp");
-			}else {
-				System.out.println("로그인 실패");
-				response.sendRedirect("Main.jsp");
-			}
-			
-			
-			
-		}
-		
-		
-		
-		
-		
-		
-		
+         if(loginTrainer != null) { 
+            System.out.println("로그인 성공");
+            
+            HttpSession session = request.getSession();
+            session.setAttribute("loginTrainer", loginTrainer);
+            response.sendRedirect("Main.jsp");
+         }else {
+            System.out.println("로그인 실패");
+            //response.sendRedirect("Main.jsp");
+            response.setContentType("text/html; charset=UTF-8");
+    		PrintWriter writer = response.getWriter();
+    		writer.println("<script>alert('아이디와 비밀번호를 확인해주세요!'); location.href='Login.jsp';</script>"); 
+    		writer.close();
+         }
+         
+         
+         
+      }
+      
+      
+      
+      
+      
+      
+      
 
-	}
+   }
 
 }
