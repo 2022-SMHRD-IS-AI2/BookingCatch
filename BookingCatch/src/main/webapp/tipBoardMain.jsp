@@ -1,3 +1,6 @@
+<%@page import="com.smhrd.model.tipBoardDAO"%>
+<%@page import="com.smhrd.model.tipBoardVO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -60,6 +63,10 @@
             <li><a href="#">우리는?</a></li>
             </ul>
         </div>
+        
+        <!-- header부분  -->
+        
+        <%List<tipBoardVO> vo = new tipBoardDAO().showTipBoard(); %>
         <div class="board">
             <h3 class="board_title">TIP 게시판</h3>
             <table>
@@ -68,86 +75,21 @@
                     <th>제목</th>
                     <th>작성자</th>
                     <th>작성일</th>
-                    <th>조회수</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td class="subject"><a href="board.jsp">공지사항 안내(세부내용 포함)</a></td>
-                    <td>dusikiki</td>
-                    <td>2022-10-26</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td class="subject">헬스 입문한 헬린이들에 지침서!!</td>
-                    <td>kjcode</td>
-                    <td>2022-10-26</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td class="subject">나도 김계란이 될 수 있다!! (헬린이 기초운동법)</td>
-                    <td>kjcode</td>
-                    <td>2022-10-26</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td class="subject">탈</td>
-                    <td>kjcode</td>
-                    <td>2022-10-26</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td class="subject">주</td>
-                    <td>kjcode</td>
-                    <td>2022-10-26</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td class="subject">하</td>
-                    <td>kjcode</td>
-                    <td>2022-10-26</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td class="subject">고</td>
-                    <td>kjcode</td>
-                    <td>2022-10-26</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td class="subject">싶</td>
-                    <td>kjcode</td>
-                    <td>2022-10-26</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td class="subject">다</td>
-                    <td>kjcode</td>
-                    <td>2022-10-26</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td class="subject">!</td>
-                    <td>kjcode</td>
-                    <td>2022-10-26</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td class="subject">!</td>
-                    <td>kjcode</td>
-                    <td>2022-10-26</td>
-                    <td>0</td>
+                    <th>좋아요 수</th>
                 </tr>
                 
+                <%for (int i = 0 ; i<vo.size(); i++) {%>
+                <tr>
+                    <td><%=i+1%></td>
+                    <td class="subject"><a href="board.jsp?num=<%=vo.get(i).getNum()%>"><%=vo.get(i).getTitle()%></a></td>
+                    <td><%=vo.get(i).getWriter() %></td>
+                    <td><%=vo.get(i).getDate().toString() %></td>
+                    <td><%=vo.get(i).getLikes() %></td>
+                </tr>
+                <%} %>
+                </table>
+                
+                <table>
                 <td class="board_writer" colspan="5">
                 <a href="#">
                     <button id="writer"> 
