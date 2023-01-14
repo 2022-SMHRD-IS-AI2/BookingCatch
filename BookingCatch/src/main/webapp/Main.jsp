@@ -51,7 +51,7 @@
             %> <div class="for-space" id="menu">
       <ul class="header1-ul">
          <li class="menu-letter"><a href="Login.jsp">로그인</a></li>
-         <li class="menu-letter"><a href="JoinWho.jsp">회원가입</a></li>
+         <li class="menu-letter"><a href="Join.jsp">회원가입</a></li>
       <li class="menu-letter"><a href="#">고객센터</a></li>
       </ul>
       </div>  

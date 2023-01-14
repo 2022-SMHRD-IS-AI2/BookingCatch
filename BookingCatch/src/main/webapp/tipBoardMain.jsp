@@ -78,20 +78,26 @@
                     <th>좋아요 수</th>
                 </tr>
                 
-                <%for (int i = 0 ; i<vo.size(); i++) {%>
+                <%for (int i = 0 ; i<vo.size(); i++) {
+                	tipBoardVO model = vo.get(i);
+                %>
                 <tr>
-                    <td><%=i+1%></td>
-                    <td class="subject"><a href="board.jsp?num=<%=vo.get(i).getNum()%>"><%=vo.get(i).getTitle()%></a></td>
+                    <td><%=model.getNum()%></td>
+                    <td class="subject"><a href="tipBoardDetail.jsp?num=<%=model.getNum()%>"><%=model.getTitle()%></a></td>
+                    <td><%=model.getWriter()%></td>
+                    <td><%=model.getDate()%></td>
+                    <td><%=model.getLikes()%></td>
+                    <%-- <td class="subject"><a href="board.jsp?num=<%=vo.get(i).getNum()%>"><%=vo.get(i).getTitle()%></a></td>
                     <td><%=vo.get(i).getWriter() %></td>
                     <td><%=vo.get(i).getDate().toString() %></td>
-                    <td><%=vo.get(i).getLikes() %></td>
+                    <td><%=vo.get(i).getLikes() %></td> --%>
                 </tr>
                 <%} %>
                 </table>
                 
                 <table>
                 <td class="board_writer" colspan="5">
-                <a href="#">
+                <a href="/BookingCatch/tipBoardWrite.jsp">
                     <button id="writer"> 
                         작성하기
                     </button>
@@ -113,6 +119,7 @@
         </ul>
     </div>
 </body>
+
 </html>
 <%-- 
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>

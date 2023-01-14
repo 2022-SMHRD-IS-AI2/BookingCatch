@@ -24,7 +24,8 @@ public class writeTipBoardCon extends HttpServlet {
 		// MultipartRequest에서 필요한 매개변수 설정
 		// 1. 모든 요청의 정보가 담겨있는 request객체
 		// 2. 업로드 된 파일(이미지)을 저장할 경로
-		String path = request.getServletContext().getRealPath("./myFile");
+//		String path = request.getServletContext().getRealPath("./myFile");
+		String path = "C:\\Users\\SMHRD\\Desktop\\Center\\";
 		System.out.println(path);
 		
 		// 3. 파일의 max size
@@ -44,8 +45,11 @@ public class writeTipBoardCon extends HttpServlet {
 		String writer = multi.getParameter("writer");
 		
 		// 한글 이름은 인코딩 해야 나중에 이미지 확인 가능!
-				// URLEncoder.encode(인코딩할 값, 인코딩 방식)
-		String filename = URLEncoder.encode(multi.getFilesystemName("filename"), "UTF-8");
+		// URLEncoder.encode(인코딩할 값, 인코딩 방식)
+		String filename = "";
+		if(null != multi.getFilesystemName("filename")) {
+			filename = URLEncoder.encode(multi.getFilesystemName("filename"), "UTF-8");
+		}
 		String content =  multi.getParameter("content");
 		
 	
@@ -65,12 +69,6 @@ public class writeTipBoardCon extends HttpServlet {
 			System.out.println("업로드 실패");
 		}
 		response.sendRedirect("tipBoardMain.jsp");
-	
-	
-	
-	
-	
-	
 	}
 
 }

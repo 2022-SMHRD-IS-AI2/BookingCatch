@@ -48,7 +48,7 @@
                 </ul>
             
             </li>
-            <li><a href="#">센터</a></li>
+            <li><a href="CenterLocation.jsp">센터</a></li>
             <li>
                 <a href="#">커뮤니티</a>
                 <ul class="hidden">

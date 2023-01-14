@@ -1,21 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-<link rel="stylesheet" href="asset/css/TrainerSearch.css">
-<link rel="stylesheet" href="asset/css/tipBoard.css">
-<script src="https://kit.fontawesome.com/f4f342f148.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    pageEncoding="UTF-8"%>
+    <%@page import="com.smhrd.model.tipBoardVO"%>
+<%@page import="com.smhrd.model.tipBoardDAO"%>
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-<div id="wrap">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, user-scalable=yes, target-density-dpi=medium-dpi" />
+    <title>센터 찾기</title>
+    <link rel="stylesheet" href="asset/css/board.css" />
+    <link rel="stylesheet" href="asset/css/TrainerSearch.css">
+    <link rel="stylesheet" href="asset/css/Trainerprofile.css">
+    <link rel="stylesheet" href="asset/css/Boarder.css">
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=794e114ba8dfd9f6256cddb7ffcdf9f1"></script>
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="../js/function.js"></script>
+
+
+</head>
+
+<body>
+	<%
+		tipBoardVO vo = new tipBoardDAO().detailTipBoard(4); 
+	%>
+   <div id="wrap">
         <header>
             <div class="header1">
                 <img src="" alt="HelinCatch" class="logo">
@@ -50,7 +62,7 @@
                     </li>
                 <li><a href="#">센터</a></li>
                 <li>
-                    <a href="#">커뮤니티</a>
+                    <a href="tipBoardMain.jsp">커뮤니티</a>
                     <ul class="hidden">
                         <li><a href="tipBoardMain.jsp">Tip게시판</a></li>
                         <li><a href="">공감게시판</a></li>
@@ -60,38 +72,16 @@
                 </ul>
             </div>
         </header>
-    </div>
-	<div id="board">
-		<form action="/BookingCatch/writeTipBoardCon" method="post" enctype="multipart/form-data">
-			<table id="list">
-				<tr>
-					<td>제목</td>
-					<td><input type="text" class="header-search" name="title" style="width: 90%;"></td>
-				</tr>
-				<tr>
-					<td>작성자</td>
-					<td><input type="text" class="header-search" name="writer" style="width: 90%;"></td>
-				</tr>
-				<tr>
-					<td colspan="2">내용</td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<input type="file" name="filename" style="float: right;"> 
-						<textarea class="header-search" name="content" rows="10" rows="10" style="resize: none; width: 90%;"></textarea></td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<button type="reset">취소</button>
-						<button type="submit">작성하기</button>
-					</td>
-					</tr>
-			</table>
-		</form>
-
-
-
-	</div>
-
+<div id="map" style="width:1280px;height:750px;" style="text-align: center;"></div>
 </body>
+<script>
+
+var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+var options = { //지도를 생성할 때 필요한 기본 옵션
+	center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+	level: 3 //지도의 레벨(확대, 축소 정도)
+};
+
+var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+</script>
 </html>
