@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>트레이너 회원가입</title>
 <link rel="stylesheet" href="asset/css/Join.css">
 
 </head>
@@ -20,13 +20,13 @@
                 <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
             </ul>
 
-            <a href="#"><h1>HelinCare</h1></a> 
+            <a href="Main.jsp"><h1>HelinCare</h1></a> 
             
             <div class="ul-forSize">
 
                 <ul>
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">회원가입</a></li>
+                    <li><a href="Login.jsp">로그인</a></li>
+                    <li><a href="JoinWho">회원가입</a></li>
                     <li><a href="#">고객센터</a></li>
                     <li><i class="fa-regular fa-heart"></i></li>
                 </ul>
@@ -37,24 +37,24 @@
 
         <div class="join">
             <h1>Join</h1>
-            <form action="#" class="join-form">
+            <form action="JoinTCon" class="join-form">
                 
                 <!-- input들어옴 -->
                 <div class="input-join">
-                    <input type="text" placeholder="아이디" id="inputE" onkeypress="checkE()">
+                    <input type="text" name="id" placeholder="아이디" id="inputE" onkeypress="checkE()">
                     <div class="inside-letter">
                         <span id="resultCheck"></span>
                     </div>
                 
-                    <input type="password" placeholder="비밀번호" id="pw">
+                    <input type="password" name="pw" placeholder="비밀번호" id="pw">
                     <input type="password" placeholder="비밀번호 확인" id="checkPw" onkeyup="checkPassword()">
                     
                     <div class="inside-letter">
                         <span id="resultPw"></span>
                     </div>
                 
-                    <input type="text" placeholder="이름">
-                    <input type="datetime" placeholder="생일 8자리">
+                    <input type="text" name="name" placeholder="이름">
+                    <input type="datetime" name="birth" placeholder="생년월일 8자리">
                     <!-- <input type="text" placeholder="MBTI"> -->
                     <input list="mbtis" name="mbti" placeholder="MBTI" class="input-list">
 
@@ -76,8 +76,14 @@
                             <option value="INFP">
                             <option value="INTP">
                         </datalist>
-                    <input type="text" placeholder="주소">
-                
+                    <input type="text" name="center" placeholder="센터주소">
+                    <input type="text" name="phone" placeholder="전화번호를 입력">
+                    <input list="ttypes" name="ttype" placeholder="운동" class="input-list">
+                		
+                		<datalist id="ttypes">
+                			<option value="헬스">
+                			<option value="필라테스">
+                		</datalist>
                     <div class="input-radio">
                         <input type="radio" name="gender" value="M" id="Man">
                         <label for="Man">남</label>

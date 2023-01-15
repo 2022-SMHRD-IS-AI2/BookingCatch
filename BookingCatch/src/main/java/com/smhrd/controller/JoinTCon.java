@@ -1,6 +1,8 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,11 +35,14 @@ public class JoinTCon extends HttpServlet {
 			System.out.println("회원가입 성공");
 			
 //			회원가입 후 갈 경로 선택-> 아마 메인?
-			response.sendRedirect("Main.jsp");
+//			response.sendRedirect("Main.jsp");
+			PrintWriter writer = response.getWriter();
+	         writer.println("<script>alert('환영합니다!'); location.href='Main.jsp';</script>"); 
+	         writer.close();
 		} else {
 			// 회원가입 실패시 갈 경로 선택
 			System.out.println("회원가입 실패");
-			response.sendRedirect("Main.jsp");
+			response.sendRedirect("JoinT.jsp");
 		}
 
 	}
