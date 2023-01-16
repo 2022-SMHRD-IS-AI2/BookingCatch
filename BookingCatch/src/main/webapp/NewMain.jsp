@@ -103,7 +103,7 @@
             <%}}%>
         </header>
         <div class="menu-hidden" id="menu-hidden">
-            <a href="#">Tip게시판</a><a href="#">공감게시판</a>
+            <a href="tipBoardMain.jsp">Tip게시판</a><a href="#">공감게시판</a>
         </div>
             <!-- 헤더부분 양심없이 길다 진짜  -->
             
