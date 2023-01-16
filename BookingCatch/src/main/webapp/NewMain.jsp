@@ -41,7 +41,7 @@
             <ul class="want-to-be-fixed">
                 <li><a href="TrainerInfo.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
                 <li><a href="CenterLocation.jsp"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
-                <li id="special-li" class="special-li"><a href="board.jsp"><span class="en">Community</span><span class="ko">게시판</span></a></li>
+                <li id="special-li" class="special-li"><a href="tipBoardMain.jsp"><span class="en">Community</span><span class="ko">게시판</span></a></li>
                 <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
             </ul>
 
