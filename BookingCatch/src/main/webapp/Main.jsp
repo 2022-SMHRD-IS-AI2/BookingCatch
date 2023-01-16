@@ -63,7 +63,7 @@
             <div class="for-space" id="menu">
              <ul class="header1-ul">
              <li class="menu-letter"><%=loginTrainer.getId() %>님 </li>
-            <li class="menu-letter"><a href="UpdateInfo.jsp">개인정보수정</a></li>
+            <li class="menu-letter"><a href="UpdateTInfo.jsp">개인정보수정</a></li>
             <li class="menu-letter"><a href="#">예약확인</a> </li>
             <li class="menu-letter"><a href="LogOutCon">로그아웃</a></li></ul>
             </div>

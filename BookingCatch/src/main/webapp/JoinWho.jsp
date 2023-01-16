@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="JoinU.jsp"><button>회원으로 가입하기</button></a>
+	<a href="Join.jsp"><button>회원으로 가입하기</button></a>
 	<a href="JoinT.jsp"><button>트레이너로 가입하기</button></a>
 </body>
 </html>

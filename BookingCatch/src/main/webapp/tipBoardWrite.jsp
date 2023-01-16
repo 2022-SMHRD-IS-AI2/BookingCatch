@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.TrainerVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,11 +15,14 @@
 <script src="https://kit.fontawesome.com/f4f342f148.js" crossorigin="anonymous"></script>
 </head>
 <body>
+	<%
+		TrainerVO loginMember = (TrainerVO)session.getAttribute("loginMember"); 
+	%>
 
 <div id="wrap">
         <header>
             <div class="header1">
-                <img src="" alt="HelinCatch" class="logo">
+                <a href="Main.jsp"><img src="" alt="HelinCatch" class="logo"></a>
                 <div class="header-center">
                     <input type="text" class="header-search" placeholder="#나의#트레이너찾기">
                     <button class="search-btn">
@@ -70,7 +74,7 @@
 				</tr>
 				<tr>
 					<td>작성자</td>
-					<td><input type="text" class="header-search" name="writer" style="width: 90%;"></td>
+					<td><input value="<%=loginMember.getName() %>트레이너" type="text" class="header-search" name="writer" style="width: 90%;"></td>
 				</tr>
 				<tr>
 					<td colspan="2">내용</td>

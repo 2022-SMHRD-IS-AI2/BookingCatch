@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>일반회원 개인정보 수정</title>
 </head>
 <body>
 	<%
