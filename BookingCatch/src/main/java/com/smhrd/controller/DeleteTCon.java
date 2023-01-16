@@ -20,10 +20,10 @@ public class DeleteTCon extends HttpServlet {
 		int cnt  =new TrainerDAO().deleteTrainer(id);
 		if(cnt>0) {
 			System.out.println("회원탈퇴 성공");
-			response.sendRedirect("Main.jsp");
+			response.sendRedirect("NewMain.jsp");
 		}else {
 			System.out.println("회원탈퇴 실패");
-			response.sendRedirect("Main.jsp");
+			response.sendRedirect("NewMain.jsp");
 		}
 		
 		

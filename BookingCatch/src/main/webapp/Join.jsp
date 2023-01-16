@@ -38,7 +38,7 @@
         
 		<div class="join">
             <h1>Join</h1>
-            <form action="JoinCon" class="join-form">
+            <form action="JoinCon" class="join-form" method="post">
                 
                 <!-- input들어옴 -->
                 <div class="input-join">

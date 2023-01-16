@@ -46,6 +46,7 @@ public class MemberDAO {
 		return loginMember;
 	}
 	
+	// 사용자 회원탈퇴
 	public int deleteMember(String id) {
 		int cnt=0;
 		try {
@@ -63,6 +64,7 @@ public class MemberDAO {
 		}
 		return cnt;
 	}
+	// 사용자 이메일 중복체크
 public boolean emailCheck(String inputE) {
 		
 		boolean checkE = false;
@@ -77,7 +79,8 @@ public boolean emailCheck(String inputE) {
 		}
 		return checkE;
 	}
-
+	
+	//사용자 정보수정
 public int updateMember(MemberVO vo) {
 	int cnt = 0;
 	try { // 만약 sql문이 잘못됐다거나, url이 잘못되었다던가하면 세션이 잘 생성이 안될 수도 있음
@@ -98,5 +101,7 @@ public int updateMember(MemberVO vo) {
 
 	return cnt;
 }
+
+
 	
 }

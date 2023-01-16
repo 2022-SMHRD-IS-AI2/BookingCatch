@@ -39,9 +39,9 @@
         <header id="header">
             
             <ul class="want-to-be-fixed">
-                <li><a href="#"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
-                <li><a href="#"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
-                <li><a href="#"><span class="en">Community</span><span class="ko">게시판</span></a></li>
+                <li><a href="TrainerInfo.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
+                <li><a href="CenterLocation.jsp"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
+                <li id="special-li" class="special-li"><a href="board.jsp"><span class="en">Community</span><span class="ko">게시판</span></a></li>
                 <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
             </ul>
 
@@ -63,7 +63,7 @@
             <%
             }else{
             %><%
-            if(loginTrainer!=null){%>    
+           		if(loginTrainer!=null){%>    
 			<div class="ul-forSize">
                 <ul>
                 	<li><%=loginTrainer.getId() %>님</li>
@@ -75,7 +75,7 @@
             </div>
             
             <%
-            } else if(loginMember.getId().equals("admin")){ 
+            	} else if(loginMember.getId().equals("admin")){ 
             %>   
             
             <div class="ul-forSize">
@@ -88,13 +88,13 @@
                 </ul>
             </div>
             <%
-            } else if(loginMember!=null){
+           		} else if(loginMember!=null){
                System.out.print(loginMember.getId());
             %>
             <div class="ul-forSize">
                 <ul>
-                	<li><%=loginTrainer.getId() %>님</li>
-                    <li><a href="UpdateTInfo.jsp">개인정보수정</a></li>
+                	<li><%=loginMember.getId() %>님</li>
+                    <li><a href="UpdateInfo.jsp">개인정보수정</a></li>
                     <li><a href="#">예약확인</a></li>
                     <li><a href="LogOutCon">로그아웃</a></li>
                     <li><i class="fa-regular fa-heart"></i></li>
@@ -102,7 +102,9 @@
             </div>
             <%}}%>
         </header>
-            
+        <div class="menu-hidden" id="menu-hidden">
+            <a href="#">Tip게시판</a><a href="#">공감게시판</a>
+        </div>
             <!-- 헤더부분 양심없이 길다 진짜  -->
             
             

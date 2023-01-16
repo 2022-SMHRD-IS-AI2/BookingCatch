@@ -34,6 +34,7 @@
 				<li><input type="submit" value="회원정보수정"></li>
 			</form>
 		</ul>
+		<a href="DeleteTCon">회원탈퇴</a>
 		<a href="NewMain.jsp">홈으로 가기</a>
 	</div>
 
