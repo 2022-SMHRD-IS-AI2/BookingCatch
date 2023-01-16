@@ -37,7 +37,7 @@ public class JoinTCon extends HttpServlet {
 //			회원가입 후 갈 경로 선택-> 아마 메인?
 //			response.sendRedirect("Main.jsp");
 			PrintWriter writer = response.getWriter();
-	         writer.println("<script>alert('환영합니다!'); location.href='Main.jsp';</script>"); 
+	         writer.println("<script>alert('환영합니다!'); location.href='NewMain.jsp';</script>"); 
 	         writer.close();
 		} else {
 			// 회원가입 실패시 갈 경로 선택

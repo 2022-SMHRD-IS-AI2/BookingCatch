@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.model.MemberVO"%>
+<%@page import="com.smhrd.model.TrainerVO"%>
 <%@page import="com.smhrd.model.tipBoardDAO"%>
 <%@page import="com.smhrd.model.tipBoardVO"%>
 <%@page import="java.util.List"%>
@@ -12,9 +14,24 @@
     <title>Document</title>
     <link rel="stylesheet" href="asset/css/TrainerSearch.css">
     <link rel="stylesheet" href="asset/css/tipBoard.css">
+     <link rel="stylesheet" href="asset/css/Main.css">
     <script src="https://kit.fontawesome.com/f4f342f148.js" crossorigin="anonymous"></script>
 </head>
 <body>
+   <%
+   
+   MemberVO loginMember=null;
+   TrainerVO loginTrainer=null; 
+   
+   if(session.getAttribute("loginMember")==null&&session.getAttribute("loginTrainer")==null){
+      System.out.print("첫 메인");
+   }else if(session.getAttribute("loginMember")!=null){
+      loginMember = (MemberVO) session.getAttribute("loginMember");
+   }else{
+      loginTrainer = (TrainerVO)session.getAttribute("loginTrainer");
+   }
+   %>
+   
     <div class="wrap">
         <header>
             <div class="header1">
@@ -28,45 +45,58 @@
                 </button>
             </div>
             
-        </ul>
-        <div class="for-space"></div>
-        <ul class="header1-ul">
-            <li class="menu-letter"><a href="Login.jsp">로그인</a></li>
-            <li class="menu-letter"><a href="JoinWho.jsp">회원가입</a></li>
-            <li class="menu-letter"><a href="#">고객센터</a></li>
-            <li class="menu-letter" id="addEvent"><i class="fa-regular fa-heart"></i>
-                <div id="hidden-list">
-                    <p>My Trainer</p>
-                    <i class="fa-solid fa-xmark" id="close" >하트</i>                  
-                    </div>
-            </li>
-        </ul>
-    </div>
-    <div class="header2">
-        <ul class="header2-ul">
-            <li><a href="#">트레이너</a>
-                <ul class="hidden">
-                    <li><a href="">지역별</a></li>
-                    <li><a href="">운동별</a></li>
-
-                </ul>
+            <%
+            if (loginMember == null && loginTrainer ==null){ 
+            %> <div class="for-space" id="menu">
+      <ul class="header1-ul">
+         <li class="menu-letter"><a href="Login.jsp">로그인</a></li>
+         <li class="menu-letter"><a href="JoinWho.jsp">회원가입</a></li>
+      <li class="menu-letter"><a href="#">고객센터</a></li>
+      </ul>
+      </div>  
             
-            </li>
-            <li><a href="#">센터</a></li>
-            <li>
-                <a href="#">커뮤니티</a>
-                <ul class="hidden">
-                    <li><a href="tipBoardMain.jsp">Tip게시판</a></li>
-                    <li><a href="">공감게시판</a></li>
-                </ul>
-            </li>
-            <li><a href="#">우리는?</a></li>
-            </ul>
-        </div>
+            <%
+            }else{
+            %><%
+            if(loginTrainer!=null){%>
+            <div class="for-space" id="menu">
+             <ul class="header1-ul">
+             <li class="menu-letter"><%=loginTrainer.getId() %>님 </li>
+            <li class="menu-letter"><a href="UpdateTInfo.jsp">개인정보수정</a></li>
+            <li class="menu-letter"><a href="#">예약확인</a> </li>
+            <li class="menu-letter"><a href="LogOutCon">로그아웃</a></li></ul>
+            </div>
+            
+             <%
+            } else if(loginMember.getId().equals("admin")){ 
+               
+            %>   
+            
+            <div class="for-space" id="menu">
+            <ul class="header1-ul">
+            <li class="menu-letter"><a href="#">전체회원정보</a></li>
+            <li class="menu-letter"><a href="UpdateInfo.jsp">개인정보수정</a> </li>
+            <li class="menu-letter"><a href="LogOutCon">로그아웃</a></li></ul>
+            </div> 
+               
+             <%
+            }
+            else if(loginMember!=null){
+               System.out.print(loginMember.getId());
+            %><div class="for-space" id="menu">
+             <ul class="header1-ul">
+             <li class="menu-letter"><%=loginMember.getId() %>님 </li>
+            <li class="menu-letter"><a href="UpdateInfo.jsp">개인정보수정</a></li>
+            <li class="menu-letter"><a href="#">예약확인</a> </li>
+            <li class="menu-letter"><a href="LogOutCon">로그아웃</a></li></ul>
+            </div>
+            
+            <%}}%>
         
         <!-- header부분  -->
         
         <%List<tipBoardVO> vo = new tipBoardDAO().showTipBoard(); %>
+        
         <div class="board">
             <h3 class="board_title">TIP 게시판</h3>
             <table>

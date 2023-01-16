@@ -31,7 +31,7 @@
 				<li>성별 : <%=loginMember.getGender()%></li>
 			</form>
 		</ul>
-		<a href="Main.jsp">홈으로 가기</a>
+		<a href="NewMain.jsp">홈으로 가기</a>
 	</div>
 
 </body>

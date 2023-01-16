@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.TrainerVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@page import="com.smhrd.model.tipBoardVO"%>
@@ -26,11 +27,12 @@
 <body>
 	<%
 		tipBoardVO vo = new tipBoardDAO().detailTipBoard(4); 
+		TrainerVO loginTrainer = (TrainerVO)session.getAttribute("loginTrainer"); 
 	%>
    <div id="wrap">
         <header>
             <div class="header1">
-                <img src="" alt="HelinCatch" class="logo">
+                <a href="Main.jsp"><img src="" alt="HelinCatch" class="logo"></a>
                 <div class="header-center">
                     <input type="text" class="header-search" placeholder="#나의#트레이너찾기">
                     <button class="search-btn">
@@ -88,7 +90,7 @@
                                 
                                  <li>
                                     <span class="title">작성자</span>
-                                    <span class="text"><%=vo.getWriter() %></span>
+                                    <span class="text"><%=loginTrainer.getName() %></span>
                                  </li>
                                  <li>
                                     <span class="title">작성일</span>
@@ -102,16 +104,13 @@
                            </div>                           
                         </div>
                         <div class="board-cont" <%=vo.getContent()%>>
-                                
-                                   <!--  <div class="video_con"><iframe src="https://www.youtube.com/embed/QdaBigmnXNs" title="YouTube video player" frameborder="0" 
+                        
+                                   <div class="video_con"><iframe src="https://www.youtube.com/embed/QdaBigmnXNs" title="YouTube video player" frameborder="0" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <p class="board-cont_text">
-                                            초고령사회를 앞두고 있는 한국의 미래 사회의 모습은 어떠할까를 고민하며, 삶과 죽음의 의미가 무엇인지, 가족이란 무엇인지 고민할 수 있는 화두를 던지는 연극.
-                                            극 중 인물들의 독백이 주가 되어 극의 사회상과 인물의 과거를 풀어내고, 광목천과 장례식상을 연상시키는 향을 이용해서 시시각각으로 변화하는 상황을
-                                            시각적/후각적으로 전달한다. 북, 꽹과리, 방울소리 등 전통타악기가 만들어내는 극적인 긴장감을 통해 죽음과 갈등과 뒤엉킨 서사를 직관적으로 받아들이게 한다.<br>                  
-                                            출처 : 플레이DB
+                                        <p class="board-cont">
+                                          <%=vo.getContent()%>
                                         </p>
-                                    </div> -->
+                                    </div> 
                         </div>
                        <!--  <div class="board-nav">
                            <ul>

@@ -26,7 +26,7 @@ public class LogOutCon extends HttpServlet {
 		// 로그아웃시 alert창 출력 후 페이지 이동
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter writer = response.getWriter();
-		writer.println("<script>alert('로그아웃 되셨습니다.'); location.href='Main.jsp';</script>"); 
+		writer.println("<script>alert('로그아웃 되셨습니다.'); location.href='NewMain.jsp';</script>"); 
 		writer.close();
 	
 	}

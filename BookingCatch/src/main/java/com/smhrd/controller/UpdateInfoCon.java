@@ -1,6 +1,7 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Timestamp;
 
 import javax.servlet.ServletException;
@@ -38,10 +39,16 @@ public class UpdateInfoCon extends HttpServlet {
 		if(cnt>0) {
 			System.out.println("회원정보수정 성공");
 			session.setAttribute("loginMember", vo);
-			response.sendRedirect("UpdateInfo.jsp");
+//			response.sendRedirect("UpdateInfo.jsp");
+			PrintWriter writer = response.getWriter();
+    		writer.println("<script>alert('수정 성공!'); location.href='UpdateInfo.jsp';</script>"); 
+    		writer.close();
 		}else {
 			System.out.println("회원정보수정 실패");
-			response.sendRedirect("UpdateInfo.jsp");
+//			response.sendRedirect("UpdateInfo.jsp");
+			PrintWriter writer = response.getWriter();
+    		writer.println("<script>alert('수정 실패!'); location.href='UpdateInfo.jsp';</script>"); 
+    		writer.close();
 		}
 		
 		

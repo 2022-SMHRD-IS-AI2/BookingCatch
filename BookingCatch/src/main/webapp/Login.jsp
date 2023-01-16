@@ -31,7 +31,7 @@
 						class="ko">우리는</span></a></li>
 			</ul>
 
-			<a href="Main.jsp"><h1>HelinCare</h1></a>
+			<a href="NewMain.jsp"><h1>HelinCare</h1></a>
 
 			<div class="ul-forSize">
 

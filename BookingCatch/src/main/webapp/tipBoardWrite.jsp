@@ -16,7 +16,7 @@
 </head>
 <body>
 	<%
-		TrainerVO loginMember = (TrainerVO)session.getAttribute("loginMember"); 
+		TrainerVO loginTrainer = (TrainerVO)session.getAttribute("loginTrainer"); 
 	%>
 
 <div id="wrap">
@@ -74,7 +74,7 @@
 				</tr>
 				<tr>
 					<td>작성자</td>
-					<td><input value="<%=loginMember.getName() %>트레이너" type="text" class="header-search" name="writer" style="width: 90%;"></td>
+					<td><input value="<%=loginTrainer.getId() %>" type="text" class="header-search" name="writer" style="width: 90%;"></td>
 				</tr>
 				<tr>
 					<td colspan="2">내용</td>

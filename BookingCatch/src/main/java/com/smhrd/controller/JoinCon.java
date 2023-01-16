@@ -1,6 +1,8 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -36,12 +38,16 @@ public class JoinCon extends HttpServlet {
 		int cnt = new MemberDAO().joinMember(vo);
 		if(cnt>0) {
 			System.out.println("회원가입 성공");
-			response.sendRedirect("Main.jsp");
+			response.sendRedirect("NewMain.jsp");
 //			회원가입 후 갈 경로 선택-> 아마 메인?
 		}else {
 			//회원가입 실패시 갈 경로 선택
 			System.out.println("회원가입 실패");
-			response.sendRedirect("Main.jsp");
+//			response.sendRedirect("Main.jsp");
+			 response.setContentType("text/html; charset=UTF-8");
+	    		PrintWriter writer = response.getWriter();
+	    		writer.println("<script>alert('회원가입이 정상적으로 이뤄지지 않았습니다'); location.href='Join.jsp';</script>"); 
+	    		writer.close();
 		}
 		
 		
