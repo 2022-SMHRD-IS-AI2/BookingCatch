@@ -38,4 +38,12 @@ public class TrainerVO {
 		this.ttype = ttype;
 		this.phone = phone;
 	}
+	public TrainerVO(String id,String pw,String mbti,String center,String ttype,String phone) {
+		this.id = id;
+		this.pw = pw;
+		this.mbti = mbti;
+		this.center = center;
+		this.ttype = ttype;
+		this.phone = phone;
+	}
 }

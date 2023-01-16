@@ -2,6 +2,7 @@ package com.smhrd.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Timestamp;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,15 +25,14 @@ public class UpdateTInfoCon extends HttpServlet {
 		TrainerVO loginTrainer = (TrainerVO)session.getAttribute("loginTrainer");
 		String id = loginTrainer.getId();
 		String pw = request.getParameter("pw");
-		String name = loginTrainer.getName();
-		String birth = loginTrainer.getBirth();
 		String mbti = request.getParameter("mbti");
 		String center= request.getParameter("center");
 		String ttype = request.getParameter("ttype");
 		String phone = request.getParameter("phone");
-		String gender = loginTrainer.getGender();
 		
-		TrainerVO vo = new TrainerVO(id,pw,name,birth,mbti,center,ttype,phone,gender);
+		
+		
+		TrainerVO vo = new TrainerVO(id,pw,mbti,center,ttype,phone);
 		
 		TrainerDAO dao = new TrainerDAO();
 		int cnt = dao.updateTrainer(vo);

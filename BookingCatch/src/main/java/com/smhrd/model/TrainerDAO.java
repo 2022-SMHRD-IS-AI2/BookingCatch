@@ -65,7 +65,7 @@ public class TrainerDAO {
 		public int updateTrainer(TrainerVO vo) {
 			int cnt =0;
 			try {
-				sqlSession.update("com.smhrd.model.TrainerDAO.updateTrainer", vo);
+				cnt = sqlSession.update("com.smhrd.model.TrainerDAO.updateTrainer", vo);
 				if(cnt>0) {
 					sqlSession.commit();
 				} else {
