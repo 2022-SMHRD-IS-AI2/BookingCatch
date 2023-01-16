@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&family=Gowun+Batang&family=Kanit&family=Lilita+One&family=Lobster&family=Michroma&family=Montserrat+Alternates&family=Moon+Dance&family=Play&family=Rubik+80s+Fade&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
+
+
 <body>
    <%
    
@@ -91,9 +93,8 @@
             %>
             <div class="ul-forSize">
                 <ul>
-                	<li><%=loginMember.getId() %>님</li>
-                    <li><a href="UpdateInfo.jsp">개인정보수정</a></li>
-                    <li><a href="UpdateInfo.jsp">관리자정보수정</a></li>
+                	<li><%=loginTrainer.getId() %>님</li>
+                    <li><a href="UpdateTInfo.jsp">개인정보수정</a></li>
                     <li><a href="#">예약확인</a></li>
                     <li><a href="LogOutCon">로그아웃</a></li>
                     <li><i class="fa-regular fa-heart"></i></li>

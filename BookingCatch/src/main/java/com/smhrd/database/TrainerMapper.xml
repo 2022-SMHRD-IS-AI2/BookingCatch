@@ -17,4 +17,8 @@ insert into TB_TRAINER values (#{id},#{pw},#{name},#{birth},#{mbti},#{gender},#{
 delete from TB_TRAINER where t_id=#{id}
 </delete>
 
+<update id="updateTrainer" parameterType= "com.smhrd.model.TrainerVO">
+		update tb_trainer set t_pw=#{pw}, t_mbti=#{mbti},t_center=#{center},t_type=#{ttype},t_phone=#{phone} where t_id=#{id}
+	</update>
+
 </mapper>

@@ -61,5 +61,22 @@ public class TrainerDAO {
 			}
 			return cnt;
 		}
+		
+		public int updateTrainer(TrainerVO vo) {
+			int cnt =0;
+			try {
+				sqlSession.update("com.smhrd.model.TrainerDAO.updateTrainer", vo);
+				if(cnt>0) {
+					sqlSession.commit();
+				} else {
+					sqlSession.rollback();
+				}
+			}catch(Exception e){
+				e.printStackTrace();
+			} finally {
+				sqlSession.close();
+			}
+			return cnt;
+		}
 
 }
