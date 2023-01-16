@@ -1,0 +1,400 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Rubik80sFade-Regular';
+    src: url("Rubik80sFade-Regular.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&family=Gowun+Batang&family=Kanit&family=Lilita+One&family=Lobster&family=Michroma&family=Montserrat+Alternates&family=Moon+Dance&family=Play&family=Rubik+80s+Fade&family=Shadows+Into+Light&display=swap');
+
+/* wheel 이벤트-> 스크롤 없앰*/
+/* html{
+    overflow:hidden;
+} */
+
+.wrap{
+    width: 100%;
+    position: absolute;
+    top: 0px;left: 0px;
+}
+
+body,div,ul,li,a{font-family: Arial, Helvetica, sans-serif;}
+
+
+*{padding:0; margin:0;}
+li{list-style:none;}
+a{color:inherit; text-decoration:none;}
+button{border:none; border-radius:0%;}
+input{border:none; border-radius:none;}
+input:focus{outline:none;}
+textarea{resize: none; padding:20px 30px; font-size:18px; font-family: Arial, Helvetica, sans-serif; border:none;}
+textarea:focus{outline:none;}
+
+.fc{display:flex; justify-content:center;}
+.fb{display:flex; justify-content:space-between;}
+
+.fixed-menu{
+    border: 1px solid black;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-weight: 30px;
+    cursor: pointer;
+}
+
+
+header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 3%;
+    box-sizing: border-box;
+}
+header h1{
+    font-family:'Gloria Hallelujah';
+}
+header input{
+    width: 12%;
+    border-bottom: 1px solid black;
+    align-self: center;
+    padding-bottom: 5px;
+}
+header>ul{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+.ul-forSize ul{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.ul-forSize{
+    width: 20%;
+    display: flex;
+    justify-content: end;
+}
+
+.wrap header ul li span.en{display: block;}
+.wrap header ul li span.ko{display: none;}
+.wrap header ul li:hover span.ko{display: block;}
+.wrap header ul li:hover span.en{display: none;}
+.want-to-be-fixed li{
+    line-height: 16px;
+    vertical-align: middle;
+    text-align: center;
+}
+.want-to-be-fixed li:first-child{
+    width: 50.09px;
+}
+.want-to-be-fixed li:nth-child(2){
+    width: 64px;
+}
+.want-to-be-fixed li:nth-child(3){
+    width: 80.91px;
+}
+.want-to-be-fixed li:nth-child(4){
+    width: 61.38px;
+}
+.main-center{
+    width: 100%;
+    height: 70vh;
+    background-color: red;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-image: url('../../img/Main.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top -190px center;
+}
+.main-center p{
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    /* position: relative;
+    top: 20%;
+    left: 52%; */
+    animation: slidein 2s;
+}
+.main-center p:nth-child(2){
+    top: 22%;
+    left: 57%;
+    animation: transparent 2s;
+    animation: slidein2 2s;
+}
+.main-center span{
+    font-size: 35px;
+    font-weight: 700;
+}
+.main-center img{
+    position: relative;
+    top: 10%;
+    left: 60%;
+}
+
+/* 여기까지 큰 그림있는 곳 */
+.main-bottom-letter{
+    width: 100%;
+    height: 11vh;
+    margin: 3% 0px 5% 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-bottom-letter p{
+    color: rgb(185, 185, 185);
+}
+.main-bottom-letter .big-letter{
+    font-size: 30px;
+    color: black;
+    font-weight: 700;
+    z-index: 1;
+}
+.sketch-line{
+    width: 30%;
+    height: 40px;
+    background-color: whitesmoke;
+    position: relative;
+    top: -18px;
+}
+
+
+
+.main-second{
+    margin-top: 3%;
+    width: 100%;
+    /* padding:2%; */
+    box-sizing: border-box;
+    height: 75vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #ffbd9e; */
+    /* background-color: #ffd4b3; */
+    /* background-color: #59C1D9; */
+    /* background-color: #f4976b; */
+    background-color:#e8b6a8;
+    margin-bottom: 5%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.find-trainer{
+    width: 46%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('/img/yoga-6082048.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-right: #e1aa9b;
+}
+.horizon{
+    width: 1px;
+    /* background-color: #b9ab9e; */
+    background-color: #a5352b;
+    height: 100%;
+    margin:0px 2%;
+}
+
+.bgcolor-brown{
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    /* background-color: rgb(199, 161, 144); */
+    /* background-color: #c98163; */
+    /* background-color: #df856f; */
+    /* background-color: #fdb67e; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: transparent 5s;
+    animation-fill-mode: forwards; 
+}
+.find-center button{
+    width: 20%;
+    height:10%;
+    background-color: rgb(171, 53, 53);
+    border:none;
+}
+
+.boxes{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+.box1{
+    width: 30%;
+    aspect-ratio: auto 1/1;
+    border: 1px solid black;
+    /* background-color: #a5352b; */
+    margin-right: 2%;
+    cursor: pointer;
+}
+.box1:nth-child(3){
+    margin-right: 0%;
+}
+
+.box-img1{
+    width: 100%;
+    height: 80%;
+    background-color: #dac34c;
+    /* background-color: whitesmoke; */
+    /* background-color: beige; */
+
+}
+.box-img2{
+    width: 100%;
+    height: 80%;
+    /* background-color: whitesmoke; */
+    background-color: #e09d8b;
+    /* background-color: beige; */
+
+}
+.box-img3{
+    width: 100%;
+    height: 80%;
+    background-color: rgb(88, 129, 88);
+    /* background-color: beige; */
+    /* background-color: whitesmoke; */
+    overflow: hidden;
+}
+.box-img1 img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto 1/1;
+}
+.box-img2 img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto 1/1;
+    position: relative;
+    left: 6%;
+    overflow: hidden;
+}
+.box-img3 img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto 1/1;
+    position: relative;
+    left: 15%;
+    bottom: 4%;
+    overflow: hidden;
+}
+
+.box-letter{
+    width: 100%;
+    height: 20%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(196, 193, 182); */
+    background-color: white;
+}
+.box-letter span{
+    font-size: 20px;
+    /* font-weight: 550; */
+}
+.solution{
+    border-bottom: 1px solid black;
+    padding-bottom: 1.5%;
+}
+.box-img1 span,.box-img2 span,.box-img3 span{
+    display: none;
+    padding: 1%;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 300;
+}
+.box1:hover .problem{display: none; transition: all 2s;}
+.box1:hover .solution{display: block; transition: all 2s;}
+.box1 .problem{display: block; transition: all 2s;}
+.box1 .solution{display: none; transition: all 2s;}
+.box1:hover img{display: none; transition: all 2s;}
+.box1:hover .box-img1{background-color: rgb(184, 182, 143); transition: all 1s;
+     display: flex; flex-direction: column;
+      justify-content: center;
+    align-items: center;
+}
+.box1:hover .box-img2{background-color: rgb(184, 158, 174); transition: all 1s;
+     display: flex; flex-direction: column;
+      justify-content: center;
+    align-items: center;
+}
+.box1:hover .box-img3{background-color: rgba(119, 139, 112, 0.541); transition: all 1s;
+     display: flex; flex-direction: column;
+      justify-content: center;
+    align-items: center;
+}
+.box1:hover span{display: flex;}
+
+
+
+
+
+
+.foot{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.foot span{
+    position: relative;
+    bottom: -600px;
+    left: 100px;
+}
+
+
+
+
+
+@keyframes slidein{
+    from{
+        left: 45%;
+        color: transparent;
+        
+    }
+    to{
+        left: 52%;
+        color: white;
+    }
+}
+@keyframes slidein2{
+    from{
+        left: 50%;
+        color: transparent;
+
+    }
+    to{
+        left: 57%;
+        color: white;
+    }
+}
+@keyframes transparent{
+    from{
+
+        color: transparent;
+
+    }
+    to{
+
+        background-color: #df856f;
+    }
+}
+
