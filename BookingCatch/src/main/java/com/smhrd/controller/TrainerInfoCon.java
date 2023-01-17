@@ -1,6 +1,8 @@
 package com.smhrd.controller;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,8 +35,9 @@ public class TrainerInfoCon extends HttpServlet {
 		String price = request.getParameter("price");
 		String method = request.getParameter("method");
 		String notice = request.getParameter("notice");
+		int likes = 0;
 		
-		TrainerInfoVO tVo = new TrainerInfoVO(trainerId, introduce, certificate, center, schedule, program, price, method, notice);
+		TrainerInfoVO tVo = new TrainerInfoVO(trainerId, introduce, certificate, center, schedule, program, price, method, notice,likes);
 		int cnt = new TrainerInfoDAO().insertTrainerInfo(tVo);
 		
 		if(cnt>0) {
