@@ -449,5 +449,11 @@ textarea:focus{outline:none;}
     transform: scale(1.4);
     transition: .5;
   }
-
+   
+  #datewantInput{
+    height: 100px;
+  }
   
+  #doReservation{
+    margin-top: 10px;
+  } 

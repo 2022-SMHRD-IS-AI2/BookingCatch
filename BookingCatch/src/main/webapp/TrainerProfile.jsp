@@ -324,6 +324,14 @@
                         <label for="usr">날짜 :</label>
                         <input type="text" class="form-control" id="datepickInput" disabled>
                     </div>
+                    <div>
+                        <label for="usrwant">요구사항 :</label>
+                        <textarea  class="form-control" id="datewantInput"></textarea>
+                    </div>
+                    <div>
+                       
+                    </div>
+
                     <button class="btn btn-primary" id="doReservation">예약</button>
                 </div>
         </div>

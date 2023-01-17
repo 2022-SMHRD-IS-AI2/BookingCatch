@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smhrd.model.TrainerListDAO">
+	<select id="getTrainerList" resultType="com.smhrd.model.TrainerListVO">
+		SELECT
+		    t_id AS tid,
+		    t_name AS name,
+		    t_birth AS birth,
+		    t_mbti AS mbti,
+		    t_gender AS gender,
+		    t_center AS center,
+		    t_type AS ttype,
+		    t_date AS bDate,
+		    t_phone AS phone,
+		    t_img_path AS tImg,
+		    t_intro AS tIntro,
+		    t_score AS tScore
+		FROM
+		    tb_trainer
+	</select>
+</mapper>

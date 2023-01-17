@@ -100,6 +100,18 @@
   	<description></description>
   	<servlet-class>com.smhrd.controller.TrainerInfoCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>TrainerListCon</servlet-name>
+  	<display-name>TrainerListCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.TrainerListCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>TrainerProfileCon</servlet-name>
+  	<display-name>TrainerProfileCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smhrd.controller.TrainerProfileCon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -163,5 +175,13 @@
   <servlet-mapping>
   	<servlet-name>TrainerInfoCon</servlet-name>
   	<url-pattern>/TrainerInfoCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TrainerListCon</servlet-name>
+  	<url-pattern>/TrainerListCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>TrainerProfileCon</servlet-name>
+  	<url-pattern>/TrainerProfileCon</url-pattern>
   </servlet-mapping>
 </web-app>
