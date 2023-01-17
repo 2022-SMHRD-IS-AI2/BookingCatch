@@ -13,7 +13,7 @@
             <div class="title-pt">
                 <h1>PT</h1>
                 
-                <button>글쓰기</button>
+                <button><a href="TrainersInfo.jsp">글쓰기</a></button>
             </div>
             <div class="trainers-container">
                 <div class="trainers">
