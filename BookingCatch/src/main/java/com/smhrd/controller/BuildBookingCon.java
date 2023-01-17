@@ -50,5 +50,6 @@ public class BuildBookingCon extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.print(cnt);
 		out.flush();
+//		되냐?
 	}
 }
