@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./asset/css/TrainerProfile.css">
+    <link rel="stylesheet" href="/css/TrainerProfile.css">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -21,7 +21,7 @@
 <body>
     <div class="wrap">
         <div class="position-fixed">
-            <img src="./img/양치승씨.jpg" alt="">
+            <img src="/img/양치승씨.jpg" alt="">
             <div class="trainer-name">
                 <span>김다희 <span class="left_tr_name">트레이너</span></span>
             </div>
@@ -70,10 +70,10 @@
                         </span>
                     </div>
                     <div class="infos pt10">
-                       <span class="bold-letter">성격유형(INFP)</span>
+                        <li><span class="bold-letter">성격유형(INFP)</span></li>
                     </div>
                     <div class="graph">
-                        <img src="./img/MBTI.gif" class="MBTI-img">
+                        <li><img src="./img/MBTI.gif" class="MBTI-img"></li>
                     </div>
                 </div>
                 <div class="buttons">
@@ -108,17 +108,7 @@
                     <span>자기소개</span>
                 </div>
                 <div class="content">
-                    <div class="infos">
-                       <ul>
-                       <li> 안녕 나는 양치승이란다!! </li>
-                       <li> 우끼끼끼끼끼끼끼끼끼 나는 침팬지야! </li>
-                       <li> 발표는 어떻게 하지..? </li>
-                       <li> 탈주 하고 싶다!! </li>
-                       <li> 하이루~ 나는 양치승이란다!! </li>
-                       <li> 하이루~ 나는 양치승이란다!! </li>
-                       <li> 하이루~ 나는 양치승이란다!! </li>
-
-                      </ul>
+                    <div class="infos"></div>
                         <!-- <span class="bold-letter">
                             전문분야
                         </span>
@@ -149,7 +139,6 @@
                         <span class="none-bold">
                             INTP 여기다가 그래프 넣을 거라서 공간확보가능
                         </span> -->
-                    </div>
                 </div>
             </div>
             <div class="short-info give-top-space">
@@ -204,54 +193,25 @@
                 <div class="title" id="center">
                     <span>센터</span>
                 </div>
-                <div class="content">
-                    <span class="one-sentence-info">
-                        "지방을 태우는 열정적인 트레이너 ㅇㅇㅇ 입니다!"
-                    </span>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            전문분야
-                        </span>
-                        <span class="none-bold">
-                            자세교정,재활전문
-                        </span>
+                <div class="content" id="Centerimg">
+                    <div class="Center_img">
+                       <div class="Center_img_1">
+                        <img src="/img/센터내부1.png" id="img1">
+                        <img src="/img/센터내부2.png" id="img2">
+                        <img src="/img/센터내부3.png" id="img3">
+                        <img src="/img/센터내부4.png" id="img4">
                     </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            자격증명
-                        </span>
-                        <span class="none-bold">
-                            2개
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            대표가격
-                        </span>
-                        <span class="none-bold">
-                            회당 10만원/20회 기준
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            성격유형
-                        </span>
-                        <span class="none-bold">
-                            INTP 여기다가 그래프 넣을 거라서 공간확보가능
-                        </span>
                     </div>
                 </div>
+
             </div>
             <div class="short-info give-top-space">
                 <div class="title" id="schedule">
                     <span>스케줄</span>
                 </div>
                 <div class="content">
-                    <span class="one-sentence-info">
-                        "지방을 태우는 열정적인 트레이너 ㅇㅇㅇ 입니다!"
-                    </span>
                     <div class="infos">
-                        <span class="bold-letter">
+                        <!-- <span class="bold-letter">
                             전문분야
                         </span>
                         <span class="none-bold">
@@ -280,7 +240,7 @@
                         </span>
                         <span class="none-bold">
                             INTP 여기다가 그래프 넣을 거라서 공간확보가능
-                        </span>
+                        </span> -->
                     </div>
                 </div>
             </div>
@@ -289,41 +249,7 @@
                     <span>프로그램</span>
                 </div>
                 <div class="content">
-                    <span class="one-sentence-info">
-                        "지방을 태우는 열정적인 트레이너 ㅇㅇㅇ 입니다!"
-                    </span>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            전문분야
-                        </span>
-                        <span class="none-bold">
-                            자세교정,재활전문
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            자격증명
-                        </span>
-                        <span class="none-bold">
-                            2개
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            대표가격
-                        </span>
-                        <span class="none-bold">
-                            회당 10만원/20회 기준
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            성격유형
-                        </span>
-                        <span class="none-bold">
-                            INTP 여기다가 그래프 넣을 거라서 공간확보가능
-                        </span>
-                    </div>
+                     
                 </div>
             </div>
             <div class="short-info give-top-space">
@@ -331,41 +257,7 @@
                     <span>후기</span>
                 </div>
                 <div class="content">
-                    <span class="one-sentence-info">
-                        "지방을 태우는 열정적인 트레이너 ㅇㅇㅇ 입니다!"
-                    </span>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            전문분야
-                        </span>
-                        <span class="none-bold">
-                            자세교정,재활전문
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            자격증명
-                        </span>
-                        <span class="none-bold">
-                            2개
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            대표가격
-                        </span>
-                        <span class="none-bold">
-                            회당 10만원/20회 기준
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            성격유형
-                        </span>
-                        <span class="none-bold">
-                            INTP 여기다가 그래프 넣을 거라서 공간확보가능
-                        </span>
-                    </div>
+                    
                 </div>
             </div>
             <div class="short-info give-top-space">
@@ -373,83 +265,8 @@
                     <span>레슨가격</span>
                 </div>
                 <div class="content">
-                    <span class="one-sentence-info">
-                        "지방을 태우는 열정적인 트레이너 ㅇㅇㅇ 입니다!"
-                    </span>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            전문분야
-                        </span>
-                        <span class="none-bold">
-                            자세교정,재활전문
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            자격증명
-                        </span>
-                        <span class="none-bold">
-                            2개
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            대표가격
-                        </span>
-                        <span class="none-bold">
-                            회당 10만원/20회 기준
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            성격유형
-                        </span>
-                        <span class="none-bold">
-                            INTP 여기다가 그래프 넣을 거라서 공간확보가능
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="short-info give-top-space">
-                <div class="title" id="zoom">
-                    <span>수업방법 여부</span>
-                </div>
-                <div class="content">
-                    <span class="one-sentence-info">
-                        "지방을 태우는 열정적인 트레이너 ㅇㅇㅇ 입니다!"
-                    </span>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            전문분야
-                        </span>
-                        <span class="none-bold">
-                            자세교정,재활전문
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            자격증명
-                        </span>
-                        <span class="none-bold">
-                            2개
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            대표가격
-                        </span>
-                        <span class="none-bold">
-                            회당 10만원/20회 기준
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            성격유형
-                        </span>
-                        <span class="none-bold">
-                            INTP 여기다가 그래프 넣을 거라서 공간확보가능
-                        </span>
-                    </div>
+                    
+                    
                 </div>
             </div>
             <div class="short-info give-top-space">
@@ -457,41 +274,7 @@
                     <span>공지사항</span>
                 </div>
                 <div class="content">
-                    <span class="one-sentence-info">
-                        "지방을 태우는 열정적인 트레이너 ㅇㅇㅇ 입니다!"
-                    </span>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            전문분야
-                        </span>
-                        <span class="none-bold">
-                            자세교정,재활전문
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            자격증명
-                        </span>
-                        <span class="none-bold">
-                            2개
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            대표가격
-                        </span>
-                        <span class="none-bold">
-                            회당 10만원/20회 기준
-                        </span>
-                    </div>
-                    <div class="infos">
-                        <span class="bold-letter">
-                            성격유형
-                        </span>
-                        <span class="none-bold">
-                            INTP 여기다가 그래프 넣을 거라서 공간확보가능
-                        </span>
-                    </div>
+                
                 </div>
             </div>
         </div>
@@ -509,7 +292,7 @@
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header" style="padding: 10px 16px;">
-          <h4 class="modal-title">예약하기</h4>
+          <h4 class="modal-title" >예약하기</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
@@ -549,5 +332,5 @@
   </div>
     
 </body>
-<script src="./asset/js/TrainerProfile.js"></script>
+<script src="/js/TrainerProfile.js"></script>
 </html>
