@@ -83,7 +83,7 @@
             <div class="ul-forSize">
                 <ul>
                 	<li>관리자 계정</li>
-                    <li><a href="#">전체회원정보</a></li>
+                    <li><a href="AdminSelectAll.jsp">전체회원정보</a></li>
                     <li><a href="UpdateInfo.jsp">관리자정보수정</a></li>
                     <li><a href="LogOutCon">로그아웃</a></li>
                     <li><i class="fa-regular fa-heart"></i></li>

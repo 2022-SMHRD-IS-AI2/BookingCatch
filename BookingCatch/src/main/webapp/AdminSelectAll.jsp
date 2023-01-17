@@ -1,11 +1,13 @@
+<%@page import="com.smhrd.model.TrainerVO"%>
+<%@page import="com.smhrd.model.MemberVO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.smhrd.model.TrainerDAO"%>
 <%@page import="com.smhrd.model.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html >
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,10 +18,10 @@
 
 <%
  MemberDAO dao = new MemberDAO();
- List<MemberDAO> list= dao.selectAllMember();
-   
+ List<MemberVO> list = dao.selectAllMember();
+ 
  TrainerDAO daot = new TrainerDAO();
- List<TrainerDAO> listt=daot.selectAllTrainer();   
+ List<TrainerVO> listT = daot.selectAllTrainer();  
 %>
 
 <div></div>
@@ -27,20 +29,20 @@
         <table>
             <caption><h2>회원 관리페이지</h2></caption>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>아이디</td>
+                    <td>이름</td>
+                    <td>생년월일</td>
+                    <td>핸드폰</td>
+                    <td>성별</td>
                 </tr> 
     
-                <%for(MemberVO m:list){ %>
+                <%for(MemberVO m: list){ %>
                  <tr>
                     <td><%=m.getId()%></td>
-                    <td><%=m.getId()%></td>
-                    <td><%=m.getId()%></td>
-                    <td><%=m.getId()%></td>
-                    <td><%=m.getId()%></td>
+                    <td><%=m.getName()%></td>
+                    <td><%=m.getBirth()%></td>
+                    <td><%=m.getPhone()%></td>
+                    <td><%=m.getGender()%></td>
                     <td><a href="DelectCon?id=<%=m.getId()%>">삭제</a></td>
                 </tr>
         <%}%>   
@@ -49,22 +51,22 @@
     <nav>
         <table>
             <caption><h2>트레이너 관리페이지</h2></caption>
-                <tr>관리자전체회원조회
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr>
+                    <td>아이디</td>
+                    <td>이름</td>
+                    <td>생년월일</td>
+                    <td>핸드폰</td>
+                    <td>성별</td>
                 </tr> 
     
-                <%for(TrainerVO t:list){ %>
+                <%for(TrainerVO t:listT){ %>
                  <tr>
                     <td><%=t.getId()%></td>
-                    <td><%=t.getId()%></td>
-                    <td><%=t.getId()%></td>
-                    <td><%=t.getId()%></td>
-                    <td><%=t.getId()%></td>
-                    <td><a href="DelectCon?id=<%=m.getId()%>">삭제</a></td>
+                    <td><%=t.getName()%></td>
+                    <td><%=t.getBirth()%></td>
+                    <td><%=t.getPhone()%></td>
+                    <td><%=t.getGender()%></td>
+                    <td><a href="DelectCon?id=<%=t.getId()%>">삭제</a></td>
                 </tr>
         <%}%>   
         </table>
