@@ -21,7 +21,7 @@
 <body>
     <div class="wrap">
         <div class="position-fixed">
-            <img src="/img/양치승씨.jpg" alt="">
+            <img src="./img/양치승씨.jpg" alt="">
             <div class="trainer-name">
                 <span>김다희 <span class="left_tr_name">트레이너</span></span>
             </div>
@@ -73,7 +73,7 @@
                        <span class="bold-letter">성격유형(INFP)</span>
                     </div>
                     <div class="graph">
-                        <img src="/img/MBTI.gif" class="MBTI-img">
+                        <img src="./img/MBTI.gif" class="MBTI-img">
                     </div>
                 </div>
                 <div class="buttons">

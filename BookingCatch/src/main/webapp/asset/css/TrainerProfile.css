@@ -242,7 +242,7 @@ textarea:focus{outline:none;}
 .infos .lic_con{font-size: 0;} /* li기본값으로 여백이 존재, font-size : 0; 그 여백을 지워주는거 */
 .infos .lic_con li{display: inline-block; width: 100%; padding-top: 10px;}
 .infos .lic_con li:last-child{padding-top: 5px;}
-.trophy_img{background:url("/img/Trophy.png") no-repeat left center; font-size: 15px;}
+.trophy_img{background:url("../img/Trophy.png") no-repeat left center; font-size: 15px;}
 
 
 
