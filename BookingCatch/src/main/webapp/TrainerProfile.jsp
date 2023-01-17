@@ -70,10 +70,10 @@
                         </span>
                     </div>
                     <div class="infos pt10">
-                        <li><span class="bold-letter">성격유형(INFP)</span></li>
+                       <span class="bold-letter">성격유형(INFP)</span>
                     </div>
                     <div class="graph">
-                        <li><img src="./img/MBTI.gif" class="MBTI-img"></li>
+                        <img src="/img/MBTI.gif" class="MBTI-img">
                     </div>
                 </div>
                 <div class="buttons">
