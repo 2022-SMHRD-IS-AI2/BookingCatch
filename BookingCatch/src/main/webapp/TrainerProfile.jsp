@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/asset/css/TrainerProfile.css">
+    <link rel="stylesheet" href="./asset/css/TrainerProfile.css">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -549,5 +549,5 @@
   </div>
     
 </body>
-<script src="/asset/js/TrainerProfile.js"></script>
+<script src="./asset/js/TrainerProfile.js"></script>
 </html>
