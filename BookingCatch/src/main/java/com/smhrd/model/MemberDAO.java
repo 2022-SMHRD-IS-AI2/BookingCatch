@@ -1,5 +1,7 @@
 package com.smhrd.model;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -101,6 +103,22 @@ public int updateMember(MemberVO vo) {
 
 	return cnt;
 }
+//전체회원조회
+public List<MemberVO> selectAllMember() {
+    List<MemberVO> list = null;
+    
+    try {
+       list = sqlSession.selectList("com.smhrd.model.MemberDAO.selectAllMember");
+       // commit / rollback 생략할수 있음!
+    }catch(Exception e) {
+       e.printStackTrace();
+    }finally {
+       sqlSession.close();
+    }
+    return list;
+	
+}
+
 
 
 	

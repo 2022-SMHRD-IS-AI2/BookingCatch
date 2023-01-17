@@ -1,5 +1,7 @@
 package com.smhrd.model;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -77,6 +79,21 @@ public class TrainerDAO {
 				sqlSession.close();
 			}
 			return cnt;
+		}
+		//전체트레이너조회
+		public List<TrainerVO> selectAllTrainer() {
+		    List<TrainerVO> list = null;
+		    
+		    try {
+		       list = sqlSession.selectList("com.smhrd.model.TrainerDAO.selectAllTrainer");
+		       // commit / rollback 생략할수 있음!
+		    }catch(Exception e) {
+		       e.printStackTrace();
+		    }finally {
+		       sqlSession.close();
+		    }
+		    return list;
+			
 		}
 
 }

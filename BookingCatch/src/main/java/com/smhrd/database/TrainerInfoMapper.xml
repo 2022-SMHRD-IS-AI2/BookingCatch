@@ -7,6 +7,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.smhrd.model.TrainerInfoDAO">
 	<insert id="insertTrainerInfo" parameterType="com.smhrd.model.TrainerInfoVO">
-	insert into tb_t_info values(#{id},#{certificate},#{introduce},#{price},#{schedule},#{notice},0,#{center},#{program},#{method})
+	insert into tb_t_info values(#{id},#{certificate},#{introduce},#{price},#{notice},#{likes},#{center},#{program},#{method},#{schedule})
 	</insert>
 </mapper>

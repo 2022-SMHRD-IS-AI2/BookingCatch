@@ -1,5 +1,6 @@
 package com.smhrd.model;
 
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 import lombok.AllArgsConstructor;
@@ -22,6 +23,6 @@ public class TrainerInfoVO {
 	private String price;
 	private String method;
 	private String notice;
-	
+	private int likes;
 }
 

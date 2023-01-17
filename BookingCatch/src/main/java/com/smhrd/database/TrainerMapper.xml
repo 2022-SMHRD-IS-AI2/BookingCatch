@@ -21,4 +21,7 @@ delete from TB_TRAINER where t_id=#{id}
 		update tb_trainer set t_pw=#{pw}, t_mbti=#{mbti},t_center=#{center},t_type=#{ttype},t_phone=#{phone} where t_id=#{id}
 	</update>
 
+<select id="selectAllTrainer" resultType="com.smhrd.model.TrainerVO">
+		select * from tb_trainer
+	</select>
 </mapper>

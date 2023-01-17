@@ -1,6 +1,7 @@
 package com.smhrd.model;
 
 import java.net.ResponseCache;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -34,6 +35,7 @@ public class TrainerInfoDAO {
 		return cnt;
 	}
 	
+
 	
 	
 	
