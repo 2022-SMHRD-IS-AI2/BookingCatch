@@ -36,10 +36,10 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
         <header>
             
             <ul class="want-to-be-fixed">
-                <li><a href="#"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
+                <li><a href="TrainerInfo.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
                 <li><a href="#"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
-                <li><a href="#"><span class="en">Community</span><span class="ko">게시판</span></a></li>
-                <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
+                <li><a href="tipBoardMain.jsp"><span class="en">Community</span><span class="ko">게시판</span></a></li>
+                <li><a href=""><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
             </ul>
 
             <a href="Main.jsp"><h1>HelinCare</h1></a> 

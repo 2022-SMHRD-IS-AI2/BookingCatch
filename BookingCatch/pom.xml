@@ -11,7 +11,7 @@
 
   <name>BookingCatch Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>http://nexus.dongnyang.com/content/repositories/releases</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -75,6 +75,18 @@
 			<groupId>com.jfinal</groupId>
 			<artifactId>cos</artifactId>
 			<version>2020.4</version>
+		</dependency>
+		<!-- JSON-SIMPLE -->
+		<dependency>
+		    <groupId>com.googlecode.json-simple</groupId>
+		    <artifactId>json-simple</artifactId>
+		    <version>1.1.1</version>
+		</dependency>
+		<!-- JACKSON -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>2.11.0</version>
 		</dependency>
   </dependencies>
 

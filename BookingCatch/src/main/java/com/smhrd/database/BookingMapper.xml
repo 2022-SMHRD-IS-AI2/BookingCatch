@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smhrd.model.BookingDAO">
+	<insert id="insertBookingContents" parameterType="com.smhrd.model.BookingVO">
+		INSERT INTO TB_BOOK
+		(BOOK_SEQ, U_ID, B_DATE, PRICE, B_WISHLIST, T_ID) VALUES (TB_BOOK_SEQ.nextval, #{uid}, #{bdate}, #{price}, #{bWishList}, #{tid})
+	</insert>
+	
+	<select id="getBookingContents" parameterType="java.lang.String" resultType="com.smhrd.model.BookingVO">
+		SELECT BOOK_SEQ AS idx, B_DATE AS bdate FROM TB_BOOK WHERE T_ID = #{tid}
+	</select>
+</mapper>
