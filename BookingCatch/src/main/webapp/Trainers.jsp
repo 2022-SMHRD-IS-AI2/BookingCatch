@@ -68,7 +68,7 @@
 <!--                             <span>★5.0(5)</span> -->
 <!--                         </div> -->
 <!--                     </div> -->
-<!--                 </div> -->
+<!--                 </div> 따라라라랏-->
             </div>
             <div class="view-more">
                 <button>더보기</button>
