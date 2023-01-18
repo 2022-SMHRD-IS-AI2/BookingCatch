@@ -13,4 +13,5 @@
             <a href="JoinT.jsp"><button>트레이너로 가입하기</button></a></li>
     </div>    	
 </body>
+
 </html>
