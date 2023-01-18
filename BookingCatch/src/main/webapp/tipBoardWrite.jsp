@@ -66,7 +66,7 @@
         </header>
     </div>
 	<div id="board">
-		<form action="/BookingCatch/writeTipBoardCon" method="post" enctype="multipart/form-data">
+		<form action="writeTipBoardCon" method="post" enctype="multipart/form-data">
 			<table id="list">
 				<tr>
 					<td>제목</td>

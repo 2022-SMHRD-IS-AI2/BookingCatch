@@ -21,6 +21,37 @@
 <body>
     <form action="">
     <div class="wrap">
+    <header>
+            
+            <ul class="want-to-be-fixed">
+                <li><a href="#"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
+                <li><a href="#"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
+                <li><a href="#"><span class="en">Community</span><span class="ko">게시판</span></a></li>
+                <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
+            </ul>
+
+            <a href="NewMain.jsp"><h1>HelinCare</h1></a> 
+            
+             <div class="ul-forSize">
+
+				<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				</ul>
+
+
+                <!-- <ul>
+                    <li><a href="Login.jsp">로그인</a></li>
+                    <li><a href="JoinWho">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul> -->
+            </div>
+
+        </header>
+        <!-- 여기까지 header -->
         <div class="position-fixed">
             <img src="./img/양치승씨.jpg" alt="">
             <div class="trainer-name">

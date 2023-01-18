@@ -64,7 +64,7 @@
 				<div class="remain-login">
 					<input type="checkbox"> <span>로그인 유지</span>
 				</div>
-				<button class="login-btn">
+				<button>
 					<span class="block">LOGIN</span><span class="none">로그인</span>
 				</button>
 			</form>

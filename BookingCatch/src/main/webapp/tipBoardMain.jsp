@@ -134,10 +134,10 @@
                 <%} %>
                 </table>
                 
-                <%if(loginTrainer !=null){%>
+                <%if(loginTrainer != null){%>
                 	<table>
                 <td class="board_writer" colspan="5">
-                <a href="/BookingCatch/tipBoardWrite.jsp">
+                <a href="tipBoardWrite.jsp">
                     <button id="writer"> 
                         작성하기
                     </button>
