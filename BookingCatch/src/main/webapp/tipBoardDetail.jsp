@@ -11,7 +11,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0, user-scalable=yes, target-density-dpi=medium-dpi" />
-    <title>게시판 되냐?</title>
+    <title>Tip게시판</title>
     <link rel="stylesheet" href="asset/css/board.css" />
     <link rel="stylesheet" href="asset/css/TrainerSearch.css">
     <link rel="stylesheet" href="asset/css/Trainerprofile.css">
@@ -29,12 +29,11 @@
 		int num = Integer.parseInt(request.getParameter("num"));
 		tipBoardVO vo = new tipBoardDAO().detailTipBoard(num); 
 		
-		TrainerVO loginTrainer = (TrainerVO)session.getAttribute("loginTrainer"); 
 	%>
    <div id="wrap">
         <header>
             <div class="header1">
-                <a href="Main.jsp"><img src="" alt="HelinCatch" class="logo"></a>
+                <a href="NewMain.jsp"><img src="" alt="HelinCatch" class="logo"></a>
                 <div class="header-center">
                     <input type="text" class="header-search" placeholder="#나의#트레이너찾기">
                     <button class="search-btn">
@@ -43,9 +42,9 @@
                 </div>
                 <div class="for-space"></div>
                 <ul class="header1-ul">
-                    <li class="menu-letter"><a href="Login.jsp">로그인</a></li>
-                    <li class="menu-letter"><a href="Join.jsp">회원가입</a></li>
-                    <li class="menu-letter"><a href="#">고객센터</a></li>
+                    <li class="menu-letter"></li>
+                    <li class="menu-letter"></li>
+                    <li class="menu-letter"></li>
                     <li class="menu-letter" id="addEvent">
                         <i class="fa-regular fa-heart"></i>
                         <div id="hidden-list">
@@ -92,7 +91,7 @@
                                 
                                  <li>
                                     <span class="title">작성자</span>
-                                    <span class="text"><%=loginTrainer.getName() %></span>
+                                    <span class="text"><%=vo.getWriter() %></span>
                                  </li>
                                  <li>
                                     <span class="title">작성일</span>
@@ -107,7 +106,7 @@
                         </div>
                         <div class="board-cont" <%=vo.getContent()%>>
                         
-                                   <div class="video_con"><iframe src="https://www.youtube.com/embed/QdaBigmnXNs" title="YouTube video player" frameborder="0" 
+                                   <div class="video_con"><iframe src="https://youtu.be/Dr-G9I6Aiiw" title="YouTube video player" frameborder="0" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         <p class="board-cont">
                                           <%=vo.getContent()%>

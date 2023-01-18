@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.smhrd.model.TrainerDAO">
 
 <insert id="joinTrainer" parameterType="com.smhrd.model.TrainerVO">
-insert into TB_TRAINER values (#{id},#{pw},#{name},#{birth},#{mbti},#{gender},#{center},#{ttype},sysdate,#{phone})
+insert into TB_TRAINER values (#{id},#{pw},#{name},#{birth},#{mbti},#{gender},#{center},#{ttype},sysdate,#{phone},#{img_path},#{intro},#{score})
 </insert>
 
 <select id="selectOne" resultType="com.smhrd.model.TrainerVO" parameterType = "com.smhrd.model.TrainerVO">

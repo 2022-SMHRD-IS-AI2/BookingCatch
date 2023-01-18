@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>트레이너 회원가입</title>
-<link rel="stylesheet" href="asset/css/Join.css">
+<link rel="stylesheet" href="asset/css/JoinT.css">
 
 <script language="javascript">
 // opener관련 오류가 발생하는 경우 아래 주석을 해지하고, 사용자의 도메인정보를 입력합니다. ("팝업API 호출 소스"도 동일하게 적용시켜야 합니다.)
@@ -13,7 +13,7 @@
 
 function goPopup(){
 	// 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(https://business.juso.go.kr/addrlink/addrLinkUrl.do)를 호출하게 됩니다.
-    var pop = window.open("/BookingCatch/jusoPopup.jsp","pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
+    var pop = window.open("jusoPopup.jsp","pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
     
 	// 모바일 웹인 경우, 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(https://business.juso.go.kr/addrlink/addrMobileLinkUrl.do)를 호출하게 됩니다.
     //var pop = window.open("/popup/jusoPopup.jsp","pop","scrollbars=yes, resizable=yes"); 
@@ -29,6 +29,8 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 }
 </script>
 
+
+
 </head>
 <body>
     <div class="wrap">
@@ -42,7 +44,7 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
                 <li><a href=""><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
             </ul>
 
-            <a href="Main.jsp"><h1>HelinCare</h1></a> 
+            <a href="NewMain.jsp"><h1>HelinCare</h1></a> 
             
              <div class="ul-forSize">
 
@@ -112,11 +114,17 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 					<input type="button"  value="주소검색" onclick="goPopup();">
 					
                     <input type="text" name="phone" placeholder="전화번호를 입력">
-                    <input list="ttypes" name="ttype" placeholder="운동" class="input-list">
+                    <br>
+					대표사진을 등록해주세요
+					<span></span>
+					 <input name="img_path" type="file">
+					<textarea name="intro" rows="10" cols="50" placeholder="간략한 자기소개를 작성해주세요 &#13;&#10; ex) 항상 열정으로 가르치는 OOO입니다"></textarea>                    
                 		
+                    <input list="ttypes" name="ttype" placeholder="운동" class="input-list">
                 		<datalist id="ttypes">
                 			<option value="헬스">
                 			<option value="필라테스">
+                			<option value="요가">
                 		</datalist>
                     <div class="input-radio">
                         <input type="radio" name="gender" value="M" id="Man">
