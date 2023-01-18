@@ -130,7 +130,7 @@
                 </div>
                 <div class="box-letter">
                     <span class="problem">운동할 곳을 찾을 땐</span>
-                    <a href="#"><span class="solution">→센터 찾기</span></a>
+                    <a href="CenterLocation.jsp"><span class="solution">→센터 찾기</span></a>
                 </div>
             </div>
             <div class="box1">
@@ -140,7 +140,7 @@
                 </div>
                 <div class="box-letter">
                     <span class="problem">운동이 막막할 땐</span>
-                    <a href="#"><span class="solution">→선생님 찾기</span></a>
+                    <a href="Trainers.jsp"><span class="solution">→선생님 찾기</span></a>
                 </div>
             </div>
             <!-- <div class="space"></div> -->
@@ -152,7 +152,7 @@
                 </div>
                 <div class="box-letter">
                     <span class="problem">1% 부족할 땐</span>
-                    <a href="#"><span class="solution">→Tip게시판</span></a>
+                    <a href="tipBoardMain.jsp"><span class="solution">→Tip게시판</span></a>
                 </div>
             </div>
         </div>

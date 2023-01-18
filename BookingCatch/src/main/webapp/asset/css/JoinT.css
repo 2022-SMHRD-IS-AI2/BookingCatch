@@ -1,0 +1,208 @@
+@charset "UTF-8";
+@charset "EUC-KR";
+@font-face {
+    font-family: 'Rubik80sFade-Regular';
+    src: url("Rubik80sFade-Regular.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&family=Gowun+Batang&family=Kanit&family=Lilita+One&family=Lobster&family=Michroma&family=Montserrat+Alternates&family=Moon+Dance&family=Play&family=Rubik+80s+Fade&family=Shadows+Into+Light&display=swap');
+
+.wrap{
+    width: 100%;
+    position: absolute;
+    top: 0px;left: 0px;
+}
+
+body,div,ul,li,a{font-family: Arial, Helvetica, sans-serif;}
+
+*{padding:0; margin:0;}
+li{list-style:none;}
+a{color:inherit; text-decoration:none;}
+button{border:none; border-radius:0%;}
+/* input{border:none; border-radius:none;} */
+input:focus{outline:none;}
+
+textarea{resize: none; padding:20px 30px; font-size:13px; font-family: Arial, Helvetica, sans-serif; border:none;}
+textarea::placeholder {
+  font-size: 0.8em;
+  
+ 
+}
+textarea:focus{outline:none;}
+
+.fc{display:flex; justify-content:center;}
+.fb{display:flex; justify-content:space-between;}
+
+/* 여기까지 기본css */
+
+header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 3%;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+}
+header h1{
+    font-family:'Gloria Hallelujah';
+}
+header input{
+    width: 12%;
+    border-bottom: 1px solid black;
+    align-self: center;
+    padding-bottom: 5px;
+}
+header>ul{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+.ul-forSize ul{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.ul-forSize{
+    width: 20%;
+    display: flex;
+    justify-content: end;
+}
+
+.wrap header ul li span.en{display: block;}
+.wrap header ul li span.ko{display: none;}
+.wrap header ul li:hover span.ko{display: block;}
+.wrap header ul li:hover span.en{display: none;}
+.want-to-be-fixed li{
+    line-height: 16px;
+    vertical-align: middle;
+    text-align: center;
+}
+.want-to-be-fixed li:first-child{
+    width: 50.09px;
+}
+.want-to-be-fixed li:nth-child(2){
+    width: 64px;
+}
+.want-to-be-fixed li:nth-child(3){
+    width: 80.91px;
+}
+.want-to-be-fixed li:nth-child(4){
+    width: 61.38px;
+}
+/* 여기까지 header부분 */
+
+
+
+.join{
+    width: 100%;
+    height:70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.join>h1{
+    font-weight: 200;
+    margin-top: 2%;
+    padding: 2%;
+}
+/* h1:hover .en{display: none;}
+h1:hover .ko{display: block;}
+.en{display: block;}
+.ko{display: none;} */
+.join-form{
+    width: 20%;
+    height: 100%;
+}
+.input-join{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+#flex-row{
+    flex-direction: row;
+    justify-content: space-around;
+    height: 10%;
+}
+.input-join>input,.input-list{
+    width: 100%;
+    height: 20%;
+    padding-left: 5px;
+    border-radius: 7px;
+    border-width: 0.5px;
+    border-color: rgb(214, 214, 214);
+}
+
+.input-join input::placeholder{
+    padding-left: 2px;
+}
+.inside-letter{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 2% 1% 4% 1%;
+}
+.inside-letter span{
+    color: rgb(0, 40, 127);
+    font-size: 12px;
+}
+option {
+    background-color: white;
+    padding: 4px;
+    color: blue;
+    margin-bottom: 1px;
+     font-size: 18px;
+    cursor: pointer;
+}
+
+
+.input-radio{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 3%; */
+}
+
+input[type='radio']{
+    display: none;
+}
+input[type='radio']+label{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 34.55px;
+    vertical-align: bottom;
+    border: 1px solid black;
+    /* border-radius: 10px; */
+    cursor: pointer;
+}
+input[type='radio']:checked+label{
+    background-color: black;
+    color: white;
+}
+.submit{
+    width: 100%;
+    height: 20%;
+    border: 1px solid black;
+    margin-top: 2%;
+    background-color: black;
+    color: white;
+    transition: 1s all;
+}
+.ko{display: none;}
+.submit:hover{border-radius: 10px;transition:1s all;}
+button:hover .en{
+    display: none;
+}
+button:hover .ko{
+    display:block;
+}
+
+

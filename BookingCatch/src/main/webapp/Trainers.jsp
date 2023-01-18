@@ -21,6 +21,7 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <link rel="stylesheet" href="./asset/css/Trainers.css">
+<link rel="stylesheet" href="asset/css/Join.css">
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="https://kit.fontawesome.com/f4f342f148.js" crossorigin="anonymous"></script>
 
@@ -42,6 +43,7 @@
    %>
     
     <div class="wrap">
+<<<<<<< HEAD
         <a href="#"><button class="fixed-menu">
             <i class="fa-solid fa-arrow-up"></i><!--  Top -->
         </button></a>
@@ -115,6 +117,40 @@
             <a href="tipBoardMain.jsp">Tip게시판</a><a href="#">공감게시판</a>
         </div>
             <!-- 헤더부분 양심없이 길다 진짜  -->
+
+     <header>
+            
+            <ul class="want-to-be-fixed">
+                <li><a href="TrainerInfo.jsp"><span class="en">Trainer</span><span class="ko">������</span></a></li>
+                <li><a href="#"><span class="en">Center</span><span class="ko">�����</span></a></li>
+                <li><a href="tipBoardMain.jsp"><span class="en">Community</span><span class="ko">�Խ���</span></a></li>
+                <li><a href=""><span class="en">AboutUs</span><span class="ko">�츮��</span></a></li>
+            </ul>
+
+            <a href="NewMain.jsp"><h1>HelinCare</h1></a> 
+            
+             <div class="ul-forSize">
+
+				<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				</ul>
+
+					
+                <!-- <ul>  ȸ�������Ҷ� �α����Ҷ� ���� �׳ɳ�����
+                    <li><a href="Login.jsp">�α���</a></li>
+                    <li><a href="JoinWho">ȸ������</a></li>
+                    <li><a href="#">������</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul> -->
+            </div>
+
+        </header>
+        <!-- ������� header -->
+    
+<!-- >>>>>>> branch 'master1' of https://github.com/2022-SMHRD-IS-AI2/BookingCatch.git -->
         <div class="all-container">
             <div class="title-pt">
                 <h1>PT</h1>

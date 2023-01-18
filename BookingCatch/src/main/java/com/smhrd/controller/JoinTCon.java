@@ -28,8 +28,11 @@ public class JoinTCon extends HttpServlet {
 		String center = request.getParameter("center");
 		String ttype = request.getParameter("ttype");
 		String phone = request.getParameter("phone");
+		String img_path = request.getParameter("img_path");
+		String intro = request.getParameter("intro");
+		double score = 0.0;
 
-		TrainerVO vo = new TrainerVO(id, pw, name, birth, mbti, gender, center, ttype, phone);
+		TrainerVO vo = new TrainerVO(id, pw, name, birth, mbti, gender, center, ttype, null, phone, img_path, intro, score);
 		int cnt = new TrainerDAO().joinTrainer(vo);
 		if (cnt > 0) {
 			System.out.println("회원가입 성공");
