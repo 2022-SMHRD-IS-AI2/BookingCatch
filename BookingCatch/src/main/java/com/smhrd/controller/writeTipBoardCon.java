@@ -24,8 +24,8 @@ public class writeTipBoardCon extends HttpServlet {
 		// MultipartRequest에서 필요한 매개변수 설정
 		// 1. 모든 요청의 정보가 담겨있는 request객체
 		// 2. 업로드 된 파일(이미지)을 저장할 경로
-//		String path = request.getServletContext().getRealPath("./myFile");
-		String path = "C:\\Users\\SMHRD\\Desktop\\Center\\";
+		String path = request.getServletContext().getRealPath("./file");
+//		String path = "C:\\Users\\SMHRD\\Desktop\\Center\\";
 		System.out.println(path);
 		
 		// 3. 파일의 max size

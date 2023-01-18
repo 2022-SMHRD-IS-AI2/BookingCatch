@@ -148,7 +148,7 @@
             <div class="box1">
                 <div class="box-img3">
                     <img src=img/Main사용이미지2.png alt="">
-                    <span>선생님들이 작성한 tip을 통해</span><span>궁금한 점들을 채워보아요</span>
+                    <span>선생님들이 작성한 tip을 통해</span><span>궁금한 점들을 ㄴ채워보아요</span>
                 </div>
                 <div class="box-letter">
                     <span class="problem">1% 부족할 땐</span>
