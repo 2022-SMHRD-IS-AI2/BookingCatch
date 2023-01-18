@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="./asset/css/Trainers.css">
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
 </head>
 <body>
     <div class="wrap">
