@@ -183,7 +183,7 @@ input[type="checkbox"]{
     border-color: rgb(206, 206, 206);
 }
 
-button{
+.login-btn{
     height: 15%;
     width: 30%;
     background-color: rgb(0, 43, 122);
