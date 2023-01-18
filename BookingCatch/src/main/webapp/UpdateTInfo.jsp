@@ -47,15 +47,23 @@
     
                 <a href="NewMain.jsp"><h1>HelinCare</h1></a> 
                 
-                <div class="ul-forSize">
-    
-                    <ul>
-                        <li><a href="Login.jsp">로그인</a></li>
-                        <li><a href="JoinWho">회원가입</a></li>
-                        <li><a href="#">고객센터</a></li>
-                        <li><i class="fa-regular fa-heart"></i></li>
-                    </ul>
-                </div>
+                 <div class="ul-forSize">
+
+				<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				</ul>
+
+
+                <!-- <ul>
+                    <li><a href="Login.jsp">로그인</a></li>
+                    <li><a href="JoinWho">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul> -->
+            </div>
     
             </header>
             <!-- 여기까지 header -->
