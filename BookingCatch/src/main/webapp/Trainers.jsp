@@ -7,9 +7,41 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="./asset/css/Trainers.css">
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<link rel="stylesheet" href="asset/css/Login.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&family=Gowun+Batang&family=Kanit&family=Lilita+One&family=Lobster&family=Michroma&family=Montserrat+Alternates&family=Moon+Dance&family=Play&family=Rubik+80s+Fade&family=Shadows+Into+Light&display=swap"
+	rel="stylesheet">
 </head>
 <body>
+
+
     <div class="wrap">
+    <header>
+
+			<ul class="want-to-be-fixed">
+				<li><a href="#"><span class="en">Trainer</span><span
+						class="ko">선생님</span></a></li>
+				<li><a href="#"><span class="en">Center</span><span
+						class="ko">운동센터</span></a></li>
+				<li><a href="#"><span class="en">Community</span><span
+						class="ko">게시판</span></a></li>
+				<li><a href="#"><span class="en">AboutUs</span><span
+						class="ko">우리는</span></a></li>
+			</ul>
+
+			<a href="NewMain.jsp"><h1>HelinCare</h1></a>
+
+			<div class="ul-forSize">
+
+				<ul>
+					<li><a href="Login.jsp">로그인</a></li>
+					<li><a href="JoinWho.jsp">회원가입</a></li>
+					<li><a href="#">고객센터</a></li>
+					<li><i class="fa-regular fa-heart"></i></li>
+				</ul>
+			</div>
+
+		</header>
         <div class="all-container">
             <div class="title-pt">
                 <h1>PT</h1>

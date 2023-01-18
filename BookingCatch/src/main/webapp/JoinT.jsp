@@ -44,14 +44,22 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 
             <a href="Main.jsp"><h1>HelinCare</h1></a> 
             
-            <div class="ul-forSize">
+             <div class="ul-forSize">
 
-                <ul>
+				<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				</ul>
+
+					
+                <!-- <ul>  회원가입할때 로그인할때 위에 그냥날리기
                     <li><a href="Login.jsp">로그인</a></li>
                     <li><a href="JoinWho">회원가입</a></li>
                     <li><a href="#">고객센터</a></li>
                     <li><i class="fa-regular fa-heart"></i></li>
-                </ul>
+                </ul> -->
             </div>
 
         </header>

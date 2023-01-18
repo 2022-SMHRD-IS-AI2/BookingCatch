@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.TrainerVO"%>
 <%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%> 
@@ -37,6 +38,8 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
      <div class="wrap">
         <!-- header시작 -->
         <header>
+           
+            
             
             <ul class="want-to-be-fixed">
                 <li><a href="#"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
@@ -49,12 +52,20 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
             
             <div class="ul-forSize">
 
-                <ul>
+				<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				</ul>
+
+
+                <!-- <ul>
                     <li><a href="Login.jsp">로그인</a></li>
                     <li><a href="JoinWho">회원가입</a></li>
                     <li><a href="#">고객센터</a></li>
                     <li><i class="fa-regular fa-heart"></i></li>
-                </ul>
+                </ul> -->
             </div>
 
         </header>
