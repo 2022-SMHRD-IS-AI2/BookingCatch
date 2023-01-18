@@ -5,9 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="asset/css/JoinWho.css">
 </head>
 <body>
-	<a href="Join.jsp"><button>회원으로 가입하기</button></a>
-	<a href="JoinT.jsp"><button>트레이너로 가입하기</button></a>
+     <div class="Join_Button">
+	        <a href="Join.jsp"><button>회원으로 가입하기</button></a></li>
+            <a href="JoinT.jsp"><button>트레이너로 가입하기</button></a></li>
+    </div>    	
 </body>
 </html>

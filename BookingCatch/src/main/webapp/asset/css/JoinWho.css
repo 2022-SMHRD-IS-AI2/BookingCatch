@@ -1,0 +1,27 @@
+@charset "UTF-8";
+body{height: 937px; background: url("/img/JoinWho.jpg") no-repeat center; background-size: cover;}
+
+.Join_Button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.Join_Button .btnWrap{display: inline-flex; align-items: center; height: 150px;
+    background: rgba(255, 255, 255, .8); border-radius: 15px; box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+    padding: 0 50px;}
+
+.Join_Button a{display: block; margin-right: 20px;}
+.Join_Button a:last-child{margin-right: 0;}
+
+.Join_Button Button{
+    min-width: 190px;
+    background-color: rgb(23, 57, 172);
+    color: white;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 10px;
+}
