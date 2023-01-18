@@ -19,10 +19,12 @@ textarea:focus{outline:none;}
 
 .fc{display:flex; justify-content:center;}
 .fb{display:flex; justify-content:space-between;}
+
 .all-container{
     width: 100%;
     height: auto;
     margin-bottom: 5%;
+    background-color: #eee;
 }
 .title-pt{
     width: 100%;
@@ -51,10 +53,11 @@ textarea:focus{outline:none;}
     
 }
 .trainers{
+	box-shadow: 5px 5px 5px 1px gray;
     width: 20%;
     height: 40vh;
     /* background-color: black; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 0% 2.43% 3%;
     cursor: pointer;
 }

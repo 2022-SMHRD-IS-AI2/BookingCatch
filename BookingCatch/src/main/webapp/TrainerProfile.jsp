@@ -11,6 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="asset/css/TrainerProfile.css">
+    <link rel="stylesheet" href="asset/css/NewMain.css">
+    
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -50,8 +52,10 @@
             <ul class="want-to-be-fixed">
                 <li><a href="Trainers.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
                 <li><a href="CenterLocation.jsp"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
-                <li id="special-li" class="special-li"><a href="tipBoardMain.jsp"><span class="en">Community</span><span class="ko">게시판</span></a></li>
-                <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
+                <li id="special-li" class="special-li"><a href="tipBoardMain.jsp"><span class="en">Community</span>
+                <span class="ko" >게시판</span></a></li>
+                <li><a href="#"><span class="en">AboutUs</span>
+                <span class="ko">우리는</span></a></li>
             </ul>
 
 
@@ -116,22 +120,22 @@
         </div>
             <!-- 헤더부분 양심없이 길다 진짜  -->
         <!-- 여기까지 header -->
-        <div class="position-fixed">
-            <img src="/img/양치승씨.jpg" alt="">
-            <div class="trainer-name">
-                <span>김다희 <span class="left_tr_name">트레이너</span></span>
+             <div class="Trainer-info">
+            <div class="position-fixed">
+                <img src="/img/양치승씨.jpg" alt="">
+                <div class="trainer-name">
+                    <span>김다희 <span class="left_tr_name">트레이너</span></span>
+                </div>
+                <div class="reservation-btn" id="pop">
+                    
+                    <a href="#" data-toggle="modal" data-target="#myModal" id="reservationView">
+                        <button>예약하기</button>
+                    </a>
+                    <a href="#"><button>
+                        채팅
+                    </button></a>
+                </div>
             </div>
-            <div class="reservation-btn" id="pop">
-                
-                <a href="#" data-toggle="modal" data-target="#myModal" id="reservationView">
-                    <button>예약하기</button>
-                </a>
-                <a href="#"><button>
-                    채팅
-                </button></a>
-            </div>
-        </div>
-        <div class="Trainer-info">
             <div class="short-info">
                 <!-- <div class="title">
                     <span>요약소개</span>
@@ -420,6 +424,12 @@
                         <label for="usr">날짜 :</label>
                         <input type="text" class="form-control" id="datepickInput" disabled>
                     </div>
+                    <div class="form-group">
+                        <label for="usr">시간</label>
+                        <select class="form-control" id="timeTableList">
+                        	<option value="0">시간 선택</option>
+                        </select>
+                    </div>
                     <div>
                         <label for="usrwant">요구사항 :</label>
                         <textarea  class="form-control" id="datewantInput"></textarea>
@@ -435,7 +445,8 @@
     </div>
   </div>
     
-</body>
 <script src="asset/js/TrainerProfile.js"></script>
-<script scr="asset/js/NewMain.js"></script>
+<script src="asset/js/NewMain.js"></script>
+</body>
+
 </html>

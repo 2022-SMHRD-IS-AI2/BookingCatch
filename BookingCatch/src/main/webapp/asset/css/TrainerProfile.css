@@ -21,8 +21,7 @@ textarea:focus{outline:none;}
     
 
 .position-fixed{
-    position: fixed;
-    top: 95.1406px;
+     position: fixed;
     left: 10%;
     display: flex;
     flex-direction: column;
@@ -93,7 +92,7 @@ textarea:focus{outline:none;}
     /* background-color: red; */
     /* box-sizing: border-box; */
     /* padding-right: 10%; */
-    padding-top: 5%;
+    padding-top: 2%;
 }
 .short-info{
     width: 50%;

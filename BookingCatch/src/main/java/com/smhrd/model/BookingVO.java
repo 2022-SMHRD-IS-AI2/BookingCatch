@@ -7,6 +7,8 @@ public class BookingVO {
 	private int price;
 	private String bWishList;
 	private String tid;
+	private String timeTable;
+	
 	public String getIdx() {
 		return idx;
 	}
@@ -42,5 +44,11 @@ public class BookingVO {
 	}
 	public void setTid(String tid) {
 		this.tid = tid;
+	}
+	public String getTimeTable() {
+		return timeTable;
+	}
+	public void setTimeTable(String timeTable) {
+		this.timeTable = timeTable;
 	}
 }

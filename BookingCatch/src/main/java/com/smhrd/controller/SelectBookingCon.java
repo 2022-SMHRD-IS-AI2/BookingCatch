@@ -31,15 +31,26 @@ public class SelectBookingCon extends HttpServlet {
 		// post방식 인코딩
 		request.setCharacterEncoding("UTF-8");
 		
-		String tid = request.getParameter("jsonData");
-		System.out.println(tid);
-		List<BookingVO> resList = new BookingDAO().getBookingContents(tid);
+		String body = request.getParameter("jsonData");
+		JSONParser reqParser = new JSONParser();
+		HashMap<String, Object> dataMap = new HashMap<String, Object>();
+		try {
+			JSONObject root = (JSONObject) reqParser.parse(body);
+			dataMap = root;
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		String tid = dataMap.get("tid").toString();
+		String bdate = dataMap.get("bdate").toString();
+		
+		List<BookingVO> resList = new BookingDAO().getBookingContents(dataMap);
 		List<JSONObject> res = new ArrayList<JSONObject>();
 		for(BookingVO model : resList) {
 			String json = new ObjectMapper().writeValueAsString(model);
-			JSONParser parser = new JSONParser();
+			JSONParser resParser = new JSONParser();
 			try {
-				JSONObject root = (JSONObject) parser.parse(json);
+				JSONObject root = (JSONObject) resParser.parse(json);
 				res.add(root);
 			} catch (ParseException e) {
 				e.printStackTrace();

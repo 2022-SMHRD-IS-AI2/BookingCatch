@@ -1,8 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+
+<%@page import="com.smhrd.model.TrainerVO"%>
+<%@page import="com.smhrd.model.MemberVO"%>
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./asset/css/NewMain.css">
+    <script src="https://kit.fontawesome.com/f4f342f148.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&family=Gowun+Batang&family=Kanit&family=Lilita+One&family=Lobster&family=Michroma&family=Montserrat+Alternates&family=Moon+Dance&family=Play&family=Rubik+80s+Fade&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <link rel="stylesheet" href="./asset/css/Trainers.css">
@@ -11,72 +26,161 @@
 
 </head>
 <body>
+
+     <%
+   
+   MemberVO loginMember=null;
+   TrainerVO loginTrainer=null; 
+   
+   if(session.getAttribute("loginMember")==null&&session.getAttribute("loginTrainer")==null){
+      System.out.print("Л╡╚ К╘■Л²╦");
+   }else if(session.getAttribute("loginMember")!=null){
+      loginMember = (MemberVO) session.getAttribute("loginMember");
+   }else{
+      loginTrainer = (TrainerVO)session.getAttribute("loginTrainer");
+   }
+   %>
+    
     <div class="wrap">
+        <a href="#"><button class="fixed-menu">
+            <i class="fa-solid fa-arrow-up"></i><!--  Top -->
+        </button></a>
+        <header id="header">
+            
+            <ul class="want-to-be-fixed">
+                <li><a href="Trainers.jsp"><span class="en">Trainer</span><span class="ko">Л└═Л┐²К▀≤</span></a></li>
+                <li><a href="CenterLocation.jsp"><span class="en">Center</span><span class="ko">Л ╢К▐≥Л└╪М└╟</span></a></li>
+                <li id="special-li" class="special-li"><a href="tipBoardMain.jsp"><span class="en">Community</span><span class="ko">Й╡▄Л▀°М▄░</span></a></li>
+                <li><a href="#"><span class="en">AboutUs</span><span class="ko">Л ╟К╕╛К┼■</span></a></li>
+            </ul>
+
+
+
+            <a href="NewMain.jsp"><h1>HelinCare</h1></a>
+            
+            <%
+            if (loginMember == null && loginTrainer ==null){ 
+            %>
+            <div class="ul-forSize">
+                <ul>
+                    <li><a href="Login.jsp">К║°Й╥╦Л²╦</a></li>
+                    <li><a href="JoinWho.jsp">М ▄Л⌡░Й╟─Л·┘</a></li>
+                    <li><a href="#">ЙЁ═Й╟²Л└╪М└╟</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <%
+            }else{
+            %><%
+           		if(loginTrainer!=null){%>    
+			<div class="ul-forSize">
+                <ul id="ul-flexiblet">
+                	<li><%=loginTrainer.getId() %>К▀≤</li>
+                    <li><a href="UpdateTInfo.jsp">Й╟°Л²╦Л═∙КЁ╢Л┬≤Л═∙</a></li>
+                    <li><a href="#">Л≤┬Л∙╫М≥∙Л²╦</a></li>
+                    <li><a href="LogOutCon">К║°Й╥╦Л∙└Л⌡┐</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            
+            <%
+            	} else if(loginMember.getId().equals("admin")){ 
+            %>   
+            
+            <div class="ul-forSize">
+                <ul>
+                	<li>Й╢─К╕╛Л·░ ЙЁ└Л═∙</li>
+                    <li><a href="#">Л═└Л╡╢М ▄Л⌡░Л═∙КЁ╢</a></li>
+                    <li><a href="UpdateInfo.jsp">Й╢─К╕╛Л·░Л═∙КЁ╢Л┬≤Л═∙</a></li>
+                    <li><a href="LogOutCon">К║°Й╥╦Л∙└Л⌡┐</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <%
+           		} else if(loginMember!=null){
+               System.out.print(loginMember.getId());
+            %>
+            <div class="ul-forSize">
+                <ul id="ul-flexibleu">
+                	<li><%=loginMember.getId() %>К▀≤</li>
+                    <li><a href="UpdateInfo.jsp">Й╟°Л²╦Л═∙КЁ╢Л┬≤Л═∙</a></li>
+                    <li><a href="#">Л≤┬Л∙╫М≥∙Л²╦</a></li>
+                    <li><a href="LogOutCon">К║°Й╥╦Л∙└Л⌡┐</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <%}}%>
+        </header>
+        <div class="menu-hidden" id="menu-hidden">
+            <a href="tipBoardMain.jsp">TipЙ╡▄Л▀°М▄░</a><a href="#">ЙЁ╣Й╟░Й╡▄Л▀°М▄░</a>
+        </div>
+            <!-- М≈╓К█■К╤─К╤└ Л√▒Л▀╛Л≈├Л²╢ Й╦╦К▀╓ Л╖└Л╖°  -->
         <div class="all-container">
             <div class="title-pt">
                 <h1>PT</h1>
                 
-                <button><a href="TrainerInfo.jsp">╠ш╬╡╠Б</a></button>
+                <button><a href="TrainerInfo.jsp">Й╦─Л⌠╟Й╦╟</a></button>
             </div>
             <div class="trainers-container" id="trainers-pt">
 <!--                 <div class="trainers"> -->
 <!--                     <img src="/img/yoga-32126.svg" alt=""> -->
 <!--                     <div class="trainers-name"> -->
-<!--                         <span>╠Х╢ыхЯ ф╝╥╧юлЁй</span> -->
+<!--                         <span>Й╧─К▀╓М²╛ М┼╦К═┬Л²╢К└┬</span> -->
 <!--                         <div class="name-and-stars"> -->
-<!--                             <span>"©╜╫ихВ го╟з╫ю╢о╢ы."</span> -->
-<!--                             <span>║з5.0(5)</span> -->
+<!--                             <span>"Л≈╢Л▀╛М·┬ М∙≤Й╡═Л┼╣К▀┬К▀╓."</span> -->
+<!--                             <span>Б≤┘5.0(5)</span> -->
 <!--                         </div> -->
 <!--                     </div> -->
 <!--                 </div> -->
             </div>
             <div class="view-more">
-                <button>╢У╨╦╠Б</button>
+                <button>К█■КЁ╢Й╦╟</button>
             </div>
         </div>
         <div class="all-container">
             <div class="title-pt">
-                <h1>гй╤Сев╫╨</h1>
-                <button>╠ш╬╡╠Б</button>
+                <h1>М∙└К²╪М┘▄Л┼╓</h1>
+                <button>Й╦─Л⌠╟Й╦╟</button>
             </div>
             <div class="trainers-container" id="trainers-pilates">
 <!--                 <div class="trainers"> -->
 <!--                     <img src="/img/yoga-32126.svg" alt=""> -->
 <!--                     <div class="trainers-name"> -->
-<!--                         <span>╠Х╢ыхЯ ф╝╥╧юлЁй</span> -->
+<!--                         <span>Й╧─К▀╓М²╛ М┼╦К═┬Л²╢К└┬</span> -->
 <!--                         <div class="name-and-stars"> -->
-<!--                             <span>"©╜╫ихВ го╟з╫ю╢о╢ы."</span> -->
-<!--                             <span>║з5.0(5)</span> -->
+<!--                             <span>"Л≈╢Л▀╛М·┬ М∙≤Й╡═Л┼╣К▀┬К▀╓."</span> -->
+<!--                             <span>Б≤┘5.0(5)</span> -->
 <!--                         </div> -->
 <!--                     </div> -->
 <!--                 </div> -->
             </div>
             <div class="view-more">
-                <button>╢У╨╦╠Б</button>
+                <button>К█■КЁ╢Й╦╟</button>
             </div>
         </div>
         <div class="all-container">
             <div class="title-pt">
-                <h1>©Д╟║</h1>
-                <button>╠ш╬╡╠Б</button>
+                <h1>Л ■Й╟─</h1>
+                <button>Й╦─Л⌠╟Й╦╟</button>
             </div>
             <div class="trainers-container" id="trainers-yoga">
 <!--                 <div class="trainers"> -->
 <!--                     <img src="/img/yoga-32126.svg" alt=""> -->
 <!--                     <div class="trainers-name"> -->
-<!--                         <span>╠Х╢ыхЯ ф╝╥╧юлЁй</span> -->
+<!--                         <span>Й╧─К▀╓М²╛ М┼╦К═┬Л²╢К└┬</span> -->
 <!--                         <div class="name-and-stars"> -->
-<!--                             <span>"©╜╫ихВ го╟з╫ю╢о╢ы."</span> -->
-<!--                             <span>║з5.0(5)</span> -->
+<!--                             <span>"Л≈╢Л▀╛М·┬ М∙≤Й╡═Л┼╣К▀┬К▀╓."</span> -->
+<!--                             <span>Б≤┘5.0(5)</span> -->
 <!--                         </div> -->
 <!--                     </div> -->
 <!--                 </div> -->
             </div>
             <div class="view-more">
-                <button>╢У╨╦╠Б</button>
+                <button>К█■КЁ╢Й╦╟</button>
             </div>
         </div>
     </div>
 </body>
 <script src="/asset/js/Trainers.js"></script>
+<script src="/asset/js/NewMain.js"></script>
 </html>

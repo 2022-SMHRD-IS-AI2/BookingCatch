@@ -1,3 +1,14 @@
+    	// TIMETABLE 생성 (09시 ~ 18시, 12~13시는 점심)
+	let timeTableArr = [
+		{"time": "09:00", "value": "1"}
+		, {"time": "10:00", "value": "2"}
+		, {"time": "11:00", "value": "3"}
+		, {"time": "13:00", "value": "4"}
+		, {"time": "14:00", "value": "5"}
+		, {"time": "15:00", "value": "6"}
+		, {"time": "16:00", "value": "7"}
+		, {"time": "17:00", "value": "8"}
+	]
 
     var li = document.getElementsByClassName("mini-menu-li");
 
@@ -159,14 +170,27 @@ const renderCalender = () => {
     thisMonth = thisMonth < 10 ? "0" + thisMonth : thisMonth;
     const thisDate = thisYear + "-" + thisMonth + "-" + thisDay;
     $('#datepickInput').val(thisDate);
+    
+    // 날짜를 클릭할 경우 리스트를 초기화
+	initTimeTableList();
+    
+    const tid = "trainer";
+    callSelectBookingCon(tid, thisDate);
   });
 
 };
 
 $('#doReservation').click(function() {
   const thisDate = $('#datepickInput').val();
+  const thisTimeTable = $('#timeTableList').val();
+  const tid = "trainer";
   if(!thisDate) {
     alert("날짜를 선택하십시오.");
+    return;
+  }
+  if(thisTimeTable == 0) {
+    alert("시간을 선택하십시오.");
+    $('#timeTableList').focus();
     return;
   }
   if(!confirm(thisDate + " 예약하시겠습니까?")) return;
@@ -177,29 +201,24 @@ $('#doReservation').click(function() {
     "bdate": thisDate,
     "price": 200000,
     "bWishList": "요구사항입니다.",
-    "tid": "trainer"
+    "tid": tid,
+    "timeTable": thisTimeTable
   }
 
   const reqBody = {
     jsonData : JSON.stringify(obj)
   }
+  
   $.post('http://localhost:8081/BuildBookingCon', reqBody, function(res) {
     if(res > 0) {
       alert("예약되었습니다.");
       
-      // 예약되면 새로 로딩한다.
-      const tid = {
-        jsonData : "trainer"
-      }
-      $.post('http://localhost:8081/SelectBookingCon', tid, function(res) {
-  
-        $(".date").each(function(i, item) {
-          if(thisDate == $(this).attr("data-date")) {
-            $(this).append('<span class="badge badge-danger">예약불가</span>');
-            return false;
-          }
-        })
-      });
+      // 예약되면 타임테이블 초기화 후 새로 로딩한다.
+      initTimeTableList();
+      callSelectBookingCon(tid, thisDate);
+      
+      // 요구사항 박스를 비운다.
+      $('#datewantInput').val('');
     } else {
       alert("예약 실패하였습니다.");
     }
@@ -211,84 +230,58 @@ renderCalender();
 const prevMonth = () => {
   date.setMonth(date.getMonth() - 1);
   renderCalender();
-
-  // 함수로 만들어서 호출해야하나... 시간이 없다 ㅠ
-  // 달력을 새로 그릴때도 호출해야함
-  const tid = {
-    jsonData : "trainer"
-  }
-  $.post('http://localhost:8081/SelectBookingCon', tid, function(res) {
-    $.each(res, function (index, item) {
-
-      const bdate = item.bdate;
-      $(".date").each(function(i, item) {
-        if(bdate == $(this).attr("data-date")) {
-          $(this).append('<span class="badge badge-danger">예약불가</span>');
-        }
-      })
-    });
-  });
 };
 
 const nextMonth = () => {
   date.setMonth(date.getMonth() + 1);
   renderCalender();
-
-  // 함수로 만들어서 호출해야하나... 시간이 없다 ㅠ
-  // 달력을 새로 그릴때도 호출해야함
-  const tid = {
-    jsonData : "trainer"
-  }
-  $.post('http://localhost:8081/SelectBookingCon', tid, function(res) {
-    $.each(res, function (index, item) {
-
-      const bdate = item.bdate;
-      $(".date").each(function(i, item) {
-        if(bdate == $(this).attr("data-date")) {
-          $(this).append('<span class="badge badge-danger">예약불가</span>');
-        }
-      })
-    });
-  });
 };
 
 const goToday = () => {
   date = new Date();
   renderCalender();
-
-  // 함수로 만들어서 호출해야하나... 시간이 없다 ㅠ
-  // 달력을 새로 그릴때도 호출해야함
-  const tid = {
-    jsonData : "trainer"
-  }
-  $.post('http://localhost:8081/SelectBookingCon', tid, function(res) {
-    $.each(res, function (index, item) {
-
-      const bdate = item.bdate;
-      $(".date").each(function(i, item) {
-        if(bdate == $(this).attr("data-date")) {
-          $(this).append('<span class="badge badge-danger">예약불가</span>');
-        }
-      })
-    });
-  });
 };
 
 $("#reservationView").click(function() {
   $('.badge-danger').remove();
   $('#datepickInput').val('');
-  const tid = {
-    jsonData : "trainer"
-  }
-  $.post('http://localhost:8081/SelectBookingCon', tid, function(res) {
-    $.each(res, function (index, item) {
-
-      const bdate = item.bdate;
-      $(".date").each(function(i, item) {
-        if(bdate == $(this).attr("data-date")) {
-          $(this).append('<span class="badge badge-danger">예약불가</span>');
-        }
-      })
-    });
-  });
 })
+
+// 예약테이블 콜백함수
+function callSelectBookingCon(tid, thisDate) {
+	  
+      const jsonData = {
+        tid : tid,
+        bdate: thisDate
+      }
+      const reqObj = {
+	    jsonData : JSON.stringify(jsonData)
+	  }
+      $.post('http://localhost:8081/SelectBookingCon', reqObj, function(res) {
+	  	res.forEach((item, i) => {
+			$('#timeTableList option').each(function() {
+				const thisText = $(this).text();
+			    if($(this).val() == item.timeTable) {
+					$(this).text(thisText + " (예약불가)");
+					$(this).css('color', '#AAAAAA');
+					$(this).attr('disabled', true);
+				}
+			});
+		});
+      });
+}
+
+// 타임테이블 초기화
+function initTimeTableList() {
+	$('#timeTableList option').each(function(i, opt) {
+		if($(this).val() != "0") $(this).remove();
+	});
+	
+	/********************** 초기화 후 재정렬 **********************/
+	let timeTableListTag = "";
+    timeTableArr.forEach((item, i) => {
+		timeTableListTag += '<option value="' + item.value +  '">' + item.time + '</option>';
+	});
+	$('#timeTableList').append(timeTableListTag);
+	/********************************************/
+}

@@ -1,5 +1,6 @@
 package com.smhrd.model;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -25,8 +26,8 @@ public class BookingDAO {
 	}
 
 	// 예약 가져오기
-	public List<BookingVO> getBookingContents(String tid) {
-		List<BookingVO> resList = sqlSession.selectList("com.smhrd.model.BookingDAO.getBookingContents", tid);
+	public List<BookingVO> getBookingContents(HashMap<String, Object> paramMap) {
+		List<BookingVO> resList = sqlSession.selectList("com.smhrd.model.BookingDAO.getBookingContents", paramMap);
 		sqlSession.close();
 		return resList;
 	}
