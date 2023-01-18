@@ -184,4 +184,6 @@
   	<servlet-name>TrainerProfileCon</servlet-name>
   	<url-pattern>/TrainerProfileCon</url-pattern>
   </servlet-mapping>
+
 </web-app>
+

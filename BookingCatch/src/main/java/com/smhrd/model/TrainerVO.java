@@ -24,6 +24,9 @@ public class TrainerVO {
 	private String ttype;
 	private Timestamp b_date;
 	private String phone;
+	private String img;
+	private String intro;
+	private double score;
 
 	public TrainerVO(String id, String pw, String name, String birth, String mbti, String gender,
 			String center,String ttype, String phone) {
