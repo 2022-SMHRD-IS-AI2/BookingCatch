@@ -67,7 +67,7 @@
             %><%
            		if(loginTrainer!=null){%>    
 			<div class="ul-forSize">
-                <ul>
+                <ul id="ul-flexiblet">
                 	<li><%=loginTrainer.getId() %>님</li>
                     <li><a href="UpdateTInfo.jsp">개인정보수정</a></li>
                     <li><a href="#">예약확인</a></li>
@@ -94,7 +94,7 @@
                System.out.print(loginMember.getId());
             %>
             <div class="ul-forSize">
-                <ul>
+                <ul id="ul-flexibleu">
                 	<li><%=loginMember.getId() %>님</li>
                     <li><a href="UpdateInfo.jsp">개인정보수정</a></li>
                     <li><a href="#">예약확인</a></li>
