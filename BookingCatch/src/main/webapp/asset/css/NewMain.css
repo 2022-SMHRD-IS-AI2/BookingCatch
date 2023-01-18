@@ -81,6 +81,10 @@ header>ul{
     display: flex;
     justify-content: end;
 }
+#ul-flexibleu,#ul-flexiblet{
+	width:85%
+}
+
 .want-to-be-fixed li,.want-to-be-fixed a{
     height: 100%;
     display: flex;
