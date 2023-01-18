@@ -25,8 +25,10 @@
 </head>
 
 <body>
-	<%
-		tipBoardVO vo = new tipBoardDAO().detailTipBoard(4); 
+	<%	
+		int num = Integer.parseInt(request.getParameter("num"));
+		tipBoardVO vo = new tipBoardDAO().detailTipBoard(num); 
+		
 		TrainerVO loginTrainer = (TrainerVO)session.getAttribute("loginTrainer"); 
 	%>
    <div id="wrap">
