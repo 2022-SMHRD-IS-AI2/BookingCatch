@@ -19,7 +19,7 @@
     <!-- <script src="https://kit.fontawesome.com/f4f342f148.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
-  <%
+     <%
    
    MemberVO loginMember=null;
    TrainerVO loginTrainer=null; 
@@ -33,16 +33,16 @@
    }
    %>
     
-    <div class="wrap_name">
+    <div class="wrap">
         <a href="#"><button class="fixed-menu">
             <i class="fa-solid fa-arrow-up"></i><!--  Top -->
         </button></a>
         <header id="header">
             
             <ul class="want-to-be-fixed">
-                <li><a href="TrainerInfo.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
+                <li><a href="Trainers.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
                 <li><a href="CenterLocation.jsp"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
-                <li id="special-li" class="special-li"><a href="#"><span class="en">Community</span><span class="ko">게시판</span></a></li>
+                <li id="special-li" class="special-li"><a href="tipBoardMain.jsp"><span class="en">Community</span><span class="ko">게시판</span></a></li>
                 <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
             </ul>
 
@@ -82,7 +82,7 @@
             <div class="ul-forSize">
                 <ul>
                 	<li>관리자 계정</li>
-                    <li><a href="#">전체회원정보</a></li>
+                    <li><a href="AdminSelectAll.jsp">전체회원정보</a></li>
                     <li><a href="UpdateInfo.jsp">관리자정보수정</a></li>
                     <li><a href="LogOutCon">로그아웃</a></li>
                     <li><i class="fa-regular fa-heart"></i></li>
@@ -106,8 +106,7 @@
         <div class="menu-hidden" id="menu-hidden">
             <a href="tipBoardMain.jsp">Tip게시판</a><a href="#">공감게시판</a>
         </div>
-        
-        <!-- header부분  -->
+            <!-- 헤더부분 양심없이 길다 진짜  -->
         
         <%List<tipBoardVO> vo = new tipBoardDAO().showTipBoard(); %>
         
