@@ -27,9 +27,7 @@
 
 </head>
 <body>
-
-     <%
-   
+ <%
    MemberVO loginMember=null;
    TrainerVO loginTrainer=null; 
    
@@ -43,16 +41,14 @@
    %>
     
     <div class="wrap">
-<!-- <<<<<<< HEAD -->
         <a href="#"><button class="fixed-menu">
             <i class="fa-solid fa-arrow-up"></i><!--  Top -->
         </button></a>
         <header id="header">
-            
             <ul class="want-to-be-fixed">
-                <li><a href="Trainers.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
+                <li id="special-li" class="special-li"><a href="Trainers.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
                 <li><a href="CenterLocation.jsp"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
-                <li id="special-li" class="special-li"><a href="tipBoardMain.jsp"><span class="en">Community</span><span class="ko">게시판</span></a></li>
+                <li id="special-li2" class="special-li2"><a href="tipBoardMain.jsp"><span class="en">Community</span><span class="ko">게시판</span></a></li>
                 <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
             </ul>
 
@@ -114,6 +110,11 @@
             <%}}%>
         </header>
         <div class="menu-hidden" id="menu-hidden">
+        
+            <a href="Trainers.jsp">MBTI</a><a href="#">수업방식</a>
+        </div>
+        <div class="menu-hidden2" id="menu-hidden2">
+        
             <a href="tipBoardMain.jsp">Tip게시판</a><a href="#">공감게시판</a>
         </div>
             <!-- 헤더부분 양심없이 길다 진짜  -->
@@ -153,7 +154,7 @@
 <!-- >>>>>>> branch 'master1' of https://github.com/2022-SMHRD-IS-AI2/BookingCatch.git -->
         <div class="all-container">
             <div class="title-pt">
-                <h1>PT</h1>
+                <h1>ENTJ</h1>
                 
                 <button><a href="TrainerInfo.jsp">글쓰기</a></button>
             </div>
@@ -175,7 +176,7 @@
         </div>
         <div class="all-container">
             <div class="title-pt">
-                <h1>필라테스</h1>
+                <h1>ISTJ</h1>
                 <button>글쓰기</button>
             </div>
             <div class="trainers-container" id="trainers-pilates">
@@ -196,7 +197,7 @@
         </div>
         <div class="all-container">
             <div class="title-pt">
-                <h1>요가</h1>
+                <h1>INTP</h1>
                 <button>글쓰기</button>
             </div>
             <div class="trainers-container" id="trainers-yoga">

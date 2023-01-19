@@ -22,7 +22,6 @@
 
 <body>
    <%
-   
    MemberVO loginMember=null;
    TrainerVO loginTrainer=null; 
    
@@ -106,7 +105,7 @@
         </header>
         <div class="menu-hidden" id="menu-hidden">
         
-            <a href="Trainer.jsp">MBTI</a><a href="#">수업방식</a>
+            <a href="Trainers.jsp">MBTI</a><a href="#">수업방식</a>
         </div>
         <div class="menu-hidden2" id="menu-hidden2">
         
