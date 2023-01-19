@@ -7,19 +7,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.smhrd.model.ssulBoardDAO">
 
-	<!-- <insert id="ssulupload" parameterType="com.smhrd.model.ssulBoardVO">
+	 <insert id="ssulupload" parameterType="com.smhrd.model.ssulBoardVO">
 		insert into tb_ssul_board values(
-		TB_SSUL_BOARD_SEQ.nextval, #{title}, #{content},#{filename},sysdate,#{writer},#{likes}
+		TB_SSUL_BOARD_SEQ.nextval, #{title}, #{content},#{filename},sysdate,#{writer}
 		)
-	</insert> -->
+	</insert> 
 	
 
 	<select id="showssulBoard" resultType="com.smhrd.model.ssulBoardVO">
 	select * from tb_ssul_board
 	</select>
 	
-	<!-- <select id="detailssulBoard" parameterType="int" resultType="com.smhrd.model.ssulBoardVO">
-	select * from tb_ssul_board where s_num=#{num}</select> -->
+	 <select id="detailssulBoard" parameterType="int" resultType="com.smhrd.model.ssulBoardVO">
+	select * from tb_ssul_board where s_num=#{num}</select> 
 
 
 </mapper>

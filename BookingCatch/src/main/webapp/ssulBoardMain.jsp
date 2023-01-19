@@ -113,7 +113,7 @@
         <%List<ssulBoardVO> vo = new ssulBoardDAO().showssulBoard(); %>
         
         <div class="board">
-            <h3 class="board_title">TIP 게시판</h3>
+            <h3 class="board_title">공감 게시판</h3>
             <table>
                 <tr class="tbtr">
                     <th>번호</th>
@@ -137,7 +137,7 @@
                  
                 <table>
                 <td class="board_writer" colspan="5">
-                <a href="tipBoardWrite.jsp">
+                <a href="ssulBoardWrite.jsp">
                     <button id="writer"> 
                         작성하기
                     </button>
