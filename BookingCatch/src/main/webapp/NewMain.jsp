@@ -40,7 +40,6 @@
             <i class="fa-solid fa-arrow-up"></i><!--  Top -->
         </button></a>
         <header id="header">
-            
             <ul class="want-to-be-fixed">
                 <li><a href="Trainers.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
                 <li><a href="CenterLocation.jsp"><span class="en">Center</span><span class="ko">운동센터</span></a></li>

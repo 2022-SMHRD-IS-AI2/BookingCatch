@@ -43,7 +43,7 @@
    %>
     
     <div class="wrap">
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD -->
         <a href="#"><button class="fixed-menu">
             <i class="fa-solid fa-arrow-up"></i><!--  Top -->
         </button></a>
@@ -117,7 +117,7 @@
             <a href="tipBoardMain.jsp">Tip게시판</a><a href="#">공감게시판</a>
         </div>
             <!-- 헤더부분 양심없이 길다 진짜  -->
-
+<!-- 
      <header>
             
             <ul class="want-to-be-fixed">
@@ -139,17 +139,17 @@
 				</ul>
 
 					
-                <!-- <ul>  ȸ�������Ҷ� �α����Ҷ� ���� �׳ɳ�����
+                <ul>  ȸ�������Ҷ� �α����Ҷ� ���� �׳ɳ�����
                     <li><a href="Login.jsp">�α���</a></li>
                     <li><a href="JoinWho">ȸ������</a></li>
                     <li><a href="#">������</a></li>
                     <li><i class="fa-regular fa-heart"></i></li>
-                </ul> -->
+                </ul>
             </div>
 
         </header>
-        <!-- ������� header -->
-    
+        ������� header
+     -->
 <!-- >>>>>>> branch 'master1' of https://github.com/2022-SMHRD-IS-AI2/BookingCatch.git -->
         <div class="all-container">
             <div class="title-pt">
