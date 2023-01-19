@@ -110,7 +110,7 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
                         </datalist>
                     <!-- <input type="text" name="center" placeholder="센터주소"> -->
                     
-					<input type="text" id="roadAddrPart1"  placeholder="센터주소입력">
+					<input name="center" type="text" id="roadAddrPart1"  placeholder="센터주소입력">
 					<input type="button"  value="주소검색" onclick="goPopup();">
 					
                     <input type="text" name="phone" placeholder="전화번호를 입력">
