@@ -27,6 +27,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<mapper resource="com/smhrd/database/BookingMapper.xml"/>
 		<mapper resource="com/smhrd/database/TrainerInfoMapper.xml"/>
 		<mapper resource="com/smhrd/database/TrainerListMapper.xml"/>
+		<mapper resource="com/smhrd/database/ssulBoardMapper.xml"/>
 	</mappers>
 
 </configuration>
