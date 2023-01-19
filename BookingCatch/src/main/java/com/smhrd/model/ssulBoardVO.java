@@ -8,13 +8,11 @@ import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
+@Getter
+@AllArgsConstructor
+@RequiredArgsConstructor
+/* @NoArgsConstructor */
 public class ssulBoardVO {
-	@Getter
-	@AllArgsConstructor
-	@RequiredArgsConstructor
-	/* @NoArgsConstructor */
-	public class tipBoardVO {
-		
 		private BigDecimal num;
 		@NonNull
 		private String title;
@@ -27,10 +25,29 @@ public class ssulBoardVO {
 		private String writer;
 		
 		
+		
+		
+		public void getNum(BigDecimal num) {
+			this.num = num;
+		}
+		public void getTitle(String title) {
+			this.title = title;
+		}
+		public void getContent(String content) {
+			this.content = content;
+		}
+		public void getFilename(String filename) {
+			this.filename = filename;
+		}
+		public void getDate(Timestamp date) {
+			this.date = date;
+		}
+		public void getWriter(String writer) {
+			this.writer = writer;
+		}
+		
+		
 
 		
 		
 	}
-
-
-}

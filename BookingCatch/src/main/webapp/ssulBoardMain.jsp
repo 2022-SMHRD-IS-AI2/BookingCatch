@@ -122,16 +122,17 @@
                     <th>작성일</th>
                 </tr>
                 
-                <%//for (int i = 0 ; i<vo.size(); i++) {
-                	//ssulBoardVO model = vo.get(i);
+                <%for (int i = 0 ; i<vo.size(); i++) {
+                	ssulBoardVO model = vo.get(i+1);
                 %>
-                <%-- <tr>
-                    <td><%=//model.getNum()%></td>
-                    <td class="subject"><a href="tipBoardDetail.jsp?num=<%=//model.getNum()%>"><%=//model.getTitle()%></a></td>
-                    <td><a href="TrainerProfile.jsp"><%=//model.getWriter()%></a></td>
-                    <td><%=//model.getDate()%></td>
+             <tr>
+                    <td><%=model.getNum()%></td>
+                    <td class="subject"><a href="tipBoardDetail.jsp?num=<%=model.getNum()%>"><%=model.getTitle()%></a></td>
+                    <td><a href="TrainerProfile.jsp"><%=model.getWriter()%></a></td>
+                    <td><%=model.getDate()%></td>
+                    
                 </tr>
-                <%//} %> --%>
+                <%} %>
                 </table>
                  
                 <table>
