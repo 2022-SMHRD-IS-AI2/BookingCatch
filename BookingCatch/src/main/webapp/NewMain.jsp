@@ -35,9 +35,7 @@
    %>
     
     <div class="wrap">
-        <a href="#"><button class="fixed-menu">
-            <i class="fa-solid fa-arrow-up"></i><!--  Top -->
-        </button></a>
+
         <header id="header">
             <ul class="want-to-be-fixed">
                 <li id="special-li" class="special-li"><a href="Trainers.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>

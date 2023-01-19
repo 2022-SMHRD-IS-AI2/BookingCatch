@@ -19,8 +19,7 @@
     <!-- <script src="https://kit.fontawesome.com/f4f342f148.js" crossorigin="anonymous"></script> -->
 </head>
 <body>
-     <%
-   
+   <%
    MemberVO loginMember=null;
    TrainerVO loginTrainer=null; 
    
@@ -34,15 +33,12 @@
    %>
     
     <div class="wrap">
-        <a href="#"><button class="fixed-menu">
-            <i class="fa-solid fa-arrow-up"></i><!--  Top -->
-        </button></a>
+   
         <header id="header">
-            
             <ul class="want-to-be-fixed">
-                <li><a href="Trainers.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
+                <li id="special-li" class="special-li"><a href="Trainers.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
                 <li><a href="CenterLocation.jsp"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
-                <li id="special-li" class="special-li"><a href="tipBoardMain.jsp"><span class="en">Community</span><span class="ko">게시판</span></a></li>
+                <li id="special-li2" class="special-li2"><a href="tipBoardMain.jsp"><span class="en">Community</span><span class="ko">게시판</span></a></li>
                 <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
             </ul>
 
@@ -66,7 +62,7 @@
             %><%
            		if(loginTrainer!=null){%>    
 			<div class="ul-forSize">
-                <ul>
+                <ul id="ul-flexiblet">
                 	<li><%=loginTrainer.getId() %>님</li>
                     <li><a href="UpdateTInfo.jsp">개인정보수정</a></li>
                     <li><a href="#">예약확인</a></li>
@@ -82,7 +78,7 @@
             <div class="ul-forSize">
                 <ul>
                 	<li>관리자 계정</li>
-                    <li><a href="AdminSelectAll.jsp">전체회원정보</a></li>
+                    <li><a href="#">전체회원정보</a></li>
                     <li><a href="UpdateInfo.jsp">관리자정보수정</a></li>
                     <li><a href="LogOutCon">로그아웃</a></li>
                     <li><i class="fa-regular fa-heart"></i></li>
@@ -93,7 +89,7 @@
                System.out.print(loginMember.getId());
             %>
             <div class="ul-forSize">
-                <ul>
+                <ul id="ul-flexibleu">
                 	<li><%=loginMember.getId() %>님</li>
                     <li><a href="UpdateInfo.jsp">개인정보수정</a></li>
                     <li><a href="#">예약확인</a></li>
@@ -104,6 +100,11 @@
             <%}}%>
         </header>
         <div class="menu-hidden" id="menu-hidden">
+        
+            <a href="Trainers.jsp">MBTI</a><a href="#">수업방식</a>
+        </div>
+        <div class="menu-hidden2" id="menu-hidden2">
+        
             <a href="tipBoardMain.jsp">Tip게시판</a><a href="#">공감게시판</a>
         </div>
             <!-- 헤더부분 양심없이 길다 진짜  -->
@@ -163,5 +164,7 @@
         </ul>
     </div>
 </body>
+
+    <script src="asset/js/NewMain.js"></script>
 
 </html>
