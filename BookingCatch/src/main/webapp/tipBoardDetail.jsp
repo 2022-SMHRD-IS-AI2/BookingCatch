@@ -163,18 +163,15 @@
                                         <img src="file/<%=vo.getFilename()%>" alt="씨앙"></img>
                                     </div> 
                         </div>
-                       <!--  <div class="board-nav">
-                           <ul>
+                       <div class="board-nav">
+                           <ul><!-- 여기에 리플넣을거에요 아시겠어요? -->
                               <li>
                                  <p class="board-nav_title prev">이전글</p>
                                  <a href="">비로소 눈을 감다<span class="board-nav_date">2019.11.13</span></a>
                               </li>
-                              <li>
-                                 <p class="board-nav_title next">다음글</p>
-                                 <a href="">등록된 다음 글이 없습니다.</span></a>
-                              </li>
+                              
                            </ul>                              
-                        </div> -->
+                        </div> 
                         <div class="board-btn">
                            
                           <button type="button" class="btn_list"><a href="tipBoardMain.jsp">목록</a></button>

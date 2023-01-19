@@ -102,12 +102,16 @@
             <%}}%>
         </header>
         <div class="menu-hidden" id="menu-hidden">
+<<<<<<< HEAD
+            <a href="tipBoardMain.jsp">Tip게시판</a><a href="ssulBoardMain.jsp">공감게시판</a>
+=======
         
             <a href="Trainers.jsp">MBTI</a><a href="#">수업방식</a>
         </div>
         <div class="menu-hidden2" id="menu-hidden2">
         
             <a href="tipBoardMain.jsp">Tip게시판</a><a href="#">공감게시판</a>
+>>>>>>> branch 'master1' of https://github.com/2022-SMHRD-IS-AI2/BookingCatch.git
         </div>
             <!-- 헤더부분 양심없이 길다 진짜  -->
             
