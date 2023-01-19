@@ -158,6 +158,7 @@
         <div class="foot">
             <span>HelinCatch</span>
             <span>이용약관 개인정보처리방침</span>
+            
             <span>
                 
                 이메일: #
@@ -166,7 +167,9 @@
                 
                 채팅상담: 카카오톡 채널 BookingCatch
                 
-                Copyright ⓒ부킹캐치  ｜ Design & Hosting by BookingCatch</span>
+                Copyright ⓒ부킹캐치  ｜ Design & Hosting by BookingCatch
+            </span>
+
         </div>
 
     </div>
