@@ -386,7 +386,7 @@ header>ul{
     height: 500px;
     display: flex;
     flex-direction: column;
-    background:url(../img/푸터.png) no-repeat top;
+    background:url(../../img/푸터.png) no-repeat top;
     background-size: 100% 500px;
     justify-content: flex-end;
     align-items: center;
