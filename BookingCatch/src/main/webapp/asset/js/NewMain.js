@@ -6,8 +6,10 @@ $(function() { // 보이기 | 숨기기
         return false; 
      }); 
    });
-  const navMenu = document.getElementById('special-li');
+const navMenu = document.getElementById('special-li');
+const navMenu2 = document.getElementById('special-li2');
 const hiddenMenu = document.getElementById('menu-hidden');
+const hiddenMenu2 = document.getElementById('menu-hidden2');
 
 /*===== 아이콘 클릭 시 메뉴바 보여주기 ====*/
 
@@ -15,6 +17,9 @@ const hiddenMenu = document.getElementById('menu-hidden');
         hiddenMenu.classList.add('show-menu');
     });
 
+    navMenu2.addEventListener('mouseover', () =>{
+        hiddenMenu2.classList.add('show-menu');
+    });
 
 /*===== 아이콘 클릭 시 메뉴바 사라지게 하기 =====*/
 
@@ -29,3 +34,13 @@ const hiddenMenu = document.getElementById('menu-hidden');
         hiddenMenu.classList.remove('show-menu')
     });
     
+     navMenu2.addEventListener('mouseout', () =>{
+    hiddenMenu2.classList.remove('show-menu');
+  });
+
+    hiddenMenu2.addEventListener('mouseover',()=>{
+        hiddenMenu2.classList.add('show-menu')
+    });
+    hiddenMenu2.addEventListener('mouseout',()=>{
+        hiddenMenu2.classList.remove('show-menu')
+    });

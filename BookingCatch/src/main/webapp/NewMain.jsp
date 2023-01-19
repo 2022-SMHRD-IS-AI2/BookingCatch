@@ -41,9 +41,9 @@
         </button></a>
         <header id="header">
             <ul class="want-to-be-fixed">
-                <li><a href="Trainers.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
+                <li id="special-li" class="special-li"><a href="Trainers.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
                 <li><a href="CenterLocation.jsp"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
-                <li id="special-li" class="special-li"><a href="tipBoardMain.jsp"><span class="en">Community</span><span class="ko">게시판</span></a></li>
+                <li id="special-li2" class="special-li2"><a href="tipBoardMain.jsp"><span class="en">Community</span><span class="ko">게시판</span></a></li>
                 <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
             </ul>
 
@@ -106,9 +106,9 @@
         </header>
         <div class="menu-hidden" id="menu-hidden">
         
-            <a href="tipBoardMain.jsp">MBTI</a><a href="#">수업방식</a>
+            <a href="Trainer.jsp">MBTI</a><a href="#">수업방식</a>
         </div>
-        <div class="menu-hidden" id="menu-hidden">
+        <div class="menu-hidden2" id="menu-hidden2">
         
             <a href="tipBoardMain.jsp">Tip게시판</a><a href="#">공감게시판</a>
         </div>
