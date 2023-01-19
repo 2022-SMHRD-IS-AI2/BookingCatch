@@ -28,3 +28,4 @@ const hiddenMenu = document.getElementById('menu-hidden');
     hiddenMenu.addEventListener('mouseout',()=>{
         hiddenMenu.classList.remove('show-menu')
     });
+    

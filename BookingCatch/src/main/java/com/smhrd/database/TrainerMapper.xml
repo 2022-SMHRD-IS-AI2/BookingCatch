@@ -24,4 +24,10 @@ delete from TB_TRAINER where t_id=#{id}
 <select id="selectAllTrainer" resultType="com.smhrd.model.TrainerVO">
 		select * from tb_trainer
 	</select>
+	<select id="emailCheck" parameterType="String" resultType="boolean">
+		select case when count(*)>0 then 1
+					else 0
+				end result
+		from tb_trainer where T_ID=#{id}		
+</select>
 </mapper>
