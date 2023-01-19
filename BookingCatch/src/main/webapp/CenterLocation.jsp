@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.model.TrainerVO"%>
+<%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -6,10 +8,10 @@
     <meta  charset="utf-8">
     <title>키워드로 장소검색하고 목록으로 표출하기</title>
     <style>
-.map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
+.map_wrap, .map_wrap * {margin:0;padding:0;}
 .map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
 .map_wrap {position:relative;width:100%;height:100vh;}
-#menu_wrap {position:absolute;top:15%;left:0;bottom:0;width:250px;height:75%;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);z-index: 1;font-size:12px;border-radius: 10px;}
+#menu_wrap {position:absolute;top:0%;left:0;bottom:0;width:280px;height:75%;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);z-index: 1;font-size:12px;border-radius: 10px;}
 .bg_white {background:#fff;}
 #menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
 #menu_wrap .option{text-align: center;}
@@ -44,46 +46,103 @@
 #pagination .on {font-weight: bold; cursor: default;color:#777;}
 </style>
 <link rel="stylesheet" href="asset/css/Login.css">
+<link rel="stylesheet" href="asset/css/NewMain.css">
 <link
 	href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&family=Gowun+Batang&family=Kanit&family=Lilita+One&family=Lobster&family=Michroma&family=Montserrat+Alternates&family=Moon+Dance&family=Play&family=Rubik+80s+Fade&family=Shadows+Into+Light&display=swap"
 	rel="stylesheet">
 </head>
 <body>
-<div class="map_wrap">
+ <%
+   
+   MemberVO loginMember=null;
+   TrainerVO loginTrainer=null; 
+   
+   if(session.getAttribute("loginMember")==null&&session.getAttribute("loginTrainer")==null){
+      System.out.print("첫 메인");
+   }else if(session.getAttribute("loginMember")!=null){
+      loginMember = (MemberVO) session.getAttribute("loginMember");
+   }else{
+      loginTrainer = (TrainerVO)session.getAttribute("loginTrainer");
+   }
+   %>
+    
+    <div class="wrap">
+        <header id="header">
+            <ul class="want-to-be-fixed">
+                <li><a href="Trainers.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
+                <li><a href="CenterLocation.jsp"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
+                <li id="special-li" class="special-li"><a href="tipBoardMain.jsp"><span class="en">Community</span><span class="ko">게시판</span></a></li>
+                <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
+            </ul>
 
-<header>
 
-			<ul class="want-to-be-fixed">
-				<li><a href="#"><span class="en">Trainer</span><span
-						class="ko">선생님</span></a></li>
-				<li><a href="#"><span class="en">Center</span><span
-						class="ko">운동센터</span></a></li>
-				<li><a href="#"><span class="en">Community</span><span
-						class="ko">게시판</span></a></li>
-				<li><a href="#"><span class="en">AboutUs</span><span
-						class="ko">우리는</span></a></li>
-			</ul>
 
-			<a href="NewMain.jsp"><h1>HelinCare</h1></a>
-
+            <a href="NewMain.jsp"><h1>HelinCare</h1></a>
+            
+            <%
+            if (loginMember == null && loginTrainer ==null){ 
+            %>
+            <div class="ul-forSize">
+                <ul>
+                    <li><a href="Login.jsp">로그인</a></li>
+                    <li><a href="JoinWho.jsp">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <%
+            }else{
+            %><%
+           		if(loginTrainer!=null){%>    
 			<div class="ul-forSize">
-
-				<ul>
-					<li><a href="Login.jsp">로그인</a></li>
-					<li><a href="JoinWho.jsp">회원가입</a></li>
-					<li><a href="#">고객센터</a></li>
-					<li><i class="fa-regular fa-heart"></i></li>
-				</ul>
-			</div>
-
-		</header>
+                <ul id="ul-flexiblet">
+                	<li><%=loginTrainer.getId() %>님</li>
+                    <li><a href="UpdateTInfo.jsp">개인정보수정</a></li>
+                    <li><a href="#">예약확인</a></li>
+                    <li><a href="LogOutCon">로그아웃</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            
+            <%
+            	} else if(loginMember.getId().equals("admin")){ 
+            %>   
+            
+            <div class="ul-forSize">
+                <ul>
+                	<li>관리자 계정</li>
+                    <li><a href="#">전체회원정보</a></li>
+                    <li><a href="UpdateInfo.jsp">관리자정보수정</a></li>
+                    <li><a href="LogOutCon">로그아웃</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <%
+           		} else if(loginMember!=null){
+               System.out.print(loginMember.getId());
+            %>
+            <div class="ul-forSize">
+                <ul id="ul-flexibleu">
+                	<li><%=loginMember.getId() %>님</li>
+                    <li><a href="UpdateInfo.jsp">개인정보수정</a></li>
+                    <li><a href="#">예약확인</a></li>
+                    <li><a href="LogOutCon">로그아웃</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <%}}%>
+        </header>
+        <div class="menu-hidden" id="menu-hidden">
+            <a href="tipBoardMain.jsp">Tip게시판</a><a href="#">공감게시판</a>
+        </div>
+<div class="map_wrap">
     <div id="map" style="width:100%;height:80vh;overflow:hidden;margin-top:50px"></div>
 
     <div id="menu_wrap" class="bg_white">
         <div class="option">
             <div>
                 <form onsubmit="searchPlaces(); return false;">
-                    키워드 : <input type="text" value="트레이닝센터" id="keyword" size="15"> 
+                    키워드 : <input type="text" value="광주 동명동 PT" id="keyword" size="15"> 
                     <button type="submit">검색하기</button> 
                 </form>
             </div>
@@ -313,5 +372,7 @@ function removeAllChildNods(el) {
     }
 }
 </script>
+  <script src="asset/js/NewMain.js"></script>
+
 </body>
 </html>

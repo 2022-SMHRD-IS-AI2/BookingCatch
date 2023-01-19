@@ -42,6 +42,7 @@ textarea:focus{outline:none;}
     height: 70px;
     font-weight: 30px;
     cursor: pointer;
+    z-index: 2;
 }
 
 
