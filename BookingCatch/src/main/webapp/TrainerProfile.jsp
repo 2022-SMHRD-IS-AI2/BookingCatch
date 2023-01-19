@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.model.TrainerInfoDAO"%>
 <%@page import="com.smhrd.model.TrainerVO"%>
 <%@page import="com.smhrd.model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -41,6 +42,10 @@
    }else{
       loginTrainer = (TrainerVO)session.getAttribute("loginTrainer");
    }
+   
+   
+   String tid = request.getParameter("tid");
+   new TrainerInfoDAO().selectTrainerInfo(tid);
    %>
     
     <div class="wrap">

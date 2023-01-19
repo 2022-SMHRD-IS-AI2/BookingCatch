@@ -69,7 +69,7 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 
         <div class="join">
             <h1>Join</h1>
-            <form action="JoinTCon" class="join-form" name="form" id="form">
+            <form action="JoinTCon" class="join-form" name="form" id="form" enctype="multipart/form-data" method="post">
                 
                 <!-- input들어옴 -->
                 <div class="input-join">
@@ -150,7 +150,7 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 
 			$.ajax({
 				// 어디로 요청할 것인지??
-				url : 'EmailCheckCon',
+				url : 'TIdCheckCon',
 				// 요청데이터(json형태, {key, value})
 				data : {
 					'inputE' : inputE

@@ -35,7 +35,17 @@ public class TrainerInfoDAO {
 		return cnt;
 	}
 	
-
+	public TrainerInfoVO selectTrainerInfo(String tid) {
+		TrainerInfoVO infoVO = null;
+		try {
+			infoVO = sqlSession.selectOne("com.smhrd.model.TrainerInfoDAO.selectTrainerInfo",tid);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		return infoVO;
+	}
 	
 	
 	
