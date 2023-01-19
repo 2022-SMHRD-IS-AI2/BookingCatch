@@ -134,7 +134,7 @@
                                 
                                  <li>
                                     <span class="title">작성자</span>
-                                    <span class="text"><%=vo.getWriter() %></span>
+                                    <span class="text"><a href="TrainerProfile.jsp"><%=vo.getWriter() %></a></span>
                                  </li>
                                  <li>
                                     <span class="title">작성일</span>

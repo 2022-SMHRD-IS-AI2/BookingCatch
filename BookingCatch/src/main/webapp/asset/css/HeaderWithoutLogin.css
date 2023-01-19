@@ -1,0 +1,90 @@
+@charset "EUC-KR";
+@font-face {
+    font-family: 'Rubik80sFade-Regular';
+    src: url("Rubik80sFade-Regular.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&family=Gowun+Batang&family=Kanit&family=Lilita+One&family=Lobster&family=Michroma&family=Montserrat+Alternates&family=Moon+Dance&family=Play&family=Rubik+80s+Fade&family=Shadows+Into+Light&display=swap');
+
+.wrap{
+    width: 100%;
+    position: absolute;
+    top: 0px;left: 0px;
+}
+
+body,div,ul,li,a{font-family: Arial, Helvetica, sans-serif;}
+
+*{padding:0; margin:0;}
+li{list-style:none;}
+a{color:inherit; text-decoration:none;}
+button{border:none; border-radius:0%;}
+/* input{border:none; border-radius:none;} */
+input:focus{outline:none;}
+
+textarea{resize: none; padding:20px 30px; font-size:18px; font-family: Arial, Helvetica, sans-serif; border:none;}
+
+textarea:focus{outline:none;}
+
+.fc{display:flex; justify-content:center;}
+.fb{display:flex; justify-content:space-between;}
+
+/* 여기까지 기본css */
+
+header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 3%;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+}
+header h1{
+    font-family:'Gloria Hallelujah';
+}
+header input{
+    width: 12%;
+    border-bottom: 1px solid black;
+    align-self: center;
+    padding-bottom: 5px;
+}
+header>ul{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+.ul-forSize ul{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.ul-forSize{
+    width: 20%;
+    display: flex;
+    justify-content: end;
+}
+
+.wrap header ul li span.en{display: block;}
+.wrap header ul li span.ko{display: none;}
+.wrap header ul li:hover span.ko{display: block;}
+.wrap header ul li:hover span.en{display: none;}
+.want-to-be-fixed li{
+    line-height: 16px;
+    vertical-align: middle;
+    text-align: center;
+}
+.want-to-be-fixed li:first-child{
+    width: 50.09px;
+}
+.want-to-be-fixed li:nth-child(2){
+    width: 64px;
+}
+.want-to-be-fixed li:nth-child(3){
+    width: 80.91px;
+}
+.want-to-be-fixed li:nth-child(4){
+    width: 61.38px;
+}
+/* 여기까지 header부분 */

@@ -122,7 +122,7 @@
         <!-- 여기까지 header -->
              <div class="Trainer-info">
             <div class="position-fixed">
-                <img src="/img/양치승씨.jpg" alt="">
+                <img src="/img/김계란.png" alt="">
                 <div class="trainer-name">
                     <span>김다희 <span class="left_tr_name">트레이너</span></span>
                 </div>
