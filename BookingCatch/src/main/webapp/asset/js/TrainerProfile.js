@@ -209,9 +209,9 @@ $('#doReservation').click(function() {
     jsonData : JSON.stringify(obj)
   }
   console.log(reqBody)
+		requestPay();
 	$.post('http://localhost:8081/BuildBookingCon', reqBody, function(res) {
 	    if(res > 0) {
-			requestPay()
 	      alert("예약되었습니다.");
 	      
 	      // 예약되면 타임테이블 초기화 후 새로 로딩한다.

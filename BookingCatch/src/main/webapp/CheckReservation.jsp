@@ -110,7 +110,7 @@
             <a href="tipBoardMain.jsp">Tip게시판</a><a href="#">공감게시판</a>
         </div>
         
-        <%  
+       <%--  <%  
         String id = loginMember.getId();
         List<BookingVO> vo = new BookingDAO().getBookingInfo(id);
         %>
@@ -133,14 +133,47 @@
                             <button>취소하기</button>
                         </div>
                     </div>
+                    
                 </div>
                 <%} %>
                 
             </div>
+        </div> --%>
+         <div class="reservation-all">
+            <div class="reservations">
 
-
-
-        </div>
+                <h1>예약정보확인</h1>
+                <div class="reservation-con">
+                    <img src="img/김계란.png" alt="">
+                    <div class="con-right">
+                        <div class="con-right-top">
+                            <span><span>김계란</span> 트레이너와</span>
+                            <span><span>2023년 01월 25일 14:00</span>에 같이 운동해요!</span>
+                        </div>
+                        <div class="con-right-bottom">
+                            <button>수정하기</button>
+                            <button>취소하기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="reservation-con">
+                    <img src="img/김계란.png" alt="" >
+                    <div class="con-right">
+                        <div class="con-right-top">
+                            <span><span>김계란</span> 트레이너와</span>
+                            <span><span>2023년 01월 25일 14:00</span>에 같이 운동해요!</span>
+                        </div>
+                        <div class="con-right-bottom">
+                            <button>수정하기</button>
+                            <button>취소하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div> 
+        
+        
     </div>
 
 </body>

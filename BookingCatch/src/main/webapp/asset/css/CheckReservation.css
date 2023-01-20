@@ -42,7 +42,7 @@ textarea:focus{outline:none;}
     height: 25vh;
     /* border: 1px solid black; */
     border-radius: 400px;
-    margin: 0% 5%;
+    margin: 0% 5% 5% 5%;
     box-sizing: border-box;
     padding-left: 3%;
     display: flex;
