@@ -57,18 +57,19 @@
         </header>
         <!-- 여기까지 header -->
         <div class="position-fixed">
-            <img src="./img/<%=vo.getImg_path() %>" alt="">
+            <%-- <img src="./img/<%=vo.getImg_path() %>" alt=""> --%>
+            <input type="file">
             <div class="trainer-name">
                 <span><%=vo.getName() %> <span class="left_tr_name">트레이너</span></span>
             </div>
             <div class="reservation-btn" id="pop">
                 
                 <a href="#" data-toggle="modal" data-target="#myModal" id="reservationView">
-                    <button>예약하기</button>
+                    <button>정보입력완료</button>
                 </a>
-                <a href="#"><button>
+                <!-- <a href="#"><button>
                     채팅
-                </button></a>
+                </button></a> -->
             </div>
         </div>
         <div class="Trainer-info">
@@ -87,7 +88,7 @@
             
                         <br>
                         <span class="none-bold">
-                           <textarea name="" id="" cols="98" rows="2" placeholder="자세교정,재활전문"></textarea>
+                           <textarea name="" id="" cols="98" rows="2" placeholder="[예시]자세교정,재활전문"></textarea>
                         </span>
                     </div>
                     <div class="infos">
@@ -103,7 +104,7 @@
                         </span>
                         <br>
                         <span class="none-bold">
-                            <textarea name="" id="" cols="98" rows="2" placeholder="회당 10만원 / 20회 기준"></textarea>
+                            <textarea name="" id="" cols="98" rows="2" placeholder="[예시]회당 10만원 / 20회 기준"></textarea>
                     
                         </span>
                     </div>
@@ -150,7 +151,7 @@
                 </div>
                 <div class="content">
                     
-                    <textarea name="certificate" id="" cols="90" rows="1" placeholder="나뭇잎 마을 배 탈주닌자 선발대회 1등"></textarea>
+                    <textarea name="certificate" id="" cols="90" rows="1" placeholder="[예시]나뭇잎 마을 배 탈주닌자 선발대회 1등"></textarea>
                     <div class="short-info give-top-space">
                     <div>
                    
