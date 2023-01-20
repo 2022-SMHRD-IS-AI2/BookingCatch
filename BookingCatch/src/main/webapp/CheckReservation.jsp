@@ -28,6 +28,7 @@
    MemberVO loginMember=null;
    TrainerVO loginTrainer=null; 
    
+   /* 안녕 */
    if(session.getAttribute("loginMember")==null&&session.getAttribute("loginTrainer")==null){
       System.out.print("첫 메인");
    }else if(session.getAttribute("loginMember")!=null){
