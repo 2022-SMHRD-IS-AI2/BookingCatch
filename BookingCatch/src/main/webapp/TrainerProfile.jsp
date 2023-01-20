@@ -42,10 +42,7 @@
 	
    String tid = request.getParameter("tid");
    System.out.print(tid);
-   TrainerInfoVO tInfoVO = new TrainerInfoDAO().selectTrainerInfo(tid);
-   System.out.print(tInfoVO);
    
-  	System.out.print(tInfoVO.getPrice());
    if(session.getAttribute("loginMember")==null&&session.getAttribute("loginTrainer")==null){
       System.out.print("첫 메인");
    }else if(session.getAttribute("loginMember")!=null){
@@ -520,15 +517,6 @@
 <script src="asset/js/TrainerProfile.js"></script>
 <script src="asset/js/NewMain.js"></script>
 <script type="text/javascript">
-
-let t_id = "<%=tid%>";
-
-  
-<%if(loginMember!=null){ %>
-let u_id = "<%=loginMember.getId() %>";
-<%}%>
-let price = <%=tInfoVO.getPrice() %>;
-
 </script>
 </body>
 

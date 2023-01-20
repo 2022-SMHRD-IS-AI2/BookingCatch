@@ -186,7 +186,7 @@ $('#doReservation').click(function() {
   const tid = t_id;
   if(!thisDate) {
     alert("날짜를 선택하십시오.");
-    return;
+    return;/*ㅇ*/
   }
   if(thisTimeTable == 0) {
     alert("시간을 선택하십시오.");
@@ -195,13 +195,13 @@ $('#doReservation').click(function() {
   }
   if(!confirm(thisDate + " 예약하시겠습니까?")) return;
 
-  // PS. 다희씨가 여기다가 날짜를 제외한 다른 데이터 넣어서 잘 조리 해주세요.
+  // PS. 다희씨가 여기다가 날짜를 제외한 다른 데이터 넣어서 잘 조리 해주세요.?
   const obj = {
-    "uid": u_id,
+    "uid": "test",
     "bdate": thisDate,
-    "price": price,
+    "price": 50000,
     "bWishList": $('#datewantInput').val(),
-    "tid": t_id,
+    "tid": "trainer",
     "timeTable": thisTimeTable
   }
 
