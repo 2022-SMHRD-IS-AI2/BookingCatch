@@ -17,50 +17,112 @@
     <!-- Popper JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
+     <link rel="stylesheet" href="./asset/css/NewMain.css">
+    <script src="https://kit.fontawesome.com/f4f342f148.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&family=Gowun+Batang&family=Kanit&family=Lilita+One&family=Lobster&family=Michroma&family=Montserrat+Alternates&family=Moon+Dance&family=Play&family=Rubik+80s+Fade&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
-    <form action="TrainerInfoDAO">
+  <%
+   MemberVO loginMember=null;
+   TrainerVO loginTrainer=null; 
+   
+   if(session.getAttribute("loginMember")==null&&session.getAttribute("loginTrainer")==null){
+      System.out.print("첫 메인");
+   }else if(session.getAttribute("loginMember")!=null){
+      loginMember = (MemberVO) session.getAttribute("loginMember");
+   }else{
+      loginTrainer = (TrainerVO)session.getAttribute("loginTrainer");
+   }
+   %>
+    
     <div class="wrap">
-    <header>
-            <%TrainerVO vo = (TrainerVO)session.getAttribute("loginTrainer"); 
 
-            %>
+        <header id="header">
             <ul class="want-to-be-fixed">
-                <li><a href="#"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
-                <li><a href="#"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
-                <li><a href="#"><span class="en">Community</span><span class="ko">게시판</span></a></li>
+                <li id="special-li" class="special-li"><a href="Trainers.jsp"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
+                <li><a href="CenterLocation.jsp"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
+                <li id="special-li2" class="special-li2"><a href="tipBoardMain.jsp"><span class="en">Community</span><span class="ko">게시판</span></a></li>
                 <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
             </ul>
 
+
+
             <a href="NewMain.jsp"><h1>HelinCare</h1></a>
             
-             <div class="ul-forSize">
-
-				<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				</ul>
-
-
-                <!-- <ul>
+            <%
+            if (loginMember == null && loginTrainer ==null){ 
+            %>
+            <div class="ul-forSize">
+                <ul>
                     <li><a href="Login.jsp">로그인</a></li>
-                    <li><a href="JoinWho">회원가입</a></li>
+                    <li><a href="JoinWho.jsp">회원가입</a></li>
                     <li><a href="#">고객센터</a></li>
                     <li><i class="fa-regular fa-heart"></i></li>
-                </ul> -->
+                </ul>
             </div>
-
+            <%
+            }else{
+            %><%
+           		if(loginTrainer!=null){%>    
+			<div class="ul-forSize">
+                <ul id="ul-flexiblet">
+                	<li><%=loginTrainer.getId() %>님</li>
+                    <li><a href="UpdateTInfo.jsp">개인정보수정</a></li>
+                    <li><a href="#">예약확인</a></li>
+                    <li><a href="LogOutCon">로그아웃</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            
+            <%
+            	} else if(loginMember.getId().equals("admin")){ 
+            %>   
+            
+            <div class="ul-forSize">
+                <ul>
+                	<li>관리자 계정</li>
+                    <li><a href="#">전체회원정보</a></li>
+                    <li><a href="UpdateInfo.jsp">관리자정보수정</a></li>
+                    <li><a href="LogOutCon">로그아웃</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <%
+           		} else if(loginMember!=null){
+               System.out.print(loginMember.getId());
+            %>
+            <div class="ul-forSize">
+                <ul id="ul-flexibleu">
+                	<li><%=loginMember.getId() %>님</li>
+                    <li><a href="UpdateInfo.jsp">개인정보수정</a></li>
+                    <li><a href="#">예약확인</a></li>
+                    <li><a href="LogOutCon">로그아웃</a></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                </ul>
+            </div>
+            <%}}%>
         </header>
-        <!-- 여기까지 header -->
+        
+        <div class="menu-hidden" id="menu-hidden">
+        
+            <a href="Trainers.jsp">MBTI</a><a href="#">수업방식</a>
+        </div>
+        <div class="menu-hidden2" id="menu-hidden2">
+        
+            <a href="tipBoardMain.jsp">Tip게시판</a><a href="ssulBoardMain.jsp">공감게시판</a>
+
+        </div>
+            <!-- 헤더부분 양심없이 길다 진짜  -->
+            
         <div class="position-fixed">
-            <%-- <img src="./img/<%=vo.getImg_path() %>" alt=""> --%>
-            <input type="file">
+            <img src="./img/" alt="">
             <div class="trainer-name">
-                <span><%=vo.getName() %> <span class="left_tr_name">트레이너</span></span>
+                <span> <span class="left_tr_name">트레이너</span></span>
             </div>
             <div class="reservation-btn" id="pop">
                 
@@ -109,7 +171,7 @@
                         </span>
                     </div>
                     <div class="infos pt10">
-                       <span class="bold-letter">성격유형(<%=vo.getMbti() %>)</span>
+                       <span class="bold-letter">성격유형</span>
                     </div>
                     <div class="graph">
                         <img src="./img/MBTI.gif" class="MBTI-img">
@@ -140,7 +202,7 @@
                 </div>
                 <div class="content">
                     <div class="infos">
-                       <textarea name="introduce" id="" cols="90" rows="5" placeholder="나는 <%=vo.getName() %>이란다!"></textarea>
+                       <textarea name="introduce" id="" cols="90" rows="5" placeholder="나는 이란다!"></textarea>
                        
                     </div>
                 </div>
@@ -170,7 +232,7 @@
                 </div>
                 <div class="content">
                     <span class="one-sentence-info">
-                        <textarea name="center" id="" cols="78" rows="1" placeholder=<%=vo.getCenter() %>></textarea>
+                        <textarea name="center" id="" cols="78" rows="1" placeholder=></textarea>
                     </span>
                     <textarea name="" id="" cols="78" rows="1" placeholder="여기는 지도가 들어가면 좋을거같아요"></textarea>
                
@@ -333,5 +395,6 @@
   <button type="submit">작성하기완료</button>
 </form>
 </body>
+ <script src="asset/js/NewMain.js"></script>
 <script src="./asset/js/TrainerProfile.js"></script>
 </html>

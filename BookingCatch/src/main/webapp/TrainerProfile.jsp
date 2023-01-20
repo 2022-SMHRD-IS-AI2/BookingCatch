@@ -138,7 +138,7 @@
             <div class="position-fixed">
                 <img src="/img/김계란.png" alt="">
                 <div class="trainer-name">
-                    <span>김다희 <span class="left_tr_name">트레이너</span></span>
+                    <span>빡빡이 <span class="left_tr_name">트레이너</span></span>
                 </div>
                 <div class="reservation-btn" id="pop">
                     
@@ -156,7 +156,7 @@
                 </div> -->
                 <div class="content">
                     <span class="one-sentence-info">
-                           "인공지능반을 책임질 김다희 트레이너 입니다."
+                           "항상 최선을 다하는..빡빡이 트레이너 입니다."
                     </span>
                     <div class="infos">
                         <span class="bold-letter">
@@ -170,8 +170,9 @@
                     <div class="infos">
                         <ul class="lic_con">
                             <li><span class="bold-letter">자격증명</span></li>
-                            <li><span class="none-bold-li trophy_img">인공지능 서비스개발자 과정 대상</span></li>
-                            <li><span class="none-bold-li trophy_img">동명동 쁘띠대회 대상</span></li>
+                            <li><span class="none-bold-li trophy_img">2019 WBC 머슬모델 4위</span></li>
+                            <li><span class="none-bold-li trophy_img">2020 MUSA 평택 피지크 4위</span></li>
+                            <li><span class="none-bold-li trophy_img">2021 PCA 리저널 안양 피지크 TOP 10</span></li>
                         </ul>
                     </div>
                     <div class="infos pt20">
@@ -180,11 +181,11 @@
                         </span>
                         <br>
                         <span class="none-bold">
-                            회당 10만원 / 20회 기준
+                            회당 10만원
                         </span>
                     </div>
                     <div class="infos pt10">
-                        <li><span class="bold-letter">성격유형(INFP)</span></li>
+                        <li><span class="bold-letter">성격유형(ENTJ)</span></li>
                     </div>
                     <div class="graph">
                         <li><img src="./img/MBTI.gif" class="MBTI-img"></li>
@@ -222,6 +223,18 @@
                     <span>자기소개</span>
                 </div>
                 <div class="content">
+                   <span>
+                   안녕하세요!
+                   <br>
+                   언제나 회원님들과 소통하면서 운동목적에 바른 길을 잡아주고 있는 김빡빡 트레이너 입니다!
+                   <br>
+                   많은 운동방법들이 나온 지금 무슨 운동이 나에게 맞고 우선순위 일지,운동의 방향은 어떻게 잡을지
+                   고민되지 않으신가요?
+                   <br>
+                   운동의 첫 단추를 잘못 끼우면 악순환으로 반복되면서 실패한다고 생각합니다.
+                   <br>
+                   막연하게 운동하기 보다는 확실한 목표 설정과 그 목표에 도달 할 수 있도록 최선을 다해 도와드리겠습니다.
+                   </span>
                     <div class="infos"></div>
                         <!-- <span class="bold-letter">
                             전문분야
@@ -263,12 +276,14 @@
                     <div class="infos">
                         <ul class="lic_con">
                             <li><span class="bold-letter">자격증명</span></li>
-                            <li><span class="none-bold-li trophy_img">인공지능 서비스개발자 과정 대상</span></li>
-                            <li><span class="none-bold-li trophy_img">동명동 쁘띠대회 대상</span></li>
-                            <li><span class="none-bold-li trophy_img">탈주닌자 제1회 대상</span></li>
-                            <li><span class="none-bold-li trophy_img">광주 이쁜 몸 대상</span></li>
-                            <li><span class="none-bold-li trophy_img">북구 디자인 </span></li>
-                            <li><span class="none-bold-li trophy_img">광주 이쁜 몸 대상</span></li>
+                            <li><span class="none-bold-li trophy_img"></span></li>
+                            <li><span class="none-bold-li trophy_img">2019 WBC 머슬모델 4위</span></li>
+                            <li><span class="none-bold-li trophy_img">2020 MUSA 평택 피지크 4위</span></li>
+                            <li><span class="none-bold-li trophy_img">2021 PCA 리저널 안양 피지크 TOP 10</span></li>
+                            <li><span class="none-bold-li trophy_img">2021 FCA 광주 피지크 TOP 5 </span></li>
+                            <li><span class="none-bold-li trophy_img">2022 BEST 서울 피지크 TOP 10</span></li>
+                            <li><span class="none-bold-li trophy_img">2022 파리 글로벌피지크 입상</span></li>
+                            <li><span class="none-bold-li trophy_img">2022 SSA 부산피지크 TOP 10</span></li>
                         </ul>
                         <!-- <span class="bold-letter">
                             전문분야
@@ -314,7 +329,7 @@
                         <img src="/img/센터내부2.png" id="img2">
                         <img src="/img/센터내부3.png" id="img3">
                         <img src="/img/센터내부4.png" id="img4">
-                    </div>
+                    </div>	
                     </div>
                 </div>
 
@@ -324,6 +339,14 @@
                     <span>스케줄</span>
                 </div>
                 <div class="content">
+                   <span><h4>운영시간</h4>
+                   <br>
+                   평일 : 07:00 ~ 23:00
+                   <br><br>
+                   토요일 : 10:00 ~ 19:00
+                   <br><br>
+                   휴무일 : 매달 둘째 , 넷째 주 일요일 , 공휴일
+                   </span>
                     <div class="infos">
                         <!-- <span class="bold-letter">
                             전문분야
@@ -363,7 +386,23 @@
                     <span>프로그램</span>
                 </div>
                 <div class="content">
-                     
+                     <span><h4>바른채형 다이어트</h4></span>
+                        <br>    	
+                        <h4>목표설정</h4>
+                        <br>
+                        <span>                       
+                        먼저 회원님의 몸상태를 파악하기 위해서 인바디와 채형을 확일할 수 있는
+                        간단한 움직임 테스트로 몸상태를 확인합니다. 현실적인 다어이트와 체형교정을
+                        하기 위해서 단기적인 목표와 장기적인 목표로 구분하여 설명드립니다.
+                        </span>
+                        <br><br>
+                        <h4>운동진행</h4>
+                        <br>
+                        
+                        사람마다 체형이 다르기에 필요한 운동도 다릅니다. 회원님께 필요한 우선순위의
+                        운동으로 진행됩니다! 두서 없는 운동을 막연하게 트레이닝 하기보다는 회원님께 이
+                        운동이 왜 필요한지 확실히 알려드리고 있습니다.
+                     </span>
                 </div>
             </div>
             <div class="short-info give-top-space">
@@ -371,7 +410,15 @@
                     <span>후기</span>
                 </div>
                 <div class="content">
+                    <span><h4>김동훈 2022.08.11</h4>
                     
+                    처음 헬스장을 방문했을때의 몸무게가 62 였습니다. 덩치가
+                    왜소한 것이 컴플렉스였고 어떠한 계기로 컴플렉스를 깨보자라는 마음가짐을
+                    가지고 생에 처음 헬스를 접해보았고 피티 20회권을 끊으며 지훈쌤에게 한가지만
+                    목표를 한다고 했습니다.딱 1달 동안 20회를 모두 소진하였을때..정말 힘들었지만
+                    혼자 헬스를 했다면 이루지 못했을 것이라고 확신하며 지훈쌤에 대한 신뢰는 높아졌고
+                    저는 또 피티를 등록 하게 되었네요!!
+                    </span>
                 </div>
             </div>
             <div class="short-info give-top-space">
@@ -379,8 +426,18 @@
                     <span>레슨가격</span>
                 </div>
                 <div class="content">
-                    
-                    
+                    <span><h4>1:1 PT</h4></span>
+                     <br>
+                     30회 - 1,800,000원(회당 60,000원)
+                     <br>
+                     <br>
+                     20회 - 1,400,000원(회당 70,000원)
+                     <br>
+                     <br>
+                     10회 - 800,000원(회당 80,000원)
+                     <br>
+                     <br>
+                     1회 -  100,000원(회당 100,000원)
                 </div>
             </div>
             <div class="short-info give-top-space">
@@ -388,7 +445,7 @@
                     <span>공지사항</span>
                 </div>
                 <div class="content">
-                
+                    <span>개인 사정으로 인해 휴무일때는 공지사항에 올려놓겠습니다.</span>
                 </div>
             </div>
         </div>
