@@ -94,7 +94,7 @@
                 <ul id="ul-flexibleu">
                 	<li><%=loginMember.getId() %>님</li>
                     <li><a href="UpdateInfo.jsp">개인정보수정</a></li>
-                    <li><a href="#">예약확인</a></li>
+                    <li><a href="CheckReservation.jsp">예약확인</a></li>
                     <li><a href="LogOutCon">로그아웃</a></li>
                     <li><i class="fa-regular fa-heart"></i></li>
                 </ul>
