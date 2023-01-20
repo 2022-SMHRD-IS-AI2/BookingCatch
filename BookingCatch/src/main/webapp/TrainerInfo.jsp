@@ -1,4 +1,5 @@
- <%@page import="com.smhrd.model.TrainerVO"%>
+ <%@page import="com.smhrd.model.MemberVO"%>
+<%@page import="com.smhrd.model.TrainerVO"%>
 <%@page import="com.smhrd.model.TrainerDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%> 

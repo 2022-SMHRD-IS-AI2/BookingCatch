@@ -197,11 +197,11 @@ $('#doReservation').click(function() {
 
   // PS. 다희씨가 여기다가 날짜를 제외한 다른 데이터 넣어서 잘 조리 해주세요.
   const obj = {
-    "uid": u_id,
+    "uid": "test",
     "bdate": thisDate,
-    "price": price,
+    "price": 50000,
     "bWishList": $('#datewantInput').val(),
-    "tid": t_id,
+    "tid": "trainer",
     "timeTable": thisTimeTable
   }
 
