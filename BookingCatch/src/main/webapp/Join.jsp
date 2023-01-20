@@ -10,7 +10,7 @@
 // opener관련 오류가 발생하는 경우 아래 주석을 해지하고, 사용자의 도메인정보를 입력합니다. ("팝업API 호출 소스"도 동일하게 적용시켜야 합니다.)
 //document.domain = "abc.go.kr";
 
-function goPopup(){
+/* function goPopup(){
 	// 호출된 페이지(jusopopup.jsp)에서 실제 주소검색URL(https://business.juso.go.kr/addrlink/addrLinkUrl.do)를 호출하게 됩니다.
     var pop = window.open("/BookingCatch/jusoPopup.jsp","pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
     
@@ -25,7 +25,7 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 	document.form.roadAddrPart2.value = roadAddrPart2;
 	/* document.form.addrDetail.value = addrDetail; */
 	document.form.zipNo.value = zipNo;
-}
+} */
 </head>
 <body>
 
@@ -106,7 +106,7 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
                             <option value="INTP">
                         </datalist>
                         <input type="text" id="roadAddrPart2"  placeholder="센터주소입력">
-    					<input type="button"  value="주소검색" onclick="goPopup();">
+    					/* <input type="button"  value="주소검색" onclick="goPopup();"> */
                 	<input type="text" name="phone" placeholder="핸드폰 번호 입력">
                     <div class="input-radio">
                         <input type="radio" name="gender" value="M" id="Man">

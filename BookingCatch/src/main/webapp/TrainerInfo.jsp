@@ -24,7 +24,7 @@
     <form action="TrainerInfoDAO">
     <div class="wrap">
     <header>
-            <% TrainerVO vo = (TrainerVO)session.getAttribute("loginTrainer"); 
+            <%TrainerVO vo = (TrainerVO)session.getAttribute("loginTrainer"); 
 
             %>
             <ul class="want-to-be-fixed">
