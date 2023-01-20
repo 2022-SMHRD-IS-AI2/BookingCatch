@@ -185,7 +185,7 @@ $('#doReservation').click(function() {
   const thisTimeTable = $('#timeTableList').val();
   const tid = t_id;
   if(!thisDate) {
-    alert("날짜를 선택하십시오.");
+    alert("날짜를 선택하십시오."); 
     return;
   }
   if(thisTimeTable == 0) {
