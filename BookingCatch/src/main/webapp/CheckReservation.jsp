@@ -1,3 +1,6 @@
+<%@page import="com.smhrd.model.BookingVO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.smhrd.model.BookingDAO"%>
 <%@page import="com.smhrd.model.TrainerVO"%>
 <%@page import="com.smhrd.model.MemberVO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
@@ -106,16 +109,24 @@
         <div class="menu-hidden" id="menu-hidden">
             <a href="tipBoardMain.jsp">Tip게시판</a><a href="#">공감게시판</a>
         </div>
+        
+        <%  
+        String id = loginMember.getId();
+        List<BookingVO> vo = new BookingDAO().getBookingInfo(id);
+        %>
+        
+        
         <div class="reservation-all">
             <div class="reservations">
 
                 <h1>예약정보확인</h1>
+                <%for(int i = 0;i<vo.size();i++){ %>
                 <div class="reservation-con">
                     <img src="img/woman-g3edd8701c_1920-removebg-preview.png" alt="">
                     <div class="con-right">
                         <div class="con-right-top">
-                            <span><span>김다희</span> 트레이너와</span>
-                            <span><span>0월0일</span>에 같이 운동해요!</span>
+                            <span><span><%=vo.get(i).getTid() %></span> 트레이너와</span>
+                            <span><span><%=vo.get(i).getBdate()+vo.get(i).getTimeTable()+"시" %></span>에 같이 운동해요!</span>
                         </div>
                         <div class="con-right-bottom">
                             <button>수정하기</button>
@@ -123,6 +134,7 @@
                         </div>
                     </div>
                 </div>
+                <%} %>
                 
             </div>
 

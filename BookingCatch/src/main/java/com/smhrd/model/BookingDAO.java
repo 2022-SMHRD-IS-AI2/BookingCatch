@@ -31,4 +31,12 @@ public class BookingDAO {
 		sqlSession.close();
 		return resList;
 	}
+	
+//	예약 불러오기
+	public List<BookingVO> getBookingInfo(String id) {
+		List<BookingVO> vo = null;
+		vo = sqlSession.selectList("com.smhrd.model.BookingDAO.getBookingInfo", id);
+		sqlSession.close();
+		return vo;
+	}
 }

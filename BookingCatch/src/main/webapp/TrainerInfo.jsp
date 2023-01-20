@@ -1,4 +1,6 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8"
+ <%@page import="com.smhrd.model.TrainerVO"%>
+<%@page import="com.smhrd.model.TrainerDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%> 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,10 +21,12 @@
 </head>
 
 <body>
-    <form action="">
+    <form action="TrainerInfoDAO">
     <div class="wrap">
     <header>
-            
+            <% TrainerVO vo = (TrainerVO)session.getAttribute("loginTrainer"); 
+
+            %>
             <ul class="want-to-be-fixed">
                 <li><a href="#"><span class="en">Trainer</span><span class="ko">선생님</span></a></li>
                 <li><a href="#"><span class="en">Center</span><span class="ko">운동센터</span></a></li>
@@ -30,7 +34,7 @@
                 <li><a href="#"><span class="en">AboutUs</span><span class="ko">우리는</span></a></li>
             </ul>
 
-            <a href="NewMain.jsp"><h1>HelinCare</h1></a> 
+            <a href="NewMain.jsp"><h1>HelinCare</h1></a>
             
              <div class="ul-forSize">
 
@@ -53,9 +57,9 @@
         </header>
         <!-- 여기까지 header -->
         <div class="position-fixed">
-            <img src="./img/양치승씨.jpg" alt="">
+            <img src="./img/<%=vo.getImg_path() %>" alt="">
             <div class="trainer-name">
-                <span>김다희 <span class="left_tr_name">트레이너</span></span>
+                <span><%=vo.getName() %> <span class="left_tr_name">트레이너</span></span>
             </div>
             <div class="reservation-btn" id="pop">
                 
@@ -74,7 +78,7 @@
                 </div> -->
                 <div class="content">
                    
-                    <span class="one-sentence-info"> <textarea name="" id="" cols="73" rows="2"placeholder='"인공지능반을 책임질 김다희 트레이너 입니다."'></textarea> </span>
+                    <span class="one-sentence-info"> <textarea name="" id="" cols="73" rows="2"placeholder='"인공지능반을 책임질 ooo 트레이너 입니다."'></textarea> </span>
                     <div class="infos">
                         <span class="bold-letter">
                             전문분야
@@ -104,7 +108,7 @@
                         </span>
                     </div>
                     <div class="infos pt10">
-                       <span class="bold-letter">성격유형(INFP)</span>
+                       <span class="bold-letter">성격유형(<%=vo.getMbti() %>)</span>
                     </div>
                     <div class="graph">
                         <img src="./img/MBTI.gif" class="MBTI-img">
@@ -135,7 +139,7 @@
                 </div>
                 <div class="content">
                     <div class="infos">
-                       <textarea name="introduce" id="" cols="90" rows="5" placeholder="나는 양치승이란다!"></textarea>
+                       <textarea name="introduce" id="" cols="90" rows="5" placeholder="나는 <%=vo.getName() %>이란다!"></textarea>
                        
                     </div>
                 </div>
@@ -165,7 +169,7 @@
                 </div>
                 <div class="content">
                     <span class="one-sentence-info">
-                        <textarea name="center" id="" cols="78" rows="1" placeholder="센터 주소를 써 주세요"></textarea>
+                        <textarea name="center" id="" cols="78" rows="1" placeholder=<%=vo.getCenter() %>></textarea>
                     </span>
                     <textarea name="" id="" cols="78" rows="1" placeholder="여기는 지도가 들어가면 좋을거같아요"></textarea>
                

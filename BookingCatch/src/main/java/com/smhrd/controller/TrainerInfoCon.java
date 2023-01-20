@@ -32,12 +32,12 @@ public class TrainerInfoCon extends HttpServlet {
 		String center = request.getParameter("center");
 		String schedule = request.getParameter("schedule");
 		String program = request.getParameter("program");
-		String price = request.getParameter("price");
+		BigDecimal price = new BigDecimal(request.getParameter("price"));
 		String method = request.getParameter("method");
 		String notice = request.getParameter("notice");
-		int likes = 0;
+		BigDecimal likes = new BigDecimal(request.getParameter("likes"));
 		
-		TrainerInfoVO tVo = new TrainerInfoVO(trainerId, introduce, certificate, center, schedule, program, price, method, notice,likes);
+		TrainerInfoVO tVo = new TrainerInfoVO(trainerId, certificate, introduce, price, notice,likes, center, program, method, schedule);
 		int cnt = new TrainerInfoDAO().insertTrainerInfo(tVo);
 		
 		if(cnt>0) {

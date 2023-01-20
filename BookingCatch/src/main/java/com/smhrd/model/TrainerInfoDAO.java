@@ -38,7 +38,7 @@ public class TrainerInfoDAO {
 	public TrainerInfoVO selectTrainerInfo(String tid) {
 		TrainerInfoVO infoVO = null;
 		try {
-			infoVO = sqlSession.selectOne("com.smhrd.model.TrainerInfoDAO.selectTrainerInfo",tid);
+			infoVO = (TrainerInfoVO)sqlSession.selectOne("com.smhrd.model.TrainerInfoDAO.selectTrainerInfo",tid);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally {

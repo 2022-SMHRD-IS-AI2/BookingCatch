@@ -9,7 +9,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="insertTrainerInfo" parameterType="com.smhrd.model.TrainerInfoVO">
 	insert into tb_t_info values(#{id},#{certificate},#{introduce},#{price},#{notice},#{likes},#{center},#{program},#{method},#{schedule})
 	</insert>
-	<select id="selectTrainerInfo" parameterType = "String">
+	<select id="selectTrainerInfo" parameterType = "String" resultType="com.smhrd.model.TrainerInfoVO">
 	select * from tb_t_info where t_id = #{tid}
 	</select>
 </mapper>

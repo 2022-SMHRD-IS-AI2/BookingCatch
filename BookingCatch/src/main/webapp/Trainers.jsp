@@ -1,4 +1,6 @@
 
+<%@page import="com.smhrd.model.TrainerInfoVO"%>
+<%@page import="com.smhrd.model.TrainerInfoDAO"%>
 <%@page import="com.smhrd.model.TrainerVO"%>
 <%@page import="com.smhrd.model.MemberVO"%>
 <%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
@@ -220,4 +222,5 @@
 </body>
 <script src="/asset/js/Trainers.js"></script>
 <script src="/asset/js/NewMain.js"></script>
+
 </html>

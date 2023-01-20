@@ -110,5 +110,18 @@ public class TrainerDAO {
 				}
 				return checkE;
 			}
+		
+		//트레이너 한명 전체 정보 보기
+		public TrainerVO selectTrainerInfo(String tid) {
+			TrainerVO vo = null;
+			try {
+				vo = sqlSession.selectOne("com.smhrd.model.TrainerDAO.selectTrainerInfo", tid);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				sqlSession.close();
+			}
+			return vo;
+		}
 
 }

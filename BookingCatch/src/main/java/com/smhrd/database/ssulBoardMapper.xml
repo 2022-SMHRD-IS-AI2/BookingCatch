@@ -19,7 +19,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	 <select id="detailssulBoard" parameterType="int" resultType="com.smhrd.model.ssulBoardVO">
-	select * from tb_ssul_board where s_num=#{num}</select> 
+	select * from tb_ssul_board where s_num=#{num}</select>
 
 
 </mapper>

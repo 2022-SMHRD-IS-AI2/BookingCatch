@@ -1,10 +1,12 @@
 package com.smhrd.model;
 
+import java.math.BigDecimal;
+
 public class BookingVO {
 	private String idx;
 	private String uid;
 	private String bdate;
-	private int price;
+	private BigDecimal price;
 	private String bWishList;
 	private String tid;
 	private String timeTable;
@@ -27,10 +29,10 @@ public class BookingVO {
 	public void setBdate(String bdate) {
 		this.bdate = bdate;
 	}
-	public int getPrice() {
+	public BigDecimal getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
 	public String getbWishList() {

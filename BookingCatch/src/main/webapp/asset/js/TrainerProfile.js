@@ -174,7 +174,7 @@ const renderCalender = () => {
     // 날짜를 클릭할 경우 리스트를 초기화
 	initTimeTableList();
     
-    const tid = "trainer";
+    const tid = t_id;
     callSelectBookingCon(tid, thisDate);
   });
 
@@ -183,7 +183,7 @@ const renderCalender = () => {
 $('#doReservation').click(function() {
   const thisDate = $('#datepickInput').val();
   const thisTimeTable = $('#timeTableList').val();
-  const tid = "trainer";
+  const tid = t_id;
   if(!thisDate) {
     alert("날짜를 선택하십시오.");
     return;
@@ -197,32 +197,34 @@ $('#doReservation').click(function() {
 
   // PS. 다희씨가 여기다가 날짜를 제외한 다른 데이터 넣어서 잘 조리 해주세요.
   const obj = {
-    "uid": "test5",
+    "uid": u_id,
     "bdate": thisDate,
-    "price": 200000,
-    "bWishList": "요구사항입니다.",
-    "tid": tid,
+    "price": price,
+    "bWishList": $('#datewantInput').val(),
+    "tid": t_id,
     "timeTable": thisTimeTable
   }
 
   const reqBody = {
     jsonData : JSON.stringify(obj)
   }
+  console.log(reqBody)
+	$.post('http://localhost:8081/BuildBookingCon', reqBody, function(res) {
+	    if(res > 0) {
+			requestPay()
+	      alert("예약되었습니다.");
+	      
+	      // 예약되면 타임테이블 초기화 후 새로 로딩한다.
+	      initTimeTableList();
+	      callSelectBookingCon(tid, thisDate);
+	      
+	      // 요구사항 박스를 비운다.
+	      $('#datewantInput').val('');
+	    } else {
+	      alert("예약 실패하였습니다.");
+		}
+	});
   
-  $.post('http://localhost:8081/BuildBookingCon', reqBody, function(res) {
-    if(res > 0) {
-      alert("예약되었습니다.");
-      
-      // 예약되면 타임테이블 초기화 후 새로 로딩한다.
-      initTimeTableList();
-      callSelectBookingCon(tid, thisDate);
-      
-      // 요구사항 박스를 비운다.
-      $('#datewantInput').val('');
-    } else {
-      alert("예약 실패하였습니다.");
-    }
-  });
 })
 
 renderCalender();
@@ -285,3 +287,36 @@ function initTimeTableList() {
 	$('#timeTableList').append(timeTableListTag);
 	/********************************************/
 }
+
+var IMP = window.IMP; 
+        IMP.init("imp00658331"); 
+      
+        var today = new Date();   
+        var hours = today.getHours(); // 시
+        var minutes = today.getMinutes();  // 분
+        var seconds = today.getSeconds();  // 초
+        var milliseconds = today.getMilliseconds();
+        var makeMerchantUid = hours +  minutes + seconds + milliseconds;
+        
+
+        function requestPay() {
+            IMP.request_pay({
+                pg : 'html5_inicis.INIpayTest',
+                pay_method : 'card',
+                merchant_uid: "IMP"+makeMerchantUid, 
+                name : '헬스 예약',
+                amount : 1,
+                buyer_email : 'Iamport@chai.finance',
+                buyer_name : '아임포트 기술지원팀',
+                buyer_tel : '010-1234-5678',
+                buyer_addr : '서울특별시 강남구 삼성동',
+                buyer_postcode : '123-456'
+            }, function (rsp) { // callback
+                if (rsp.success) {
+                    console.log(rsp);
+                } else {
+                    console.log(rsp);
+                }
+            });
+        }
+

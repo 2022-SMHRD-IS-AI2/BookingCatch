@@ -14,4 +14,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="getBookingContents" parameterType="java.util.HashMap" resultType="com.smhrd.model.BookingVO">
 		SELECT BOOK_SEQ AS idx, B_DATE AS bdate, B_TIMETABLE AS timeTable FROM TB_BOOK WHERE T_ID = #{tid} AND B_DATE = #{bdate}
 	</select>
+	<select id="getBookingInfo" parameterType="com.smhrd.model.BookingDAO" resultType = "com.smhrd.model.BookingVO">
+	select * from TB_book where u_id = #{id}
+	</select>
 </mapper>

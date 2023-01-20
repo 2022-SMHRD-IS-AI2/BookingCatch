@@ -1,3 +1,5 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="com.smhrd.model.TrainerInfoVO"%>
 <%@page import="com.smhrd.model.TrainerInfoDAO"%>
 <%@page import="com.smhrd.model.TrainerVO"%>
 <%@page import="com.smhrd.model.MemberVO"%>
@@ -25,6 +27,9 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Gloria+Hallelujah&family=Gowun+Batang&family=Kanit&family=Lilita+One&family=Lobster&family=Michroma&family=Montserrat+Alternates&family=Moon+Dance&family=Play&family=Rubik+80s+Fade&family=Shadows+Into+Light&display=swap"
 	rel="stylesheet">
+	 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+    <!-- iamport.payment.js -->
+    <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
 </head>
 
 <body>
@@ -34,7 +39,13 @@
    
    MemberVO loginMember=null;
    TrainerVO loginTrainer=null; 
+	
+   String tid = request.getParameter("tid");
+   System.out.print(tid);
+   TrainerInfoVO tInfoVO = new TrainerInfoDAO().selectTrainerInfo(tid);
+   System.out.print(tInfoVO);
    
+  	System.out.print(tInfoVO.getPrice());
    if(session.getAttribute("loginMember")==null&&session.getAttribute("loginTrainer")==null){
       System.out.print("첫 메인");
    }else if(session.getAttribute("loginMember")!=null){
@@ -44,8 +55,6 @@
    }
    
    
-   String tid = request.getParameter("tid");
-   new TrainerInfoDAO().selectTrainerInfo(tid);
    %>
     
     <div class="wrap">
@@ -444,6 +453,7 @@
                     </div>
 
                     <button class="btn btn-primary" id="doReservation">예약</button>
+                    <button onclick="requestPay()">결제하기</button>
                 </div>
         </div>
       </div>
@@ -452,6 +462,17 @@
     
 <script src="asset/js/TrainerProfile.js"></script>
 <script src="asset/js/NewMain.js"></script>
+<script type="text/javascript">
+
+let t_id = "<%=tid%>";
+
+
+<%if(loginMember!=null){ %>
+let u_id = "<%=loginMember.getId() %>";
+<%}%>
+let price = <%=tInfoVO.getPrice() %>;
+
+</script>
 </body>
 
 </html>
