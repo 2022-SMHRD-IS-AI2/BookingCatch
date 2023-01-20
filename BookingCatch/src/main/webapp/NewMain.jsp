@@ -102,9 +102,6 @@
             <%}}%>
         </header>
         <div class="menu-hidden" id="menu-hidden">
-
-            <a href="tipBoardMain.jsp">Tip게시판</a><a href="ssulBoardMain.jsp">공감게시판</a>
-
         
             <a href="Trainers.jsp">MBTI</a><a href="#">수업방식</a>
         </div>
