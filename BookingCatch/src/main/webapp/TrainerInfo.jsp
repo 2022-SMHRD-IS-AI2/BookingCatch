@@ -1,4 +1,5 @@
- <%@page import="com.smhrd.model.TrainerVO"%>
+ <%@page import="com.smhrd.model.MemberVO"%>
+<%@page import="com.smhrd.model.TrainerVO"%>
 <%@page import="com.smhrd.model.TrainerDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%> 
@@ -173,9 +174,9 @@
                     <div class="infos pt10">
                        <span class="bold-letter">성격유형</span>
                     </div>
-                    <div class="graph">
+                    <!-- <div class="graph">
                         <img src="./img/MBTI.gif" class="MBTI-img">
-                    </div>
+                    </div> -->
                 </div>
                 <div class="buttons">
                     <button>예약하기</button>

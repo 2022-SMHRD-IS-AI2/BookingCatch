@@ -523,7 +523,7 @@
 
 let t_id = "<%=tid%>";
 
-
+  
 <%if(loginMember!=null){ %>
 let u_id = "<%=loginMember.getId() %>";
 <%}%>
