@@ -121,15 +121,15 @@
             <!-- 헤더부분 양심없이 길다 진짜  -->
             
         <div class="position-fixed">
-            <img src="./img/" alt="">
+            <input type="file">
             <div class="trainer-name">
                 <span> <span class="left_tr_name">트레이너</span></span>
             </div>
             <div class="reservation-btn" id="pop">
                 
-                <a href="#" data-toggle="modal" data-target="#myModal" id="reservationView">
-                    <button>정보입력완료</button>
-                </a>
+                
+                    <button><a href="Trainers.jsp">정보입력완료</a></button>
+                
                 <!-- <a href="#"><button>
                     채팅
                 </button></a> -->
