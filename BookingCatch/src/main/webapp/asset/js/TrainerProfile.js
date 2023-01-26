@@ -313,9 +313,9 @@ var IMP = window.IMP;
                 buyer_postcode : '123-456'
             }, function (rsp) { // callback
                 if (rsp.success) {
-                    console.log(rsp);
+                    alert('결제 성공! 예약되었습니다!');
                 } else {
-                    console.log(rsp);
+                   alert('결제 성공! 예약되었습니다!');
                 }
             });
         }

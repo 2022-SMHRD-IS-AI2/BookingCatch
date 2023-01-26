@@ -133,7 +133,7 @@
         <!-- 여기까지 header -->
              <div class="Trainer-info">
             <div class="position-fixed">
-                <img src="/img/김계란.png" alt="">
+                <img src="img/김계란.png" alt="">
                 <div class="trainer-name">
                     <span>빡빡이 <span class="left_tr_name">트레이너</span></span>
                 </div>
@@ -142,7 +142,7 @@
                     <a href="#" data-toggle="modal" data-target="#myModal" id="reservationView">
                         <button>예약하기</button>
                     </a>
-                    <a href="#"><button>
+                    <a href="http://127.0.0.1:5500/index.html" target="_blank"><button>
                         채팅
                     </button></a>
                 </div>

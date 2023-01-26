@@ -6,7 +6,6 @@
 <meta charset="UTF-8">
 <title>일반 회원 가입</title>
 <link rel="stylesheet" href="asset/css/Join.css">
-<script language="javascript">
 
 </head>
 <body>
@@ -48,7 +47,7 @@
         
 		<div class="join">
             <h1>Join</h1>
-            <form action="JoinCon" class="join-form" method="post">
+            <form action="JoinCon" method="post">
                 
                 <!-- input들어옴 -->
                 <div class="input-join">
@@ -87,7 +86,7 @@
                             <option value="INFP">
                             <option value="INTP">
                         </datalist>
-                        <input type="text" name="center" placeholder="센터주소입력">
+                        <input type="text" name="address" placeholder="동까지만 주소 입력">
                 	<input type="text" name="phone" placeholder="핸드폰 번호 입력">
                     <div class="input-radio">
                         <input type="radio" name="gender" value="M" id="Man">
@@ -105,7 +104,8 @@
 
         
     </div>
-    	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js">
+    </script>
 	<script>
 		function checkE() {
 			var inputE = $('#inputE').val()
