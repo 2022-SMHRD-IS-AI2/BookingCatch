@@ -45,9 +45,9 @@
         <!-- 여기까지 header -->
         
         
-		<div class="join">
+            <form action="JoinCon" method="post" class="join">
+		<!-- <div class="join"> -->
             <h1>Join</h1>
-            <form action="JoinCon" method="post">
                 
                 <!-- input들어옴 -->
                 <div class="input-join">
@@ -100,7 +100,7 @@
                 </div>
             </form>
             
-        </div>
+   <!--      </div> -->
 
         
     </div>

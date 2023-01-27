@@ -108,7 +108,7 @@ h1:hover .ko{display: block;}
 .en{display: block;}
 .ko{display: none;} */
 .join-form{
-    width: 20%;
+    width: 30%;
     height: 100%;
 }
 .input-join{
@@ -116,6 +116,7 @@ h1:hover .ko{display: block;}
     flex-direction: column;
     align-items: center;
     height: 100%;
+    width:20%;
 }
 
 #flex-row{

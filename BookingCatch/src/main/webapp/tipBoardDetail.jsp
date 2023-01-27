@@ -160,7 +160,7 @@
                                         <p class="board-cont">
                                           <%=vo.getContent()%>
                                         </p>
-                                        <img src="file/<%=vo.getFilename()%>" alt="씨앙"></img>
+                                        <img src="file/<%=vo.getFilename()%>" alt="등록된 사진이 없습니다."></img>
                                     </div> 
                         </div>
                        <div class="board-nav">

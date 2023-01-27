@@ -24,6 +24,17 @@ public class ssulBoardDAO {
 		sqlSession.close();
 		return cnt;
 	}
+	
+	public int ssuluploadT(ssulBoardVO vo) {
+		int cnt = sqlSession.insert("com.smhrd.model.ssulBoardDAO.ssuluploadT",vo);
+		if(cnt>0) {
+			sqlSession.commit();
+		}else {
+			sqlSession.rollback();
+		}
+		sqlSession.close();
+		return cnt;
+	}
 
 	// 전체 게시글 조회하는 기능
 	public List<ssulBoardVO> showssulBoard() {

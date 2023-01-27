@@ -8,9 +8,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+import com.smhrd.model.MemberVO;
+import com.smhrd.model.TrainerVO;
 import com.smhrd.model.ssulBoardDAO;
 import com.smhrd.model.ssulBoardVO;
 import com.smhrd.model.tipBoardDAO;
@@ -27,7 +30,7 @@ public class writeSsulBoardCon extends HttpServlet {
 				// MultipartRequest에서 필요한 매개변수 설정
 				// 1. 모든 요청의 정보가 담겨있는 request객체
 				// 2. 업로드 된 파일(이미지)을 저장할 경로
-				String path = request.getServletContext().getRealPath("/sfile");
+				String path = request.getServletContext().getRealPath("/file");
 //				String path = "C:\\Users\\SMHRD\\Desktop\\Center\\";
 				System.out.println(path);
 				
@@ -60,11 +63,14 @@ public class writeSsulBoardCon extends HttpServlet {
 				System.out.println("writer:"+writer);
 				System.out.println("filename:"+filename);
 				System.out.println("content:"+content);
-				
+				int cnt = 0;
+				HttpSession session = request.getSession();
 				ssulBoardVO vo = new ssulBoardVO(title, content, filename, writer);
-				
-				int cnt = new ssulBoardDAO().ssulupload(vo);
-				
+				if(session.getAttribute("loginMember")!=null) {
+				 cnt = new ssulBoardDAO().ssulupload(vo);
+				}else {
+				 cnt = new ssulBoardDAO().ssuluploadT(vo);
+				}
 				if(cnt>0) {
 					System.out.println("업로드 성공");
 				}else {

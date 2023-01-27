@@ -23,7 +23,7 @@ public class ssulBoardVO {
 		private Timestamp date;
 		@NonNull
 		private String writer;
-		
+		private String writer2;
 		
 		
 		
